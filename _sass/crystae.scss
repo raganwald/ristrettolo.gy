@@ -1,0 +1,39 @@
+@import "compass/reset";
+@import "_solarized.scss";
+@import "_grid.scss";
+@import "_type.scss";
+@import "susy";
+@import "compass/typography/vertical_rhythm";
+
+@include establish-baseline;
+
+body {
+    @include light;
+    @include accentize($blue);
+    @include leader(1);
+    font-family: "nimbus-sans", sans-serif;
+    font-weight: 300;
+}
+
+body.dark {
+    @include dark;
+    @include accentize($blue);
+}
+
+header {
+    h1 {
+        @include adjust-font-size-to(30px);
+        font-weight: bold;
+    }
+}
+
+.container {
+    @include container;
+    > header {
+        @include accentize($orange);
+    }
+}
+
+p {
+    @include margin-leader;
+}

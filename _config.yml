@@ -1,0 +1,5 @@
+pygments: true
+lsi: false
+safe: true
+
+exclude: Gemfile, Gemfile.lock, config.rb, Rakefile, CNAME
