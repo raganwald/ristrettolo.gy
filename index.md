@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ristrettology, CoffeeScript Ristretto Online
+title: ristrettolo.gy, CoffeeScript Ristretto Online
 ---
 
 ---
