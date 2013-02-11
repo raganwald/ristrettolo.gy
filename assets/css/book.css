@@ -1,6 +1,6 @@
 body {
   width: 700px;
-  float: left;
+  float: center;
 }
 
 /* headings */
@@ -68,7 +68,7 @@ blockquote {
   margin-right: 2em;
   font-size: 80%;
   background-image: url(assets/images/Quote_background_transparent.png);
-  background-position: middle center;
+/*  background-position: middle center;*/
 }
 span.lineno, code.lineno {
   color: gray;
