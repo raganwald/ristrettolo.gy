@@ -13,17 +13,15 @@ Some time ago, Benjamin Stein and I rediscovered Haskell's Maybe Monad. Or as we
 
 Unfortunately, you can only go so far with meta-programming, and eventually you find yourself confronted with a choice: Take the blue pill, forget about fixing the language, and live a happy life until old age or a passing asteroid claims you. Or take the red pill, and venture into hacking the syntax with parsers, grammars, ASTs, and whatever else you need to make things like `[1..100].map { its.first_name }` work.
 
-> &ldquo;This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes.&rdquo;—*Morpheus*
+> &ldquo;This is your last chance. After this, there is no turning back. You take the blue pill—the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill—you stay in Wonderland and I show you how deep the rabbit-hole goes.&rdquo;—*Morpheus*
 
 I took the red pill, and wound up writing [rewrite_rails][rr]. The trouble was, Ruby was well-regarded, and the problems that I solved didn't really bother most people. For example, rewrite_rails provides extension methods so you can extend a class without monkey-patching it in the global namespace. Everyone agrees that monkey-patching is a "Bad Idea" in theory, but in practice it seems to suit Ruby programmers just fine. If Rails can do it, how bad can it be?
 
-Meanwhile in New York, Jeremy Ashkenas also took the red pill. But instead of smoothing over some obscure warts in a language that was otherwise liked and well-regarded, Jeremy took on some annoyances and headaches in a language that was generally reviled as having awkward and annoying syntax: JavaScript. 
+## Meanwhile, in New York...
 
-Underneath its syntax, JavaScript is extremely cool. Almost lisp-y, in fact. I suppose I ought to say that it has excellent support for first-class functions, even better than Ruby. And it does, but what I find interesting isn't that everything is an object in JavaScript, but rather that *everything of interest is a function*. Prototypical inheritance is actually very, very interesting, much more interesting than classist inheritance. Not because anything can be a prototype, but the idea of working with exemplars rather than classes is...
+Meanwhile, in New York, Jeremy Ashkenas also took the red pill. But instead of smoothing over some obscure warts in a language that was otherwise liked and well-regarded, Jeremy took on some annoyances and headaches in a language that was generally reviled as having awkward and annoying syntax: JavaScript. 
 
-Sorry, I was getting carried away!
-
-The point is, JavaScript is a good language hampered by a syntax that was very, very necessary to capture mindshare in 199x, but is holding it back in 201x. And Jeremy did something about it, he wrote [CoffeeScript]. Yada, yada, and now CoffeeScript could be the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing *libraries*, because lots of pure JavaScript users need to read the code, but when I'm writing code for a team, it's CoffeeScript, CoffeeScript, CoffeeScript.
+Underneath its syntax, JavaScript is extremely cool. Almost lisp-y: It has excellent support for first-class functions, even better than Ruby. JavaScript is a good language hampered by a syntax that was very, very necessary to capture mindshare in 199x, but is holding it back in 201x. And Jeremy did something about it, he wrote [CoffeeScript]. Yada, yada, and now CoffeeScript could be the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing *libraries*, because lots of pure JavaScript users need to read the code, but when I'm writing code for a team, it's CoffeeScript, CoffeeScript, CoffeeScript.
 
 > "I was also seriously caught up by the digression into espresso, ristretto, etc. Worth the purchase just for the intro."—*Chris Smith*
 
@@ -35,7 +33,7 @@ But what I hadn't seen was a book that addressed the underlying semantics, the f
 
 But a book about programming with functions as first-class values, a book that embraces the fact that CoffeeScript methods, like JavaScript methods, are functions. A book that dares to start the story at the very beginning but not falter and work from there up to very advanced topics like refactoring to method combinators and decorators. A book that complements what you read elsewhere and already know, a book that acts like a multiplier of your skills.
 
-That was a book I thought was worth writing, and a lot of people think it's worth reading! 
+That was a book I thought was worth writing, and more than three hundred people think it's worth paying for and reading! 
 
 > "The best explanation of closures I've seen yet."—*Jerry Anning*
 
@@ -51,7 +49,13 @@ If you bought a car that could go 240mph and he dealership advertised a long-wee
 
 The entire text is online, free, although I certainly encourage you to check out the [ebook][cr]. In addition to better formatting and portability to offline formats, you'll also receive free updates and fixes indefinitely, while this web site may not receive updates as often, or at all.
 
-(*And yes, the web formatting is mediocre at the moment, although it's great in the [ebook][cr]. This isn't a conspiracy, it's just that I'm working on the styling as I go. Check out the [sample PDF][sample] for an idea of what the ebook is like. And if you want to help... Fork it and send me a pull request!*)  
+(*Want to help? File an issue][issue] or [fork this repository][repo] and send a pull request!*)  
+
+---
+
+![](http://i.minus.com/iL337yTdgFj7.png)[![JavaScript Allongé](http://i.minus.com/iW2E1A8M5UWe6.jpeg)](http://leanpub.com/javascript-allonge "JavaScript Allongé")![](http://i.minus.com/iL337yTdgFj7.png)[![CoffeeScript Ristretto](http://i.minus.com/iMmGxzIZkHSLD.jpeg)](http://leanpub.com/coffeescript-ristretto "CoffeeScript Ristretto")![](http://i.minus.com/iL337yTdgFj7.png)[![Kestrels, Quirky Birds, and Hopeless Egocentricity](http://i.minus.com/ibw1f1ARQ4bhi1.jpeg)](http://leanpub.com/combinators "Kestrels, Quirky Birds, and Hopeless Egocentricity")
+
+---
                     
 <a name="start"></a>
                                                                                                                                                                                                                                                                                                                        
@@ -77,3 +81,5 @@ This site uses the [Solarized][solarized] color scheme, is set in Nimbus Sans, a
 [CoffeeScript]: http://coffeescript.org
 [cr]: https://leanpub.com/coffeescript-ristretto
 [sample]: http://samples.leanpub.com/coffeescript-ristretto-sample.pdf "Free Sample PDF"
+[issue]: https://github.com/ristrettolo-gy/ristrettolo-gy.github.com/issues
+[repo]: https://github.com/ristrettolo-gy/ristrettolo-gy.github.com/
