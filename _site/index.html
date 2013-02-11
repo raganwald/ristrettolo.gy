@@ -15,7 +15,7 @@
     <h1><tt>ristrettolo.gy</tt>, CoffeeScript Ristretto Online</h1>
 </header>
             
-<h1 id="a-pull-of-the-lever-prefaces">A Pull of the Lever: Prefaces</h1>
+<p>#A Pull of the Lever: Prefaces</p>
 
 <p><img src="images/caffemolinari.jpg" alt="Caffe Molinari" /></p>
 
@@ -23,7 +23,7 @@
   <p>“We always pour our coffee in the ristretto, or restricted, tradition. The coffee is restricted to the most flavourful part of the shot.  This tradition offers the heaviest shot, thickest texture and finest flavour that the coffee has to offer.”–<a href="http://www.espressovivace.com/archives/9507scr.html">David Schomer</a></p>
 </blockquote>
 
-<p>## About This Book</p>
+<h2 id="about-this-book">About This Book</h2>
 
 <blockquote>
   <p>Learning about “for” loops is not learning to program, any more than learning about pencils is learning to draw.–Bret Victor, <a href="http://worrydream.com/LearnableProgramming/">Learnable Programming</a></p>
@@ -39,7 +39,7 @@
 
 <p>As a result, <em>CoffeeScript Ristretto</em> is a rich, dense read, much like the Espresso Ristretto beloved by coffee enthusiasts everywhere.</p>
 
-<p>## Foreword by Jeremy Ashkenas</p>
+<h2 id="foreword-by-jeremy-ashkenas">Foreword by Jeremy Ashkenas</h2>
 
 <blockquote>
   <p>“I particularly enjoyed this small book because I’ve reached for it a hundred times before and come up empty-handed. Large and heavy manuals on object-oriented programming and JavaScript are all around us, but to find a book that tackles the fundamental features of functions and objects in a brief, strong gulp, is rare indeed.</p>
@@ -53,7 +53,7 @@
   <p>“This book is dense, but hopefully you’ve chosen it because you like your ristretto bold and strong. If Reg had pulled it any thicker you’d have to chew it.”—Jeremy Ashkenas, CoffeeScript’s creator</p>
 </blockquote>
 
-<p>## Legend</p>
+<h2 id="legend">Legend</h2>
 
 <p>Some text in monospaced type like <code>this</code> in the text represents some code being discussed. Some monospaced code in its own lines also represents code being discussed:</p>
 
@@ -225,8 +225,7 @@ true isnt 'true'
 
 <p><img src="images/half-drunk.jpg" alt="While Terroir tends toward pretty low body (particularly at its age when we pulled it), the crema's so thin on this shot due to it having been sipped from already!" /></p>
 
-<pre><code>  ## As Little As Possible About Functions, But No Less
-</code></pre>
+<h2 id="as-little-as-possible-about-functions-but-no-less">As Little As Possible About Functions, But No Less</h2>
 
 <p>In CoffeeScript, functions are values, but they are also much more than simple numbers, strings, or even complex data structures like trees or maps. Functions represent computations to be performed. Like numbers, strings, and arrays, they have a representation in CoffeeScript. Let’s start with the very simplest possible function. In CoffeeScript, it looks like this:<sup id="fnref:also"><a href="#fn:also" rel="footnote">3</a></sup></p>
 
@@ -404,6 +403,8 @@ false?
 
 <p>And with that’s let’s move on!</p>
 
+<h2 id="fargs">Ah. I’d Like to Have an Argument, Please.<sup id="fnref:mp"><a href="#fn:mp" rel="footnote">8</a></sup></h2>
+
 <p>Up to now, we’ve looked at functions without arguments. We haven’t even said what an argument <em>is</em>, only that our functions don’t have any.</p>
 
 <p>A&gt; Most programmers are perfectly familiar with arguments (often called “parameters”). Secondary school mathematics discusses this. So you know what they are, and I know that you know what they are, but please be patient with the explanation!</p>
@@ -457,7 +458,7 @@ T&gt; «(code/f1.coffee)</p>
   #=&gt; 6.2831853
 </code></pre>
 
-<p>What happened internally is that the expression <code>1 + 1</code> was evaluated first, resulting in <code>2</code>. Then our circumference function was applied to <code>2</code>.<sup id="fnref:f2f"><a href="#fn:f2f" rel="footnote">8</a></sup></p>
+<p>What happened internally is that the expression <code>1 + 1</code> was evaluated first, resulting in <code>2</code>. Then our circumference function was applied to <code>2</code>.<sup id="fnref:f2f"><a href="#fn:f2f" rel="footnote">9</a></sup></p>
 
 <h3 id="variables-and-bindings">variables and bindings</h3>
 
@@ -515,11 +516,9 @@ A&gt; But there’s another reason for learning the word <em>antidisestablishmen
   ((copy) -&gt;
     copy is value
   )(value)
-
-  
-
-  ## Closures and Scope {#closures}
 </code></pre>
+
+<h2 id="closures">Closures and Scope</h2>
 
 <p>Before we explain <code>(x) -&gt; (y) -&gt; x</code>, we’re going to toss in something that doesn’t directly affect our explanation, but makes things easier to see <em>visually</em>. Up to now, every function has looked like this: <code>(</code><em>arguments</em><code>) -&gt; </code><em>body</em>. There’s another way to write functions. For example here’s the other way to write <code>(x) -&gt; x</code>:</p>
 
@@ -584,7 +583,7 @@ A&gt; Now let’s have an Espresso before we continue!</p>
 
 <h3 id="if-functions-without-free-variables-are-pure-are-closures-impure">If functions without free variables are pure, are closures impure?</h3>
 
-<p>The function <code>(y) -&gt; x</code> is interesting. It contains a <em>free variable</em>, <code>x</code>.<sup id="fnref:nonlocal"><a href="#fn:nonlocal" rel="footnote">9</a></sup> A free variable is one that is not bound within the function. Up to now, we’ve only seen one way to “bind” a variable, namely by passing in an argument with the same name. Since the function <code>(y) -&gt; x</code> doesn’t have an argument named <code>x</code>, the variable <code>x</code> isn’t bound in this function, which makes it “free.”</p>
+<p>The function <code>(y) -&gt; x</code> is interesting. It contains a <em>free variable</em>, <code>x</code>.<sup id="fnref:nonlocal"><a href="#fn:nonlocal" rel="footnote">10</a></sup> A free variable is one that is not bound within the function. Up to now, we’ve only seen one way to “bind” a variable, namely by passing in an argument with the same name. Since the function <code>(y) -&gt; x</code> doesn’t have an argument named <code>x</code>, the variable <code>x</code> isn’t bound in this function, which makes it “free.”</p>
 
 <p>Now that we know that variables used in a function are either bound or free, we can bifurcate functions into those with free variables and those without:</p>
 
@@ -680,8 +679,7 @@ A&gt; Now let’s have an Espresso before we continue!</p>
 
 <p>The effect of this is to insert a new, empty environment in between the global environment and your own functions: <code>{x: 1, '..': {'..': </code><em>global environment</em><code>}}</code>. As we’ll see when we discuss mutable state, this helps to prevent programmers from accidentally changing the global state that is shared by code in every file.</p>
 
-<pre><code>  ## Summary
-</code></pre>
+<h2 id="summary">Summary</h2>
 
 <p>T&gt; ### Functions
 T&gt;
@@ -698,8 +696,7 @@ T&gt; * Variables can shadow variables in an enclosing scope.</p>
 
 <p><img src="images/diplomatico.jpg" alt="Cafe Diplomatico in Toronto's Little Italy" /></p>
 
-<pre><code>  ## Let Me Show You What To Do
-</code></pre>
+<h2 id="let-me-show-you-what-to-do">Let Me Show You What To Do</h2>
 
 <h3 id="let">let</h3>
 
@@ -741,15 +738,15 @@ T&gt; * Variables can shadow variables in an enclosing scope.</p>
   #=&gt; 6.2831853
 </code></pre>
 
-<p>That works! We can bind anything we want and use it in a function by wrapping the function in another function that is immediately invoked with the value we want to bind. This “functional programming pattern” was popularized in the Lisp programming language more than 50 years ago, where it is called <a href="http://jtra.cz/stuff/lisp/sclr/let.html"><code>let</code></a>.<sup id="fnref:let"><a href="#fn:let" rel="footnote">10</a></sup> Although CoffeeScript doesn’t have a <code>let</code> keyword, when we discuss this programming pattern we will call it <code>let</code>.</p>
+<p>That works! We can bind anything we want and use it in a function by wrapping the function in another function that is immediately invoked with the value we want to bind. This “functional programming pattern” was popularized in the Lisp programming language more than 50 years ago, where it is called <a href="http://jtra.cz/stuff/lisp/sclr/let.html"><code>let</code></a>.<sup id="fnref:let"><a href="#fn:let" rel="footnote">11</a></sup> Although CoffeeScript doesn’t have a <code>let</code> keyword, when we discuss this programming pattern we will call it <code>let</code>.</p>
 
-<p><code>let</code> works,<sup id="fnref:letrec"><a href="#fn:letrec" rel="footnote">11</a></sup> but only a masochist would write programs this way in CoffeeScript. Besides all the extra characters, it suffers from a fundamental semantic problem: there is a big visual distance between the name <code>Pi</code> and the value <code>3.14159265</code> we bind to it. They should be closer. Is there another way?</p>
+<p><code>let</code> works,<sup id="fnref:letrec"><a href="#fn:letrec" rel="footnote">12</a></sup> but only a masochist would write programs this way in CoffeeScript. Besides all the extra characters, it suffers from a fundamental semantic problem: there is a big visual distance between the name <code>Pi</code> and the value <code>3.14159265</code> we bind to it. They should be closer. Is there another way?</p>
 
 <p>Yes.</p>
 
 <h3 id="do">do</h3>
 
-<p>CoffeeScript programmers often wish to create a new environment and bind some values to names within it as <code>let</code> does. To make this easier to read and write, CoffeeScript provides some <em>syntactic sugar</em> called <code>do</code>.<sup id="fnref:ssugar"><a href="#fn:ssugar" rel="footnote">12</a></sup></p>
+<p>CoffeeScript programmers often wish to create a new environment and bind some values to names within it as <code>let</code> does. To make this easier to read and write, CoffeeScript provides some <em>syntactic sugar</em> called <code>do</code>.<sup id="fnref:ssugar"><a href="#fn:ssugar" rel="footnote">13</a></sup></p>
 
 <p><img src="images/sugarservice.jpg" alt="Italians seem to prefer espresso with plenty of sugar, while North Americans often drink it without" /></p>
 
@@ -776,8 +773,7 @@ X&gt; «(code/do1.coffee)</p>
 
 <p>A&gt; Dozens of pages into the book, we’re finally calling a function the way you’ll see functions being called in most production code. Sheesh.</p>
 
-<pre><code>  ## A Simple Question
-</code></pre>
+<h2 id="a-simple-question">A Simple Question</h2>
 
 <p>Both of the following produce the exact same result:</p>
 
@@ -881,8 +877,7 @@ X&gt; «(code/do1.coffee)</p>
 
 <p>What happens? There’s one outer <code>do (circumference = (...) -&gt;</code>, same as before. And then every time we invoke <code>circumference</code>, we also invoke <code>do (Pi = 3.14159265) -&gt;</code>, so we have a total of twenty-one function invocations. This is nearly twice as expensive.</p>
 
-<pre><code>  ## Making Things Easy
-</code></pre>
+<h2 id="making-things-easy">Making Things Easy</h2>
 
 <p>In <em>CoffeeScript Ristretto</em>, we are focusing on CoffeeScript’s <em>semantics</em>, the meaning of CoffeeScript programs. As we go along, we’re learning just enough CoffeeScript to understand the next concept simply and directly.</p>
 
@@ -935,13 +930,9 @@ X&gt; «(code/do1.coffee)</p>
   alert("Frobbish value: #{frobbish}")
   snarglivate(frobbish)
   frobbish
-
-  
-
-  
-
-  ## Summary
 </code></pre>
+
+<h2 id="summary-1">Summary</h2>
 
 <p>T&gt; ### More About Functions And Scope
 T&gt;
@@ -965,7 +956,7 @@ T&gt; * CoffeeScript has <code>if</code>, <code>then</code>, <code>'else</code> 
 
 <h1 id="poco">References, Identity, Arrays, and Objects</h1>
 
-<h3 id="a-simple-question">a simple question</h3>
+<h3 id="a-simple-question-1">a simple question</h3>
 
 <p>Consider this code:</p>
 
@@ -1040,7 +1031,7 @@ T&gt; * CoffeeScript has <code>if</code>, <code>then</code>, <code>'else</code> 
 
 <p>Cool, arrays work a lot like arrays in other languages and are zero-based. The trouble with this example is that strings are value types in CoffeeScript, so we have no idea whether <code>a[0]</code> always gives us the same value back like looking up a name in an environment, or whether it does some magic that tries to give us a new value.</p>
 
-<p>We need to put a reference type into an array. If we get the same thing back, we know that the array stores a reference to whatever you put into it. If you get something different back, you know that arrays store copies of things.<sup id="fnref:hunh"><a href="#fn:hunh" rel="footnote">13</a></sup></p>
+<p>We need to put a reference type into an array. If we get the same thing back, we know that the array stores a reference to whatever you put into it. If you get something different back, you know that arrays store copies of things.<sup id="fnref:hunh"><a href="#fn:hunh" rel="footnote">14</a></sup></p>
 
 <p>Let’s test it:</p>
 
@@ -1066,7 +1057,7 @@ T&gt; * CoffeeScript has <code>if</code>, <code>then</code>, <code>'else</code> 
 
 <p>CoffeeScript also provides objects. The word “object” is loaded in programming circles, due to the widespread use of the term “object-oriented programming” that was coined by Alan Kay but has since come to mean many, many things to many different people.</p>
 
-<p>In CoffeeScript, Objects<sup id="fnref:poco"><a href="#fn:poco" rel="footnote">14</a></sup> are values that can store other values by name (including functions). The most common syntax for creating an object is simple:</p>
+<p>In CoffeeScript, Objects<sup id="fnref:poco"><a href="#fn:poco" rel="footnote">15</a></sup> are values that can store other values by name (including functions). The most common syntax for creating an object is simple:</p>
 
 <pre><code>{ year: 2012, month: 6, day: 14 }
 </code></pre>
@@ -1126,8 +1117,7 @@ T&gt; * CoffeeScript has <code>if</code>, <code>then</code>, <code>'else</code> 
 
 <p>It’s time to change <em>everything</em>.</p>
 
-<pre><code>  ## Reassignment and Mutation
-</code></pre>
+<h2 id="reassignment-and-mutation">Reassignment and Mutation</h2>
 
 <p>Like most imperative programming languages, CoffeeScript allows you to re-assign the value of variables. The syntax is familiar to users of most popular languages:</p>
 
@@ -1273,7 +1263,7 @@ T&gt; * CoffeeScript has <code>if</code>, <code>then</code>, <code>'else</code> 
 <pre><code>do (identity = ((x) -&gt; x), kestrel = (x) -&gt; (y) -&gt; x) -&gt;
 </code></pre>
 
-<p>To see how <code>letrec</code> differs from <code>let</code>, consider writing a recursive function<sup id="fnref:y"><a href="#fn:y" rel="footnote">15</a></sup> like <code>pow</code>. <code>pow</code> takes two arguments, <code>n</code> and <code>p</code>, and returns <code>n</code> raised to the <code>p</code>^th^ power. For simplicity, we’ll assume that <code>p</code> is an integer.</p>
+<p>To see how <code>letrec</code> differs from <code>let</code>, consider writing a recursive function<sup id="fnref:y"><a href="#fn:y" rel="footnote">16</a></sup> like <code>pow</code>. <code>pow</code> takes two arguments, <code>n</code> and <code>p</code>, and returns <code>n</code> raised to the <code>p</code>^th^ power. For simplicity, we’ll assume that <code>p</code> is an integer.</p>
 
 <pre><code>do (pow = undefined) -&gt;
   pow = (n, p) -&gt;
@@ -1331,8 +1321,7 @@ T&gt; * CoffeeScript has <code>if</code>, <code>then</code>, <code>'else</code> 
 T&gt;
 T&gt; The <code>letrec</code> pattern allows us to bind interdependent and recursive expressions.</p>
 
-<pre><code>  ## Normal Variables
-</code></pre>
+<h2 id="normal-variables">Normal Variables</h2>
 
 <p>Now that we’ve discussed reassignment, it’s time to discuss <em>assignment</em>.</p>
 
@@ -1371,7 +1360,7 @@ falsehood = kestrel(identity)
   #=&gt; 49, not 50
 </code></pre>
 
-<p>The second is that you may accidentally alias an existing variable if you are not careful. If you’re in the habit of creating a lot of your variables with assignments rather than with <code>do</code>, you must be careful to scan the source of all of your function’s parents to ensure you haven’t accidentally reused the name of an existing binding.<sup id="fnref:worse"><a href="#fn:worse" rel="footnote">16</a></sup></p>
+<p>The second is that you may accidentally alias an existing variable if you are not careful. If you’re in the habit of creating a lot of your variables with assignments rather than with <code>do</code>, you must be careful to scan the source of all of your function’s parents to ensure you haven’t accidentally reused the name of an existing binding.<sup id="fnref:worse"><a href="#fn:worse" rel="footnote">17</a></sup></p>
 
 <p>A&gt; CoffeeScript calls creating new bindings with assignment “normal ,” because it’s how most programmers normally create bindings. Just remember that if anyone criticizes CoffeeScript for being loose with scoping and aliases, you can always show them how to use <code>do</code> to emulate <code>let</code> and <code>letrec</code>.</p>
 
@@ -1387,8 +1376,7 @@ falsehood = kestrel(identity)
 
 <p><code>do</code> is a good pattern to know and deeply understand, but it is generally sufficient to write with normal variables. If you see a lot of <code>do</code> in this book, that is because we are writing to be excruciatingly clear, not to construct software that is easy to read and maintain in a team setting.</p>
 
-<pre><code>  ## Comprehensions {#comprehensions}
-</code></pre>
+<h2 id="comprehensions">Comprehensions</h2>
 
 <p><img src="images/cupping.jpg" alt="Cupping Grinds" /></p>
 
@@ -1487,14 +1475,13 @@ yourName
 
 <p>T&gt; <a href="http://coffeescript.org/#loops">Comprehensions</a> are extraordinarily useful for working with collections, but their loop variables are normal variables and may require special care to obtain the desired results. Also worth noting: Comprehensions may be the <em>only</em> place where <code>let</code> or <code>do</code> is <em>necessary</em> in CoffeeScript. Every other case can probably be handled with appropriate use of normal variables.</p>
 
-<pre><code>  ## Encapsulating State with Closures {#encapsulation}
-</code></pre>
+<h2 id="encapsulation">Encapsulating State with Closures</h2>
 
 <blockquote>
   <p>OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme late-binding of all things.–<a href="http://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en">Alan Kay</a></p>
 </blockquote>
 
-<p>We’re going to look at encapsulation using CoffeeScript’s functions and objects. We’re not going to call it object-oriented programming, mind you, because that would start a long debate. This is just plain encapsulation<sup id="fnref:encapsulation"><a href="#fn:encapsulation" rel="footnote">17</a></sup>, with a dash of information-hiding.</p>
+<p>We’re going to look at encapsulation using CoffeeScript’s functions and objects. We’re not going to call it object-oriented programming, mind you, because that would start a long debate. This is just plain encapsulation<sup id="fnref:encapsulation"><a href="#fn:encapsulation" rel="footnote">18</a></sup>, with a dash of information-hiding.</p>
 
 <h3 id="what-is-hiding-of-state-process-and-why-does-it-matter">what is hiding of state-process, and why does it matter?</h3>
 
@@ -1524,7 +1511,7 @@ yourName
 
 <p>We’ve been introduced to CoffeeScript’s objects, and it’s fairly easy to see that objects can be used to model what other programming languages call (variously) records, structs, frames, or what-have-you. And given that their elements are mutable, they can clearly model state.</p>
 
-<p>Given an object that holds our state (an array and an index<sup id="fnref:length"><a href="#fn:length" rel="footnote">18</a></sup>), we can easily implement our three operations as functions. Bundling the functions with the state does not require any special “magic” features. CoffeeScript objects can have elements of any type, including functions:</p>
+<p>Given an object that holds our state (an array and an index<sup id="fnref:length"><a href="#fn:length" rel="footnote">19</a></sup>), we can easily implement our three operations as functions. Bundling the functions with the state does not require any special “magic” features. CoffeeScript objects can have elements of any type, including functions:</p>
 
 <pre><code>stack = do (obj = undefined) -&gt;
   obj =
@@ -1628,9 +1615,11 @@ A&gt; We’ve built something with hidden internal state and “methods,” all 
 A&gt;
 A&gt; Then again, the key lesson experienced programmers repeat (although it often falls on deaf ears) is, <a href="http://www.c2.com/cgi/wiki?CompositionInsteadOfInheritance">Composition instead of Inheritance</a>. So maybe we aren’t missing much.</p>
 
+<h2 id="composition">Composition and Extension</h2>
+
 <h3 id="composition">composition</h3>
 
-<p>A deeply fundamental practice is to build components out of smaller components. The choice of how to divide a component into smaller components is called <em>factoring</em>, after the operation in number theory <sup id="fnref:refactoring"><a href="#fn:refactoring" rel="footnote">19</a></sup>. </p>
+<p>A deeply fundamental practice is to build components out of smaller components. The choice of how to divide a component into smaller components is called <em>factoring</em>, after the operation in number theory <sup id="fnref:refactoring"><a href="#fn:refactoring" rel="footnote">20</a></sup>. </p>
 
 <p>The simplest and easiest way to build components out of smaller components in CoffeeScript is also the most obvious: Each component is a value, and the components can be put together into a single object or encapsulated with a closure.</p>
 
@@ -1696,7 +1685,7 @@ ModelMaker = (initialAttributes = {}) -&gt;
       tail &lt; head
 </code></pre>
 
-<p>Now we wish to create a <a href="https://en.wikipedia.org/wiki/Double-ended_queue" title="Double-ended queue">deque</a> by adding <code>pullTail</code> and <code>pushHead</code> operations to our queue.<sup id="fnref:wasa"><a href="#fn:wasa" rel="footnote">20</a></sup> Unfortunately, encapsulation prevents us from adding operations that interact with the hidden data structures.</p>
+<p>Now we wish to create a <a href="https://en.wikipedia.org/wiki/Double-ended_queue" title="Double-ended queue">deque</a> by adding <code>pullTail</code> and <code>pushHead</code> operations to our queue.<sup id="fnref:wasa"><a href="#fn:wasa" rel="footnote">21</a></sup> Unfortunately, encapsulation prevents us from adding operations that interact with the hidden data structures.</p>
 
 <p>This isn’t really surprising: The entire point of encapsulation is to create an opaque data structure that can only be manipulated through its public interface. The design goals of encapsulation and extension are always going to exist in tension.</p>
 
@@ -1754,8 +1743,7 @@ DequeMaker = -&gt;
 
 <p>T&gt; Encapsulation and Extension exist in a natural state of tension. A program with elaborate encapsulation resists breakage but can also be difficult to refactor in other ways. Be mindful of when it’s best to Compose and when it’s best to Extend.</p>
 
-<pre><code>  ## This and That {#this}
-</code></pre>
+<h2 id="this">This and That</h2>
 
 <p>Let’s take another look at <a href="#extensible">extensible objects</a>. Here’s a Queue:</p>
 
@@ -1860,7 +1848,7 @@ banksQueue.pushTail('Hello')
 banksQueue.pushTail('CoffeeScript') 
 </code></pre>
 
-<p>Every time you invoke a function that is a member of an object, CoffeeScript binds that object to the name <code>this</code> in the environment of the function just as if it was an argument.<sup id="fnref:this"><a href="#fn:this" rel="footnote">21</a></sup> Now we can easily make copies:</p>
+<p>Every time you invoke a function that is a member of an object, CoffeeScript binds that object to the name <code>this</code> in the environment of the function just as if it was an argument.<sup id="fnref:this"><a href="#fn:this" rel="footnote">22</a></sup> Now we can easily make copies:</p>
 
 <pre><code>copyOfQueue = extend({}, banksQueue)
 copyOfQueue.array = (element for element in banksQueue.array)
@@ -1949,6 +1937,8 @@ A&gt; For example, if you put a <code>return 'foo'</code> inside a <code>do</cod
 
 <p>The fat arrow says, “Treat this function as if we did the <code>this</code> and <code>that</code> idiom, so that whenever I refer to <code>this</code>, I get the outer one.” Which is exactly what we want if we don’t care to rearrange our code.</p>
 
+<h2 id="summary-2">Summary</h2>
+
 <p>T&gt; ### Objects, Mutation, and State
 T&gt;
 T&gt; * CoffeeScript permits reassignment/rebinding of variables.
@@ -1967,12 +1957,11 @@ T&gt; * The fat arrow (<code>=&gt;</code>) is syntactic sugar for binding <code>
 
 <p><img src="images/beans1.jpg" alt="Other languages call their objects &quot;beans,&quot; but serve extra-weak coffee in an attempt to be all things to all people" /></p>
 
-<p>As discussed in <a href="#poco">References, Identity, Arrays, and Objects</a> and again in <a href="#encapsulation">Encapsulating State</a>, CoffeeScript objects are very simple, yet the combination of objects, functions, and closures can create powerful data structures. That being said, there are language features that cannot be implemented with Plain Old CoffeeScript Objects, functions, and closures<sup id="fnref:turing"><a href="#fn:turing" rel="footnote">22</a></sup>.</p>
+<p>As discussed in <a href="#poco">References, Identity, Arrays, and Objects</a> and again in <a href="#encapsulation">Encapsulating State</a>, CoffeeScript objects are very simple, yet the combination of objects, functions, and closures can create powerful data structures. That being said, there are language features that cannot be implemented with Plain Old CoffeeScript Objects, functions, and closures<sup id="fnref:turing"><a href="#fn:turing" rel="footnote">23</a></sup>.</p>
 
 <p>One of them is <em>inheritance</em>. In CoffeeScript, inheritance provides a cleaner, simpler mechanism for extending data structures, domain models, and anything else you represent as a bundle of state and operations.</p>
 
-<pre><code>  ## Prototypes are Simple, it's the Explanations that are Hard To Understand
-</code></pre>
+<h2 id="prototypes-are-simple-its-the-explanations-that-are-hard-to-understand">Prototypes are Simple, it’s the Explanations that are Hard To Understand</h2>
 
 <p>As you recall from our code for making objects <a href="#extensible">extensible</a>, we wrote a function that returned a Plain Old CoffeeScript Object. The colloquial term for this kind of function is a “Factory Function.”</p>
 
@@ -2049,7 +2038,7 @@ another.language
   #=&gt; 'Sumerian'
 </code></pre>
 
-<p>Even more interesting: Changing the constructor’s prototype changes the behaviour of all of its instances. This strongly implies that there is a dynamic relationship between instances and their constructors, rather than some kind of mechanism that makes objects by copying.<sup id="fnref:dynamic"><a href="#fn:dynamic" rel="footnote">23</a></sup></p>
+<p>Even more interesting: Changing the constructor’s prototype changes the behaviour of all of its instances. This strongly implies that there is a dynamic relationship between instances and their constructors, rather than some kind of mechanism that makes objects by copying.<sup id="fnref:dynamic"><a href="#fn:dynamic" rel="footnote">24</a></sup></p>
 
 <p>Speaking of prototypes, here’s something else that’s very interesting:</p>
 
@@ -2173,7 +2162,7 @@ extend(Queue.prototype,
 
 <p>Somehow, when we write <code>"Spence Olham".split(' ')</code>, the string <code>"Spence Olham"</code> isn’t an instance, it doesn’t have methods, but it does a damn fine job of impersonating an instance of a <code>String</code> constructor. How does <code>"Spence Olham"</code> impersonate an instance?</p>
 
-<p>CoffeeScript pulls some legerdemain. When you do something that treats a value like an object, CoffeeScript checks to see whether the value actually is an object. If the value is actually a primitive,<sup id="fnref:reminder"><a href="#fn:reminder" rel="footnote">24</a></sup> CoffeeScript temporarily makes an object that is a kinda-sorta copy of the primitive and that kinda-sorta copy has methods and you are temporarily fooled into thinking that <code>"Spence Olham"</code> has a <code>.split</code> method.</p>
+<p>CoffeeScript pulls some legerdemain. When you do something that treats a value like an object, CoffeeScript checks to see whether the value actually is an object. If the value is actually a primitive,<sup id="fnref:reminder"><a href="#fn:reminder" rel="footnote">25</a></sup> CoffeeScript temporarily makes an object that is a kinda-sorta copy of the primitive and that kinda-sorta copy has methods and you are temporarily fooled into thinking that <code>"Spence Olham"</code> has a <code>.split</code> method.</p>
 
 <p>These kinda-sorta copies are called String <em>instances</em> as opposed to String <em>primitives</em>. And the instances have methods, while the primitives do not. How does CoffeeScript make an instance out of a primitive? With <code>new</code>, of course. Let’s try it:</p>
 
@@ -2241,8 +2230,7 @@ original(new Boolean(true) is true
 
 <p>Of course, <code>original</code> will not work for your own creations unless you take great care to emulate the same behaviour. But it does work for strings, numbers, and booleans.</p>
 
-<pre><code>  ## A Touch of Class
-</code></pre>
+<h2 id="a-touch-of-class">A Touch of Class</h2>
 
 <p>CoffeeScript has “classes,” for some definition of “class.” You’ve met them already, they’re constructors that are designed to work with the <code>new</code> keyword and have behaviour in their <code>.prototype</code> element. You can create one any time you like by:</p>
 
@@ -2405,8 +2393,7 @@ Queue.queues = 0
 T&gt;
 T&gt; CoffeeScript’s <code>class</code> statement is a nice syntactic convenience over manually wiring everything up, and it may help avoid errors. Since most CoffeeScript programmers will use “classes,” it’s wise to use the class statement when the underlying semantics are what you want. That way your code will communicate its intent clearly and be a little more resistant to small errors.</p>
 
-<pre><code>  ## Object Methods {#object-methods}
-</code></pre>
+<h2 id="object-methods">Object Methods</h2>
 
 <p>An <em>instance method</em> is a function defined in the constructor’s prototype. Every instance acquires this behaviour unless otherwise “overridden.” Instance methods usually have some interaction with the instance, such as references to <code>this</code> or to other methods that interact with the instance. A <em>constructor method</em> is a function belonging to the constructor itself.</p>
 
@@ -2468,8 +2455,7 @@ T&gt; CoffeeScript’s <code>class</code> statement is a nice syntactic convenie
 
 <p><code>set</code>, <code>get</code>, and <code>has</code> are instance methods, but <code>id</code> is an object method: Each object has its own <code>id</code> closure, where <code>id</code> is bound to the id of the widget by the argument <code>id</code> in the constructor. The advantage of this approach is that instances can have different object methods, or object methods with their own closures as in this case. The disadvantage is that every object has its own methods, which uses up much more memory than instance methods, which are shared amongst all instances.</p>
 
-<pre><code>  ## Canonicalization
-</code></pre>
+<h2 id="canonicalization">Canonicalization</h2>
 
 <p>Early in this book, we discussed how objects, arrays, and functions are <em>reference types</em>. When we create a new object, even if it has the same contents as some other object, it is a different value, as we can tell when we test its identity with <code>is</code>:</p>
 
@@ -2542,11 +2528,13 @@ T&gt; CoffeeScript’s <code>class</code> statement is a nice syntactic convenie
 
 <p>If there are a tractable number of possible instances of a class (such as cards in a deck), it may be more practical to enumerate them all in advance rather than lazily create them, and/or to use a factory method to retried them rather than changing the behaviour of the constructor.</p>
 
-<p>More serious is that the engine that executes CoffeeScript programs does not support weak references.<sup id="fnref:wr"><a href="#fn:wr" rel="footnote">25</a></sup> As a result, if you wish to perform cache eviction for memory management purposes, you will have to implement your own reference management scheme. This may be non-trivial.</p>
+<p>More serious is that the engine that executes CoffeeScript programs does not support weak references.<sup id="fnref:wr"><a href="#fn:wr" rel="footnote">26</a></sup> As a result, if you wish to perform cache eviction for memory management purposes, you will have to implement your own reference management scheme. This may be non-trivial.</p>
 
 <p>If you have many, many possible instances, your cache can end up holding onto what some programmers call <em>zombie objects</em>: Objects that are not in use anywhere in your program except the cache. If they are never accessed again, the memory they take up will never be released for reuse. An early version of the HashLife implementation did not clear objects from the cache. Some computations would consume as much as 700MB of data for the cache before the virtual machine was unable to continue. Most of that memory was consumed by zombie objects.</p>
 
 <p>All that being said, canonicalization is sometimes the appropriate path forward, and even if it isn’t, it serves to illustrate the possibilities latent in writing constructors that return objects explicitly.</p>
+
+<h2 id="this-section-needs-no-title">This Section Needs No Title</h2>
 
 <p>CoffeeScript is fundamentally an object-oriented language in the sense that Alan Kay first described object orientation. His vision was of software constructed from entities that communicate with message passing, with the system being extremely dynamic (what he described as “extreme late-binding”). However, words and phrases are only useful when both writer and reader share a common understanding, and for many people the words “object-oriented” carry with them a great deal of baggage related to constructing ontologies of domain entities.</p>
 
@@ -2556,8 +2544,7 @@ T&gt; CoffeeScript’s <code>class</code> statement is a nice syntactic convenie
 
 <p>We’ll finish by looking at the excellent support CoffeeScript provides so that you can accomplish all of this with a single keyword.</p>
 
-<pre><code>  ## Extending Classes {#classextension}
-</code></pre>
+<h2 id="classextension">Extending Classes</h2>
 
 <p>You recall from <a href="#extensible">Composition and Extension</a> that we extended a Plain Old CoffeeScript Queue to create a Plain Old CoffeeScript Deque. But what if we have decided to use CoffeeScript’s prototypes and class statements instead of Plain Old CoffeeScript Objects? How do we extend a queue into a deque?</p>
 
@@ -2739,7 +2726,7 @@ xtend(B, A)
 <pre><code>B extends A
 </code></pre>
 
-<p>Most helpful! In fact, CoffeeScript’s keyword is superior to the <code>xtend</code> function: It provides support for extending functions that have other properties, not just the prototype.<sup id="fnref:xt"><a href="#fn:xt" rel="footnote">26</a></sup> </p>
+<p>Most helpful! In fact, CoffeeScript’s keyword is superior to the <code>xtend</code> function: It provides support for extending functions that have other properties, not just the prototype.<sup id="fnref:xt"><a href="#fn:xt" rel="footnote">27</a></sup> </p>
 
 <p>How about the class statement? CoffeeScript does a lot more work for you if you wish. You can write:</p>
 
@@ -2759,12 +2746,10 @@ xtend(B, A)
 <ol>
   <li>CoffeeScript will do even more work for you. If you aren’t doing any extra setup, you can leave the constructor out. CoffeeScript will handle calling the extended function’s constructor for you.</li>
   <li>If you do wish to do some extra setup, write your own constructor. Like Ruby, you can call <code>super</code> in any method to access the extended version of the same method.</li>
-  <li>
-    <p>CoffeeScript’s <code>class</code> and <code>extends</code> keywords handle a lot of the boilerplate and play nicely together. Use them unless you have specific needs they don’t cover.</p>
-
-    <p>## Summary</p>
-  </li>
+  <li>CoffeeScript’s <code>class</code> and <code>extends</code> keywords handle a lot of the boilerplate and play nicely together. Use them unless you have specific needs they don’t cover.</li>
 </ol>
+
+<h2 id="summary-3">Summary</h2>
 
 <p>T&gt; ### Instances and Classes
 T&gt;
@@ -2811,8 +2796,7 @@ T&gt; * <code>extends</code> plays well with <code>class</code>.</p>
 
 <p><img src="images/intestines.jpg" alt="The Intestines of an Espresso Machine" /></p>
 
-<pre><code>  ## Refactoring to Combinators {#combinators}
-</code></pre>
+<h2 id="combinators">Refactoring to Combinators</h2>
 
 <p>The word “combinator” has a precise technical meaning in mathematics:</p>
 
@@ -2843,7 +2827,7 @@ new Fibonacci(45).toInt()
 
 <p>Why is it so slow? Well, it has a nasty habit of recalculating the same results over and over and over again. We could rearrange the computation to avoid this, but let’s be lazy and trade space for time. What we want to do is use a lookup table. Whenever we want a result, we look it up. If we don’t have it, we calculate it and write the result in the table to use in the future. If we do have it, we return the result without recalculating it.</p>
 
-<p>We could write something specific for fibonacci and then generalize it, but let’s skip right to a general solution (we’ll discuss extracting a combinator below). First, a new feature. Within any function the name <code>arguments</code> is always bound to an object that behaves like a collection of all the arguments passed to a function. Using <code>arguments</code>, here is a <code>memoize</code> implementation that works for many<sup id="fnref:json"><a href="#fn:json" rel="footnote">27</a></sup> kinds of functions:</p>
+<p>We could write something specific for fibonacci and then generalize it, but let’s skip right to a general solution (we’ll discuss extracting a combinator below). First, a new feature. Within any function the name <code>arguments</code> is always bound to an object that behaves like a collection of all the arguments passed to a function. Using <code>arguments</code>, here is a <code>memoize</code> implementation that works for many<sup id="fnref:json"><a href="#fn:json" rel="footnote">28</a></sup> kinds of functions:</p>
 
 <pre><code>memoized = (fn) -&gt;
   do (lookupTable = {}, key = undefined, value = undefined) -&gt;
@@ -2983,12 +2967,11 @@ ensureItIsInitialized = once(initializeIt)
 
 <p>All of this is made possible by the simple property of <em>composability</em>, the property of combinators taking a function as an argument and returning a function that operates on the same arguments and returns something meaningful to code expecting to call the original function.</p>
 
-<pre><code>  ## Method Decorators
-</code></pre>
+<h2 id="method-decorators">Method Decorators</h2>
 
 <p>Now that we’ve seen how function combinators can make our code cleaner and DRYer, it isn’t a great leap to ask if we can use combinators with methods. After all, methods are functions. That’s one of the great strengths of CoffeeScript, since methods are “just” functions, we don’t need to have one kind of tool for functions and another for methods, or a messy way of turning methods into functions and functions into methods.</p>
 
-<p>And the answer is, “Yes we can.” With some caveats. Let’s get our terminology  synchronized. A combinator is a function that modifies another function. A <em>method decorator</em> is a combinator that modifies a method expression used inline. So, all method decorators are combinators, but not all combinators are method decorators.<sup id="fnref:py"><a href="#fn:py" rel="footnote">28</a></sup></p>
+<p>And the answer is, “Yes we can.” With some caveats. Let’s get our terminology  synchronized. A combinator is a function that modifies another function. A <em>method decorator</em> is a combinator that modifies a method expression used inline. So, all method decorators are combinators, but not all combinators are method decorators.<sup id="fnref:py"><a href="#fn:py" rel="footnote">29</a></sup></p>
 
 <h3 id="decorating-object-methods">decorating object methods</h3>
 
@@ -3178,8 +3161,7 @@ provided =
 
 <p>All four of these, and many more can be found in the <a href="https://github.com/raganwald/method-combinators">method combinators</a> module. They can be used with all CoffeeScript and JavaScript projects.</p>
 
-<pre><code>  ## Callbacks and Promises
-</code></pre>
+<h2 id="callbacks-and-promises">Callbacks and Promises</h2>
 
 <p>Like nearly all languages in widespread use, CoffeeScript expresses programs as expressions that are composed together with a combination of operators, function application, and control flow constructs such as sequences of statements.</p>
 
@@ -3342,7 +3324,7 @@ sequenceWithCallbacks = -&gt;
 
 <h3 id="promises-3">solving this problem with promises</h3>
 
-<p>Asynchronous control flow can also be expressed using objects and methods. One model is called <a href="http://wiki.commonjs.org/wiki/Promises/A">promises</a>. A <em>promise</em> is an object that acts as a state machine.<sup id="fnref:fsm"><a href="#fn:fsm" rel="footnote">29</a></sup> Its permissible states are:</p>
+<p>Asynchronous control flow can also be expressed using objects and methods. One model is called <a href="http://wiki.commonjs.org/wiki/Promises/A">promises</a>. A <em>promise</em> is an object that acts as a state machine.<sup id="fnref:fsm"><a href="#fn:fsm" rel="footnote">30</a></sup> Its permissible states are:</p>
 
 <ul>
   <li>unfulfilled</li>
@@ -3352,7 +3334,7 @@ sequenceWithCallbacks = -&gt;
 
 <p>The only permissible transitions are from <em>unfulfilled</em> to <em>fulfilled</em> and from <em>unfulfilled</em> to <em>failed</em>. Once in either the fulfilled or failed states, it remains there permanently.</p>
 
-<p>Each promise must at a bare minimum implement a single method, <code>.then(fulfilledCallback, failedCallback)</code>.<sup id="fnref:interactive"><a href="#fn:interactive" rel="footnote">30</a></sup> <code>fulfilledCallback</code> is a function to be invoked by a fulfilled promise, <code>failedCallback</code> by a failed promise. If the promise is already in either state, that function is invoked immediately.</p>
+<p>Each promise must at a bare minimum implement a single method, <code>.then(fulfilledCallback, failedCallback)</code>.<sup id="fnref:interactive"><a href="#fn:interactive" rel="footnote">31</a></sup> <code>fulfilledCallback</code> is a function to be invoked by a fulfilled promise, <code>failedCallback</code> by a failed promise. If the promise is already in either state, that function is invoked immediately.</p>
 
 <p><code>.then</code> returns another promise that is fulfilled when the appropriate callback is fulfilled or fails when the appropriate callback fails. This allows chaining of <code>.then</code> calls.</p>
 
@@ -3368,8 +3350,7 @@ sequenceWithCallbacks = -&gt;
 
 <p>Crisp and clean, no caffeine. The promises model provides linear code “out of the box,” and it “scales up” to serve as a complete platform for managing asynchronous code and remote invocation. Be sure to look at libraries supporting promises like <a href="https://github.com/kriskowal/q">q</a>, and <a href="https://github.com/cujojs/when">when</a>.</p>
 
-<pre><code>  ## Summary
-</code></pre>
+<h2 id="summary-4">Summary</h2>
 
 <p>T&gt; ### An Extra Shot of Ideas
 T&gt;
@@ -3392,14 +3373,15 @@ T&gt; * Promises represent control flow with an object API.</p>
 
 <p><img src="images/la_marzocco.jpg" alt="You've earned a break!" /></p>
 
-<pre><code>## How to run the examples {#online}
-</code></pre>
+<h2 id="online">How to run the examples</h2>
 
-<p>If you follow the instructions at <a href="http://coffeescript.org/#installation" title="Install CoffeeScript">coffeescript.org</a> to install NodeJS and CoffeeScript,<sup id="fnref:whoa"><a href="#fn:whoa" rel="footnote">31</a></sup> you can run an interactive CoffeeScript <a href="https://en.wikipedia.org/wiki/REPL" title="Read–eval–print loop">REPL</a> on your command line simply by typing <code>coffee</code>. This is how the examples in this book were tested, and what many programmers will do. When running CoffeeScript on the command line, ctrl-V switches between single-line and multi-line input mode. If you need to enter more than one line of code, be sure to enter multi-line mode.</p>
+<p>If you follow the instructions at <a href="http://coffeescript.org/#installation" title="Install CoffeeScript">coffeescript.org</a> to install NodeJS and CoffeeScript,<sup id="fnref:whoa"><a href="#fn:whoa" rel="footnote">32</a></sup> you can run an interactive CoffeeScript <a href="https://en.wikipedia.org/wiki/REPL" title="Read–eval–print loop">REPL</a> on your command line simply by typing <code>coffee</code>. This is how the examples in this book were tested, and what many programmers will do. When running CoffeeScript on the command line, ctrl-V switches between single-line and multi-line input mode. If you need to enter more than one line of code, be sure to enter multi-line mode.</p>
 
 <p>Some websites function as online <a href="https://en.wikipedia.org/wiki/REPL" title="Read–eval–print loop">REPLs</a>, allowing you to type CoffeeScript programs right within a web page and see the results (as well as a translation from CoffeeScript to JavaScript). The examples in this book have all been tested on <a href="http://coffeescript.org/#try:">coffeescript.org</a>. You simply type a CoffeeScript expression into the blank window and you will see its JavaScript translation live. Clicking “Run” evaluates the expression in the browser.</p>
 
 <p>To actually see the result of your expressions, you’ll need to either include a call to <code>console.log</code> (and be using a browser that supports console logging) or you could go old-school and use <code>alert</code>, e.g. <code>alert 2+2</code> will cause the alert box to be displayed with the message <code>4</code>.</p>
+
+<h2 id="thanks">Thanks!</h2>
 
 <h3 id="daniel-friedman-and-matthias-felleisen">Daniel Friedman and Matthias Felleisen</h3>
 
@@ -3425,15 +3407,13 @@ T&gt; * Promises represent control flow with an object API.</p>
 
 <p>{pagebreak}</p>
 
-<pre><code>## JavaScript Allongé
-</code></pre>
+<h2 id="javascript-allong">JavaScript Allongé</h2>
 
 <p><img src="images/javascript_allonge_medium.jpg" alt="a long and strong programming book" /></p>
 
 <p><a href="http://leanpub.com/javascript-allonge">JavaScript Allongé</a> is the companion book to <em>CoffeeScript Ristretto</em>.</p>
 
-<pre><code>## Copyright Notice
-</code></pre>
+<h2 id="copyright-notice">Copyright Notice</h2>
 
 <p>The original words in this sample preview of <a href="https://leanpub.com/coffeescript-ristretto">CoffeeScript Ristretto</a> are (c) 2012, Reginald Braithwaite. This sample preview work is licensed under an <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Attribution-NonCommercial-NoDerivs 3.0 Unported</a> license.</p>
 
@@ -3477,8 +3457,7 @@ T&gt; * Promises represent control flow with an object API.</p>
   <li><a href="http://www.flickr.com/photos/joncrel/237026246/">Coffee Van with Bullet Holes</a> (c) 2006 Jon Crel. <a href="http://creativecommons.org/licenses/by-nd/2.0/deed.en">Some rights reserved</a>.</li>
 </ul>
 
-<pre><code>## About The Author
-</code></pre>
+<h2 id="about-the-author">About The Author</h2>
 
 <p>When he’s not shipping CoffeeScript, Ruby, JavaScript and Java applications scaling out to millions of users, Reg “Raganwald” Braithwaite has authored <a href="http://github.com/raganwald">libraries</a> for CoffeeScript, JavaScript and Ruby programming such as Method Combinators, Katy, JQuery Combinators, YouAreDaChef, andand, and others.</p>
 
@@ -3517,9 +3496,10 @@ in Nimbus Sans, and is snarfed wholesale from <a href="http://www.crystae.net/">
       <p>Elsewhere, we’ve pledged to avoid optional bits that don’t add a lot to our understanding. This optional bit gives us an excuse to learn about <code>undefined</code>, so that’s why it’s in. Now that we know this, we see that our expression <code>-&gt;</code> evaluates to a function taking no arguments and having no expression, therefore when you apply it to no arguments with <code>(-&gt;)()</code>, you get <code>undefined</code>.<a href="#fnref:omit" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:pedant">
-      <p>It does something else when the first argument is a string, but let’s ignore that bit of pedantry for now.</p>
-
-      <p>## Ah. I’d Like to Have an Argument, Please.<sup id="fnref:mp"><a href="#fn:mp" rel="footnote">32</a></sup> {#fargs}<a href="#fnref:pedant" rel="reference">&#8617;</a></p>
+      <p>It does something else when the first argument is a string, but let’s ignore that bit of pedantry for now.<a href="#fnref:pedant" rel="reference">&#8617;</a></p>
+    </li>
+    <li id="fn:mp">
+      <p><a href="http://www.mindspring.com/~mfpatton/sketch.htm">The Argument Sketch</a> from “Monty Python’s Previous Record” and “Monty Python’s Instant Record Collection”<a href="#fnref:mp" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:f2f">
       <p>We said that you can’t apply a function to an expression. You <em>can</em> apply a function to one or more functions. Functions are values! This has interesting applications, and they will be explored much more thoroughly in <a href="#consumers">Functions That Are Applied to Functions</a>.<a href="#fnref:f2f" rel="reference">&#8617;</a></p>
@@ -3552,9 +3532,7 @@ in Nimbus Sans, and is snarfed wholesale from <a href="http://www.crystae.net/">
       <p>“A language construct that facilitates the bundling of data with the methods (or other functions) operating on that data.”–<a href="https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)">Wikipedia</a><a href="#fnref:encapsulation" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:length">
-      <p>Yes, there’s another way to track the size of the array, but we don’t need it to demonstrate encapsulation and hiding of state.</p>
-
-      <p>## Composition and Extension {#composition}<a href="#fnref:length" rel="reference">&#8617;</a></p>
+      <p>Yes, there’s another way to track the size of the array, but we don’t need it to demonstrate encapsulation and hiding of state.<a href="#fnref:length" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:refactoring">
       <p>And when you take an already factored component and rearrange things so that it is factored into a different set of subcomponents without altering its behaviour, you are <em>refactoring</em>.<a href="#fnref:refactoring" rel="reference">&#8617;</a></p>
@@ -3563,9 +3541,7 @@ in Nimbus Sans, and is snarfed wholesale from <a href="http://www.crystae.net/">
       <p>Before you start wondering whether a deque is-a queue, we said nothing about types and classes. This relationship is called was-a, or “implemented in terms of a.”<a href="#fnref:wasa" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:this">
-      <p>CoffeeScript also does other things with <code>this</code> as well, but this is all we care about right now.</p>
-
-      <p>## Summary<a href="#fnref:this" rel="reference">&#8617;</a></p>
+      <p>CoffeeScript also does other things with <code>this</code> as well, but this is all we care about right now.<a href="#fnref:this" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:turing">
       <p>Since the CoffeeScript that we have presented so far is <a href="https://en.wikipedia.org/wiki/Turing_completeness" title="Computational Universality and Turing Completeness">computationally universal</a>, it is possible to perform any calculation with its existing feature set, including emulating any other programming language. Therefore, it is not theoretically necessary to have any further language features; If we need macros, continuations, generic functions, static typing, or anything else, we can <a href="https://en.wikipedia.org/wiki/Greenspun%27s_Tenth_Rule">greenspun</a> them ourselves. In practice, however, this is buggy, inefficient, and presents our fellow developers with serious challenges understanding our code.<a href="#fnref:turing" rel="reference">&#8617;</a></p>
@@ -3577,9 +3553,7 @@ in Nimbus Sans, and is snarfed wholesale from <a href="http://www.crystae.net/">
       <p>Recall that Strings, Numbers, Booleans and so forth are value types and primitives. We’re calling them primitives here.<a href="#fnref:reminder" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:wr">
-      <p>A <a href="https://en.wikipedia.org/wiki/Weak_reference">weak reference</a> is a reference that does not protect the referenced object from collection by a garbage collector; unlike a strong reference. An object referenced only by weak references is considered unreachable (or weakly reachable) and so may be collected at any time.</p>
-
-      <p>## This Section Needs No Title <a href="#fnref:wr" rel="reference">&#8617;</a></p>
+      <p>A <a href="https://en.wikipedia.org/wiki/Weak_reference">weak reference</a> is a reference that does not protect the referenced object from collection by a garbage collector; unlike a strong reference. An object referenced only by weak references is considered unreachable (or weakly reachable) and so may be collected at any time.<a href="#fnref:wr" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:xt">
       <p>You should almost always use <code>extends</code> rather than rolling your own code to chain functions and instances. And even if you let CoffeeScript do the work, you should always <em>understand</em> what CoffeeScript is doing for you.<a href="#fnref:xt" rel="reference">&#8617;</a></p>
@@ -3597,10 +3571,7 @@ in Nimbus Sans, and is snarfed wholesale from <a href="http://www.crystae.net/">
       <p>Interactive promises also support <code>.get</code> and <code>.call</code> methods for interacting with a potentially remote object.<a href="#fnref:interactive" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:whoa">
-      <p>Instructions for installing NodeJS and modules like CoffeeScript onto a desktop computer is beyond the scope of this book, especially given the speed with which things advance. Fortunately, there are always up-to-date instructions on the web.</p>
-
-      <h2 id="thanks">Thanks!</h2>
-      <p><a href="#fnref:whoa" rel="reference">&#8617;</a></p>
+      <p>Instructions for installing NodeJS and modules like CoffeeScript onto a desktop computer is beyond the scope of this book, especially given the speed with which things advance. Fortunately, there are always up-to-date instructions on the web.<a href="#fnref:whoa" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>
