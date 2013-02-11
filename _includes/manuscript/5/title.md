@@ -1,7 +1,7 @@
 
 #Finish the Cup: Instances and Classes {#methods}
 
-![Other languages call their objects "beans," but serve extra-weak coffee in an attempt to be all things to all people](images/beans1.jpg)
+![Other languages call their objects "beans," but serve extra-weak coffee in an attempt to be all things to all people](assets/images/beans1.jpg)
 
 As discussed in [References, Identity, Arrays, and Objects](#poco) and again in [Encapsulating State](#encapsulation), CoffeeScript objects are very simple, yet the combination of objects, functions, and closures can create powerful data structures. That being said, there are language features that cannot be implemented with Plain Old CoffeeScript Objects, functions, and closures[^turing].
 

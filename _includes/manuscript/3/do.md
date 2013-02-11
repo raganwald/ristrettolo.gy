@@ -56,7 +56,7 @@ CoffeeScript programmers often wish to create a new environment and bind some va
 [^ssugar]: "Syntactic sugar causes cancer of the semicolon"--[Alan Perlis][perlisisms]
 [perlisisms]: http://www.cs.yale.edu/quotes.html "Epigrams in Programming"
 
-![Italians seem to prefer espresso with plenty of sugar, while North Americans often drink it without](images/sugarservice.jpg)
+![Italians seem to prefer espresso with plenty of sugar, while North Americans often drink it without](assets/images/sugarservice.jpg)
 
 This is what our example looks like using `do`:
 

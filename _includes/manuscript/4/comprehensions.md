@@ -1,7 +1,7 @@
 
 ## Comprehensions {#comprehensions}
 
-![Cupping Grinds](images/cupping.jpg)
+![Cupping Grinds](assets/images/cupping.jpg)
 
 If you're the type of person who can "Write Lisp in any language," you could set about writing entire CoffeeScript programs using `let` and `letrec` patterns such that you don't have *any* normal variables. But being a CoffeeScript programmer, you will no doubt embrace normal variables. As you dive into CoffeeScript, you'll discover many helpful features that aren't "Lisp-y." Eschewing them is to cut against CoffeeScript's grain. One of those features is the [comprehension], a mechanism for working with collections that was popularized by Python.
 

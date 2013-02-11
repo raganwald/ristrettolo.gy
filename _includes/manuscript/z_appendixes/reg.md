@@ -16,4 +16,4 @@ He writes about programming on his "[Homoiconic][homo]" un-blog as well as gener
 Twitter: [@raganwald](https://twitter.com/raganwald)  
 Email: [reg@braythwayt.com](mailto:reg@braythwayt.com)
 
-![Reg "Raganwald" Braithwaite ](images/reg2.jpg)
+![Reg "Raganwald" Braithwaite ](assets/images/reg2.jpg)

@@ -5,6 +5,6 @@ This sample edition of the book includes both the fourth and the sixth full chap
 
 --Reginald "Raganwald" Braithwaite, Toronto, 2012
 
-![No, this is not the author: But he has free coffee!](images/freecoffee.jpg)
+![No, this is not the author: But he has free coffee!](assets/images/freecoffee.jpg)
 
 [buy]: http://leanpub.com/coffeescript-ristretto

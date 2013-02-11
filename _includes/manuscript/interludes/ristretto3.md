@@ -1,6 +1,6 @@
 ### interlude...
 
-![Drawing a Doppio](images/doppio.jpg)
+![Drawing a Doppio](assets/images/doppio.jpg)
 
 [Aaron De Lazzer][a] on Ristretto:
 

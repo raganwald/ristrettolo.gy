@@ -146,7 +146,7 @@ Putting the `@` prefix (and not `this.`) on a label as part of the structure ins
       
 We've added a constructor method to reset the count.
 
-![It seems there is Strong Typing in Coffeeland](images/types.jpg)
+![It seems there is Strong Typing in Coffeeland](assets/images/types.jpg)
 
 T> **Classes**
 T>

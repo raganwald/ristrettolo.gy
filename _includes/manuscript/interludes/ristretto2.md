@@ -1,6 +1,6 @@
 ### interlude...
 
-![A beautiful espresso machine](images/mirage.jpg)
+![A beautiful espresso machine](assets/images/mirage.jpg)
 
 [Michael Allen Smith][m] on Ristretto:
 

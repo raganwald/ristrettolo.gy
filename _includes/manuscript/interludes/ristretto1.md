@@ -1,6 +1,6 @@
 ### interlude...
 
-![A short, intense shot of espresso](images/espresso.jpg)
+![A short, intense shot of espresso](assets/images/espresso.jpg)
 
 [Wikipedia] on Ristretto:
 
