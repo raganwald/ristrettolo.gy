@@ -7,7 +7,7 @@ title: ristrettolo.gy, CoffeeScript Ristretto Online
 
 <iframe style="float:right;margin-left:20px;margin-bottom:20px;" width="160" height="400" src="https://leanpub.com/coffeescript-ristretto/embed" frameborder="0" allowtransparency="true"></iframe>
 
-Some time ago, Benjamin Stein and I rediscovered Haskell's Maybe Monad/Groovy's Elvis Operator and wrote a little Ruby helper called AndAnd. It was a hack, but it worked and inspired me to want to fix a lot of other "problems" I encountered with Ruby's syntax.
+Some time ago, Benjamin Stein and I rediscovered Haskell's Maybe Monad and wrote a little Ruby helper called #andand. It was a hack, but it worked and inspired me to want to fix a lot of other "problems" I encountered with Ruby's syntax.
 
 Unfortunately, you can only go so far with proxy objects, and eventually you find yourself confronted with a choice: Take the blue pill, forget about fixing the language, and live a happy life until old age or a passing asteroid claims you. Or take the red pill, and venture into hacking the syntax with parsers, grammars, ASTs, and whatever else you need to make things like `[1..100].map { its.first_name }` work.
 
@@ -50,6 +50,8 @@ The entire text is online, free, although I certainly encourage you to check out
 (*And yes, the formatting is terrible on the web at the moment, although it's great in the [ebook][cr]. This isn't a conspiracy, it's just that I'm working on the styling as I go. And if you want to help... Fork it and send me a pull request!*)
 
 ---
+
+The "Cover:"
 
 ![CoffeeScript Ristretto](assets/images/title_page.jpg)
 
