@@ -1,3 +1,4 @@
+
 ### interlude...
 
 ![A beautiful espresso machine](assets/images/mirage.jpg)

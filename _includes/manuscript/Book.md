@@ -30,6 +30,8 @@
 
       {% include manuscript/break.md %}
 
+<iframe style="float:right;margin-left:20px;margin-bottom:20px;" width="160" height="400" src="https://leanpub.com/b/coffee-kestrels-code/embed" frameborder="0" allowtransparency="true"></iframe>
+
       {% include manuscript/2/little.md %}
 
       {% include manuscript/break.md %}

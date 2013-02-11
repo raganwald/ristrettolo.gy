@@ -1,3 +1,4 @@
+
 ### interlude...
 
 ![A short, intense shot of espresso](assets/images/espresso.jpg)

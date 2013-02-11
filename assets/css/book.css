@@ -10,6 +10,16 @@ body {
    font-family: sans-serif;
 }*/
 
+img {
+  max-width: 100%;
+}
+
+blockquote p:before {
+  content('&ldquo;');
+  font-size: 3em;
+  font-weight: bold;
+}
+
 /* Parts */
 h1 {
    font-size: 1.5em;
