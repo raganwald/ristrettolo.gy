@@ -21,7 +21,9 @@ I took the red pill, and wound up writing [rewrite_rails][rr]. The trouble was, 
 
 Meanwhile, in New York, Jeremy Ashkenas also took the red pill. But instead of smoothing over some obscure warts in a language that was otherwise liked and well-regarded, Jeremy took on some annoyances and headaches in a language that was generally reviled as having awkward and annoying syntax: JavaScript. 
 
-Underneath its syntax, JavaScript is extremely cool. Almost lisp-y: It has excellent support for first-class functions, even better than Ruby. JavaScript is a good language hampered by a syntax that was very, very necessary to capture mindshare in 199x, but is holding it back in 201x. And Jeremy did something about it, he wrote [CoffeeScript]. Yada, yada, and now CoffeeScript could be the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing *libraries*, because lots of pure JavaScript users need to read the code, but when I'm writing code for a team, it's CoffeeScript, CoffeeScript, CoffeeScript.
+Underneath its syntax, JavaScript is extremely cool. Almost lisp-y: It has excellent support for first-class functions, even better than Ruby. JavaScript is a good language hampered by a syntax that was very, very necessary to capture mindshare in 199x, but is holding it back in 201x. And Jeremy did something about it, he wrote [CoffeeScript].
+
+Yada, yada, and now CoffeeScript could be the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing *libraries*, because lots of pure JavaScript users need to read the code, but when I'm writing code for a team, it's CoffeeScript, CoffeeScript, CoffeeScript.
 
 > "I was also seriously caught up by the digression into espresso, ristretto, etc. Worth the purchase just for the intro."—*Chris Smith*
 
