@@ -14,7 +14,7 @@ img {
   max-width: 100%;
 }
 
-blockquote p:before {
+blockquote p:after {
   content('&ldquo;');
   font-size: 3em;
   font-weight: bold;

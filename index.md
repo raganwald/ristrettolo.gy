@@ -3,11 +3,11 @@ layout: default
 title: ristrettolo.gy, CoffeeScript Ristretto Online
 ---
 
-Yes, it's true: The entire text of [CoffeeScript Ristretto][cr] is online for you to read. The book starts [here](#A-Pull-of-the-Lever-Prefaces), but by all means read the introduction first.
-
-> "I particularly enjoyed this small book because I've reached for it a hundred times before and come up empty-handed. Large and heavy manuals on object-oriented programming and JavaScript are all around us, but to find a book that tackles the fundamental features of functions and objects in a brief, strong gulp, is rare indeed."—*Jeremy Ashkenas, creator of the CoffeeScript Language*
+Yes, it's true: *The entire text of [CoffeeScript Ristretto][cr] is online for you to read, free*. The book starts [here](#A-Pull-of-the-Lever-Prefaces), but by all means read the introduction first.
 
 ## Introduction
+
+> "I particularly enjoyed this small book because I've reached for it a hundred times before and come up empty-handed. Large and heavy manuals on object-oriented programming and JavaScript are all around us, but to find a book that tackles the fundamental features of functions and objects in a brief, strong gulp, is rare indeed."—*Jeremy Ashkenas, creator of the CoffeeScript Language*
 
 Some time ago, Benjamin Stein and I rediscovered Haskell's Maybe Monad. Or as we prefer to think of it, we wrote a little Ruby helper called #andand. It was a hack, but it worked and inspired me to want to fix a lot of other "problems" I encountered with Ruby's syntax.
 
