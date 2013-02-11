@@ -3,7 +3,7 @@ layout: default
 title: ristrettolo.gy, CoffeeScript Ristretto Online
 ---
 
-Yes, it's true: *The entire text of [CoffeeScript Ristretto][cr] is online for you to read, free*. The book starts [here](#A-Pull-of-the-Lever-Prefaces), but by all means read the introduction first.
+Yes, it's true: *The entire text of [CoffeeScript Ristretto][cr] is online for you to read, free*. The book starts [here](#start), but by all means read the introduction first.
 
 ## Introduction
 
@@ -54,7 +54,7 @@ The entire text is online, free, although I certainly encourage you to check out
 (*And yes, the web formatting is mediocre at the moment, although it's great in the [ebook][cr]. This isn't a conspiracy, it's just that I'm working on the styling as I go. Check out the [sample PDF][sample] for an idea of what the ebook is like. And if you want to help... Fork it and send me a pull request!*)
 
 ---
-<br/>
+<a name="start"><br/></a>
 
 {% include manuscript/Book.md %}
 
