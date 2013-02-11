@@ -7,7 +7,7 @@
 
 *CoffeeScript Ristretto* was inspired by [The Little Schemer] by Daniel Friedman and Matthias Felleisen. But where *The Little Schemer's* primary focus is recursion, *CoffeeScript Ristretto's* primary focus is **functions as first-class values**.
 
-{pagebreak}
+<div class="pagebreak"></div>
 
 ### Richard Feynman
 
@@ -15,7 +15,7 @@
 
 Richard Feynman's [QED] was another inspiration: A book that explains Quantum Electrodynamics and the "Sum of the Histories" methodology using the simple expedient of explaining how light reflects off a mirror, and showing how most of the things we think are happening--such as light travelling on a straight line,  the angle of reflection equalling the angle of refraction, or that a beam of light only interacts with a small portion of the mirror, or that it reflects off a plane--are all wrong. And everything is explained in simple, concise terms that build upon each other logically.
 
-{pagebreak}
+<div class="pagebreak"></div>
 
 ### Trevor Burnham
 
@@ -27,4 +27,4 @@ Trevor Burnham provided invaluable assistance with this book. Trevor is the auth
 [The Little Schemer]: http://www.amzn.com/0262560992?tag=raganwald001-20
 [QED]: http://www.amzn.com/0691125759?tag=raganwald001-20
 
-{pagebreak}
+<div class="pagebreak"></div>

@@ -16,7 +16,7 @@ What!? Why didn't it type back `->` for us? This *seems* to break our rule that 
 
 [coffeescript.org]: http://coffeescript.org
 
-{pagebreak}
+<div class="pagebreak"></div>
 
 A> I'd prefer something else, but I console myself with the thought that what gets typed back to us on the screen is arbitrary, and all that really counts is that it is somewhat useful for a human to read. But we must understand that whether we see `[Function]` or `function () {}` or--in some future version of CoffeeScript--`->`, internally CoffeeScript has a full and proper function.[^circular]
 

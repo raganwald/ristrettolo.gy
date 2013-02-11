@@ -36,7 +36,7 @@ The same thing happens with binding a variable through a more conventional means
 
 `x` and `y` both end up bound to the exact same array, not two different arrays that look the same to our eyes.
 
-{pagebreak}
+<div class="pagebreak"></div>
 
 
 ## arguments and arrays
@@ -90,7 +90,7 @@ If we get a value out of an array using the `[]` suffix, it's the exact same val
           a[0] is x and a[1] is y and a[2] is z
       #=> true
 
-{pagebreak}
+<div class="pagebreak"></div>
 
 
 ## references and objects

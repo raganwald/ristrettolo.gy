@@ -113,7 +113,7 @@ This function does much the same thing as:
 
 Only you call it with `(1)(2)(3)` instead of `(1, 2, 3)`. The other big difference is that you can call it with `(1)` and get a function back that you can later call with `(2)(3)`.
 
-{pagebreak}
+<div class="pagebreak"></div>
 
 A> The first function is the result of [currying] the second function. Calling a curried function with only some of its arguments is sometimes called [partial application]. Some programming languages automatically curry and partially evaluate functions without the need to manually nest them.
 

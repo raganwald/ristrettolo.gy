@@ -8,4 +8,4 @@
 
 [Wikipedia]: https://en.wikipedia.org/wiki/Ristretto
 
-{pagebreak}
+<div class="pagebreak"></div>

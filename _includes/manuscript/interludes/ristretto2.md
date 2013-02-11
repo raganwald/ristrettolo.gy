@@ -8,4 +8,4 @@
 
 [m]: http://www.ineedcoffee.com/07/ristretto-rant/
 
-{pagebreak}
+<div class="pagebreak"></div>
