@@ -39,8 +39,6 @@ That was a book I thought was worth writing, and more than three hundred people 
 
 ## Is this book for you?
 
-<iframe style="float:right;margin-left:20px;margin-bottom:20px;" width="160" height="400" src="https://leanpub.com/coffeescript-ristretto/embed" frameborder="0" allowtransparency="true"></iframe>
-
 Quite frankly, the audience for a book about "function decorators and method combinators" is tiny. But that isn't really what [CoffeeScript Ristretto][cr] is about, and that isn't who it's for. **This is a book about understanding what CoffeeScript is really capable of and how far you can take it.** Function decorators and method combinators and everything else are just how we get there together.
 
 If you bought a car that could go 240mph and he dealership advertised a long-weekend driving course at a local racetrack, obviously it isn't really for people who want to go street racing. It's for people who want to know how to drive their car safely on the autobahn and for people who want the knowledge and reflexes to know what to do if they find the car drifting in a turn on a slippery road.
@@ -49,7 +47,7 @@ If you bought a car that could go 240mph and he dealership advertised a long-wee
 
 The entire text is online, free, although I certainly encourage you to check out the [ebook][cr]. In addition to better formatting and portability to offline formats, you'll also receive free updates and fixes indefinitely, while this web site may not receive updates as often, or at all.
 
-(*Want to help? File an issue][issue] or [fork this repository][repo] and send a pull request!*)  
+(*Want to help? [File an issue][issue], or [fork this repository][repo] and send a pull request!*)  
 
 ---
 
