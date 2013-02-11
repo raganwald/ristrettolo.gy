@@ -41,7 +41,7 @@ But a book about programming with functions as first-class values, a book that e
 
 Quite frankly, the audience for a book about "function decorators and method combinators" is tiny. But that isn't really what [CoffeeScript Ristretto][cr] is about, and that isn't who it's for. **This is a book about understanding what CoffeeScript is really capable of and how far you can take it.** Function decorators and method combinators and everything else are just how we get there together.
 
-If you bought a car that could go 240mph and he dealership advertised a long-weekend driving course at a local racetrack, obviously it isn't really for people who want to go street racing. It's for people who want to know how to drive their care safely on the autobahn and for people who want the knowledge and reflexes to know what to do if they find the car drifting in a turn on a slippery road.
+If you bought a car that could go 240mph and he dealership advertised a long-weekend driving course at a local racetrack, obviously it isn't really for people who want to go street racing. It's for people who want to know how to drive their car safely on the autobahn and for people who want the knowledge and reflexes to know what to do if they find the car drifting in a turn on a slippery road.
 
 [CoffeeScript Ristretto][cr] is for people who appreciate that they're using a high-performance language, one that can be very powerful when necessary. And they who want to know what it's capable of in their hands. If that's you, read on!
 
