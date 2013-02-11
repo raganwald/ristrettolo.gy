@@ -50,14 +50,13 @@ The entire text is online, free, although I certainly encourage you to check out
 (*And yes, the formatting is terrible on the web at the moment, although it's great in the [ebook][cr]. This isn't a conspiracy, it's just that I'm working on the styling as I go. And if you want to help... Fork it and send me a pull request!*)
 
 ---
-
-The "Cover:"
-
-![CoffeeScript Ristretto](assets/images/title_page.jpg)
-
 <br/>
 
+<div class="book">
+
 {% include manuscript/Book.md %}
+
+</div>
 
 ---
 
