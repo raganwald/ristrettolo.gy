@@ -3,15 +3,15 @@ layout: default
 title: ristrettolo.gy, CoffeeScript Ristretto Online
 ---
 
-## Introduction
+Yes, it's true: The entire text of [CoffeeScript Ristretto][cr] is online for you to read. The book starts [here](#A-Pull-of-the-Lever-Prefaces), but by all means read the introduction first.
 
-<iframe style="float:right;margin-left:20px;margin-bottom:20px;" width="160" height="400" src="https://leanpub.com/coffeescript-ristretto/embed" frameborder="0" allowtransparency="true"></iframe>
+> "I particularly enjoyed this small book because I've reached for it a hundred times before and come up empty-handed. Large and heavy manuals on object-oriented programming and JavaScript are all around us, but to find a book that tackles the fundamental features of functions and objects in a brief, strong gulp, is rare indeed."—*Jeremy Ashkenas, creator of the CoffeeScript Language*
+
+## Introduction
 
 Some time ago, Benjamin Stein and I rediscovered Haskell's Maybe Monad. Or as we prefer to think of it, we wrote a little Ruby helper called #andand. It was a hack, but it worked and inspired me to want to fix a lot of other "problems" I encountered with Ruby's syntax.
 
 Unfortunately, you can only go so far with meta-programming, and eventually you find yourself confronted with a choice: Take the blue pill, forget about fixing the language, and live a happy life until old age or a passing asteroid claims you. Or take the red pill, and venture into hacking the syntax with parsers, grammars, ASTs, and whatever else you need to make things like `[1..100].map { its.first_name }` work.
-
-![The choice](assets/images/pills.jpg)
 
 > This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes.
 
@@ -23,15 +23,22 @@ Underneath its syntax, JavaScript is extremely cool. Almost lisp-y, in fact. I s
 
 Sorry, I was getting carried away. The point is, JavaScript is a good language hampered by a syntax that was very, very necessary to capture mindshare in 199x, but is holding it back in 201x. And Jeremy did something about it, he wrote [CoffeeScript].
 
-Yada, yada, and now CoffeeScript is possibly the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing *libraries*, because lots of pure JavaScript users need to read the code, but when I'm writing code for a team, it's CoffeeScript, CoffeeScript, CoffeeScript.
+Yada, yada, and now CoffeeScript could be the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing *libraries*, because lots of pure JavaScript users need to read the code, but when I'm writing code for a team, it's CoffeeScript, CoffeeScript, CoffeeScript.
+
+> "I was also seriously caught up by [the] digression into espresso, ristretto, etc.
+Worth the purchase just for the intro."—*Chris Smith*
 
 ## CoffeeScript Ristretto
 
 I like almost all of the books I've read that introduce the CoffeeScript language. They do a great job of teaching you how the syntax works. Some walk you through building something big enough to touch on many features but small enough to fit in a week or two of reading.
 
-But what I hadn't seen was a book that addressed the underlying semantics, the functions, functions, functions orientation of the JavaScript runtime. So I set out to write such a book. Not a book about "functional programming," the world needs another discussion of folds, unfolds, lazy lists, and purely functional data structures like it needs another Haskell or Clojure blog post explaining that Schrödinger's Cat is a Monad.
+But what I hadn't seen was a book that addressed the underlying semantics, the functions, functions, functions orientation of the JavaScript runtime. So I set out to write such a book. Not a book about "functional programming," the world needs another discussion of folds, unfolds, lazy lists, and purely functional data structures like it needs another Haskell or Clojure blog post explaining that "Schrödinger's Cat is a Monad".
 
 But a book about programming with functions as first-class values, a book that embraces the fact that CoffeeScript methods, like JavaScript methods, are functions. A book that dares to start the story at the very beginning but not falter and work from there up to very advanced topics like refactoring to method combinators and decorators. A book that complements what you read elsewhere and already know, a book that acts like a multiplier of your skills.
+
+That was a book I thought was worth writing, and a lot of people think it's worth reading! 
+
+"Best explanation of closures i've seen yet."—*Jerry Anning*
 
 ## Is this book for you?
 
