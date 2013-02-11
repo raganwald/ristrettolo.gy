@@ -1,4 +1,4 @@
-div.book {
+body {
   width: 700px;
   float: left;
 }
@@ -11,7 +11,7 @@ div.book {
 }*/
 
 /* Parts */
-.book h1 {
+h1 {
    font-size: 4em;
    line-height: .8em;
    font-variant: small-caps;
@@ -22,59 +22,59 @@ div.book {
 }
 
 /* Chapters */
-.book h2 {
+h2 {
    margin-bottom: 1em;
 }
 
 /* Sections */
-.book h3 {
+h3 {
    margin-top: 1em;
    margin-bottom: 0.25em;
 }
 
-.book h4 { margin-top: 1em;
+h4 { margin-top: 1em;
    margin-bottom: 0.25em;
 }
 
-.book h5 { margin-top: 1em;
+h5 { margin-top: 1em;
    margin-bottom: 0.25em;
  }
 
-.book h6 {
+h6 {
    margin: 0;
  }
 
 /* general text */
 
-.book p {
+p {
   text-indent: 0em;
   margin-top: 0.5em;
 }
 
-.book blockquote { margin-left: 2em; }
+blockquote { margin-left: 2em; }
 
-.book span.lineno, code.lineno {
+span.lineno, code.lineno {
   color: gray;
   font-size: 80%;
 }
 
-.book .centered p {
+.centered p {
   text-align: center;
 }
 
 /* asides, warnings, etc */
 
-.book div.sidebarish h1, .book div.sidebarish h2, .book div.sidebarish h3, .book div.sidebarish h4 {
+div.sidebarish h1, div.sidebarish h2, div.sidebarish h3, div.sidebarish h4 {
   margin-bottom: 0.5em;
   vertical-align: center;
 }
 
-.book div.sidebarish   {
+div.sidebarish   {
   margin: 50px 0px 50px 10px;
   padding-left: 60px;
 }
 
-.book div.sidebarish .book img.sidebar-image {
+div.sidebarish img.sidebar-image {
   float: left;
   width: 40px;
   height: 40px;
@@ -82,28 +82,28 @@ div.book {
   vertical-align: center;
 }
 
-.book div.page-break {
+div.page-break {
   page-break-after: always;
 }
 
 /* force some space before and after code blocks */
-.book pre {
+pre {
    margin-top: 0.5em;
    margin-bottom: 0.5em;
    font-family: Courier, monospace;
 }
 
-.book body {
+body {
   direction: ltr;
 }
 
 /* image equations */
 
-.book img.inline-equation {
+img.inline-equation {
    vertical-align: -30%;
 }
 
-.book img.block-equation {
+img.block-equation {
   margin-top: 0.5em;
   margin-right: auto;
   margin-bottom: 0.5em;

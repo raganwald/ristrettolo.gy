@@ -2,7 +2,7 @@
 layout: default
 title: ristrettolo.gy, CoffeeScript Ristretto Online
 ---
- 
+
 # Introduction
 
 <iframe style="float:right;margin-left:20px;margin-bottom:20px;" width="160" height="400" src="https://leanpub.com/coffeescript-ristretto/embed" frameborder="0" allowtransparency="true"></iframe>
@@ -52,11 +52,7 @@ The entire text is online, free, although I certainly encourage you to check out
 ---
 <br/>
 
-<div class="book">
-
 {% include manuscript/Book.md %}
-
-</div>
 
 ---
 
