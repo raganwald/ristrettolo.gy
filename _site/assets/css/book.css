@@ -62,9 +62,17 @@ p {
 }
 
 blockquote {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   margin-left: 2em;
   margin-right: 2em;
   font-size: 80%;
+}
+
+blockquote:after {
+  content('&ldquo;');
+  font-size: 12em;
+  font-weight: bold;
 }
 
 span.lineno, code.lineno {
