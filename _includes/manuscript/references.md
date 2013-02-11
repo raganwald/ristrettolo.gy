@@ -38,6 +38,7 @@ The same thing happens with binding a variable through a more conventional means
 
 {pagebreak}
 
+
 ## arguments and arrays
 
 CoffeeScript provides two different kinds of containers for values. We've met one already, the array. Let's see how it treats values and identities. For starters, we'll learn how to extract a value from an array. We'll start with a function that makes a new value with a unique identity every time we call it. We already know that every function we create is unique, so that's what we'll use:
@@ -90,6 +91,7 @@ If we get a value out of an array using the `[]` suffix, it's the exact same val
       #=> true
 
 {pagebreak}
+
 
 ## references and objects
 

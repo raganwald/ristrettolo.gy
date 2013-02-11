@@ -1,3 +1,4 @@
+
 ## Prototypes are Simple, it's the Explanations that are Hard To Understand
 
 As you recall from our code for making objects [extensible](#extensible), we wrote a function that returned a Plain Old CoffeeScript Object. The colloquial term for this kind of function is a "Factory Function."

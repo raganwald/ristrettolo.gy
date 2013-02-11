@@ -1,3 +1,4 @@
+
 ## Encapsulating State with Closures {#encapsulation}
 
 > OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme late-binding of all things.--[Alan Kay][oop]

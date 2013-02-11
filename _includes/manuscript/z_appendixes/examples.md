@@ -1,3 +1,4 @@
+
 ## How to run the examples {#online}
 
 If you follow the instructions at [coffeescript.org][install] to install NodeJS and CoffeeScript,[^whoa] you can run an interactive CoffeeScript [REPL][repl] on your command line simply by typing `coffee`. This is how the examples in this book were tested, and what many programmers will do. When running CoffeeScript on the command line, ctrl-V switches between single-line and multi-line input mode. If you need to enter more than one line of code, be sure to enter multi-line mode.

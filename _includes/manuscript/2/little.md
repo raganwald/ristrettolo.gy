@@ -1,3 +1,4 @@
+
 ## As Little As Possible About Functions, But No Less
 
 In CoffeeScript, functions are values, but they are also much more than simple numbers, strings, or even complex data structures like trees or maps. Functions represent computations to be performed. Like numbers, strings, and arrays, they have a representation in CoffeeScript. Let's start with the very simplest possible function. In CoffeeScript, it looks like this:[^also]

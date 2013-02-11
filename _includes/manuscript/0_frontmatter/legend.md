@@ -1,3 +1,4 @@
+
 ## Legend
 
 Some text in monospaced type like `this` in the text represents some code being discussed. Some monospaced code in its own lines also represents code being discussed:

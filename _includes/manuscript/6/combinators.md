@@ -1,3 +1,4 @@
+
 ## Refactoring to Combinators {#combinators}
 
 The word "combinator" has a precise technical meaning in mathematics:

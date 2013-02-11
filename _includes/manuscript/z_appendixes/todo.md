@@ -1,3 +1,4 @@
+
 ## Author's To-Do List
 
 TODO: Introduce judicious use of function calls without parentheses

@@ -1,3 +1,4 @@
+
 ## Extending Classes {#classextension}
 
 You recall from [Composition and Extension](#extensible) that we extended a Plain Old CoffeeScript Queue to create a Plain Old CoffeeScript Deque. But what if we have decided to use CoffeeScript's prototypes and class statements instead of Plain Old CoffeeScript Objects? How do we extend a queue into a deque?

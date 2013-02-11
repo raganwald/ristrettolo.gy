@@ -1,3 +1,4 @@
+
 ## What Will You Learn?
 
 Like *The Little Schemer*, *CoffeeScript Ristretto* is valuable to the new programmer as well as the experienced developer. *CoffeeScript Ristretto* will provide a deep grounding in the fundamentals such functions, values, references, closures, and functions that consume and return functions. It then progresses to advanced topics built on those fundamentals such as callbacks, combinators, method decorators, fluent APIs, and continuation-passing style.

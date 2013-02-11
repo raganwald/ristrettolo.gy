@@ -1,3 +1,4 @@
+
 ## This Section Needs No Title 
 
 CoffeeScript is fundamentally an object-oriented language in the sense that Alan Kay first described object orientation. His vision was of software constructed from entities that communicate with message passing, with the system being extremely dynamic (what he described as "extreme late-binding"). However, words and phrases are only useful when both writer and reader share a common understanding, and for many people the words "object-oriented" carry with them a great deal of baggage related to constructing ontologies of domain entities.

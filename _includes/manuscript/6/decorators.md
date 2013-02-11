@@ -1,3 +1,4 @@
+
 ## Method Decorators
 
 Now that we've seen how function combinators can make our code cleaner and DRYer, it isn't a great leap to ask if we can use combinators with methods. After all, methods are functions. That's one of the great strengths of CoffeeScript, since methods are "just" functions, we don't need to have one kind of tool for functions and another for methods, or a messy way of turning methods into functions and functions into methods.

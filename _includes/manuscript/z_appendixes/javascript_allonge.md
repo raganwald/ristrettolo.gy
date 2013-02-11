@@ -1,3 +1,4 @@
+
 ## JavaScript Allongé
 
 ![a long and strong programming book](images/javascript_allonge_medium.jpg)

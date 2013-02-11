@@ -1,3 +1,4 @@
+
 ## Comprehensions {#comprehensions}
 
 ![Cupping Grinds](images/cupping.jpg)

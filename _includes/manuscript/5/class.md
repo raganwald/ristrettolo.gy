@@ -1,3 +1,4 @@
+
 ## A Touch of Class
 
 CoffeeScript has "classes," for some definition of "class." You've met them already, they're constructors that are designed to work with the `new` keyword and have behaviour in their `.prototype` element. You can create one any time you like by:

@@ -1,3 +1,4 @@
+
 ## Callbacks and Promises
 
 Like nearly all languages in widespread use, CoffeeScript expresses programs as expressions that are composed together with a combination of operators, function application, and control flow constructs such as sequences of statements.

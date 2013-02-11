@@ -1,3 +1,4 @@
+
 ## Closures and Scope {#closures}
 
 Before we explain `(x) -> (y) -> x`, we're going to toss in something that doesn't directly affect our explanation, but makes things easier to see *visually*. Up to now, every function has looked like this: `(`*arguments*`) -> `*body*. There's another way to write functions. For example here's the other way to write `(x) -> x`:

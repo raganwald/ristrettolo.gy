@@ -1,3 +1,4 @@
+
 ## Normal Variables
 
 Now that we've discussed reassignment, it's time to discuss *assignment*.

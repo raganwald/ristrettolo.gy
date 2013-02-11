@@ -1,3 +1,4 @@
+
 ## Making Things Easy
 
 In *CoffeeScript Ristretto*, we are focusing on CoffeeScript's *semantics*, the meaning of CoffeeScript programs. As we go along, we're learning just enough CoffeeScript to understand the next concept simply and directly.

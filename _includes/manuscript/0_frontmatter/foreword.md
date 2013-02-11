@@ -1,3 +1,4 @@
+
 ## Foreword by Jeremy Ashkenas
 
 > "I particularly enjoyed this small book because I've reached for it a hundred times before and come up empty-handed. Large and heavy manuals on object-oriented programming and JavaScript are all around us, but to find a book that tackles the fundamental features of functions and objects in a brief, strong gulp, is rare indeed.

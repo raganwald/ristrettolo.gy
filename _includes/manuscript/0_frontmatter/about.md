@@ -1,3 +1,4 @@
+
 ## About This Book
 
 > Learning about "for" loops is not learning to program, any more than learning about pencils is learning to draw.--Bret Victor, [Learnable Programming][victor]

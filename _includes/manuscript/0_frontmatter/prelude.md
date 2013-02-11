@@ -10,6 +10,7 @@ You express your order at one end of their counter, the folks behind the counter
 [expression]: https://en.wikipedia.org/wiki/Expression_(computer_science)
 [value]: https://en.wikipedia.org/wiki/Value_(computer_science)
 
+
 ## values and expressions
 
 All values are expressions. Say you hand the barista a Cafe Cubana. Yup, you hand over a cup with some coffee infused through partially caramelized sugar. You say, "I want one of these." The barista is no fool, she gives it straight back to you, and you get exactly what you want. Thus, a Cafe Cubana is an expression (you can use it to place an order) and a value (you get it back from the barista).
@@ -41,6 +42,7 @@ Let's try this as well with something else the computer understands easily:
       #=> "CoffeeScript Ristretto"
 
 These are "strings," values featured in almost every contemporary computer language. We see that "strings" are values, and you can make an expression out of strings and an operator `+`. Since strings are values, they are also expressions by themselves. But strings with operators are not values, they are expressions. Now we know what was missing with our "coffee grounds plus hot water" example. The coffee grounds were a value, the boiling hot water was a value, and the "plus" operator between them made the whole thing an expression that was not a value.
+
 
 ## values and identity
 

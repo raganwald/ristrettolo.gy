@@ -1,3 +1,4 @@
+
 ## This and That {#this}
 
 Let's take another look at [extensible objects](#extensible). Here's a Queue:

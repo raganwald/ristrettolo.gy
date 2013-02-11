@@ -1,3 +1,4 @@
+
 ## Canonicalization
 
 Early in this book, we discussed how objects, arrays, and functions are *reference types*. When we create a new object, even if it has the same contents as some other object, it is a different value, as we can tell when we test its identity with `is`:

@@ -1,3 +1,4 @@
+
 ## A Simple Question
 
 Both of the following produce the exact same result:

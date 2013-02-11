@@ -1,3 +1,4 @@
+
 ## Reassignment and Mutation
 
 Like most imperative programming languages, CoffeeScript allows you to re-assign the value of variables. The syntax is familiar to users of most popular languages:
