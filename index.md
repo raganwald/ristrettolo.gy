@@ -61,8 +61,6 @@ The entire text is online, free, although I certainly encourage you to check out
                                                                                                                                                                                                                                                                                                                        
 ## CoffeeScript Ristretto
 
----
-
 {% include manuscript/Book.md %}
 
 ---
