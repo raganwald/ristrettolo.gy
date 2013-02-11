@@ -21,11 +21,11 @@ Meanwhile in New York, Jeremy Ashkenas also took the red pill. But instead of sm
 
 Underneath its syntax, JavaScript is extremely cool. Almost lisp-y, in fact. I suppose I ought to say that it has excellent support for first-class functions, even better than Ruby. And it does, but what I find interesting isn't that everything is an object in JavaScript, but rather that *everything of interest is a function*. Prototypical inheritance is actually very, very interesting, much more interesting than classist inheritance. Not because anything can be a prototype, but the idea of working with exemplars rather than classes is...
 
-Sorry, I was getting carried away. The point is, JavaScript is a good language hampered by a syntax that was very, very necessary to capture mindshare in 199x, but is holding it back in 201x. And Jeremy did something about it, he wrote [CoffeeScript].
+Sorry, I was getting carried away!
 
-Yada, yada, and now CoffeeScript could be the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing *libraries*, because lots of pure JavaScript users need to read the code, but when I'm writing code for a team, it's CoffeeScript, CoffeeScript, CoffeeScript.
+The point is, JavaScript is a good language hampered by a syntax that was very, very necessary to capture mindshare in 199x, but is holding it back in 201x. And Jeremy did something about it, he wrote [CoffeeScript]. Yada, yada, and now CoffeeScript could be the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing *libraries*, because lots of pure JavaScript users need to read the code, but when I'm writing code for a team, it's CoffeeScript, CoffeeScript, CoffeeScript.
 
-> "I was also seriously caught up by [the] digression into espresso, ristretto, etc. Worth the purchase just for the intro."—*Chris Smith*
+> "I was also seriously caught up by the digression into espresso, ristretto, etc. Worth the purchase just for the intro."—*Chris Smith*
 
 ## CoffeeScript Ristretto
 
@@ -37,7 +37,7 @@ But a book about programming with functions as first-class values, a book that e
 
 That was a book I thought was worth writing, and a lot of people think it's worth reading! 
 
-"Best explanation of closures i've seen yet."—*Jerry Anning*
+> "The best explanation of closures I've seen yet."—*Jerry Anning*
 
 ## Is this book for you?
 
