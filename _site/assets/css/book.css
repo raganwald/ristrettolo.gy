@@ -67,14 +67,8 @@ blockquote {
   margin-left: 2em;
   margin-right: 2em;
   font-size: 80%;
+  background-image: 'images/Quote_background_transparent.png';
 }
-
-blockquote p:after {
-  content: '&ldquo;';
-  font-size: 12em;
-  font-weight: bold;
-}
-
 span.lineno, code.lineno {
   color: gray;
   font-size: 80%;
