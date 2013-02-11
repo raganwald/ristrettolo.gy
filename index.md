@@ -51,6 +51,8 @@ The entire text is online, free, although I certainly encourage you to check out
 
 ---
 
+![CoffeeScript Ristretto](assets/images/title_page.jpg)
+
 <br/>
 
 {% include manuscript/Book.md %}
