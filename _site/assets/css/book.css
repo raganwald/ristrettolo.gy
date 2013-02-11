@@ -14,12 +14,6 @@ img {
   max-width: 100%;
 }
 
-blockquote p:after {
-  content('&ldquo;');
-  font-size: 3em;
-  font-weight: bold;
-}
-
 /* Parts */
 /*h1 {
    font-size: 1.5em;
@@ -67,7 +61,11 @@ p {
   margin-top: 0.5em;
 }
 
-blockquote { margin-left: 2em; }
+blockquote {
+  margin-left: 2em;
+  margin-right: 2em;
+  font-size: 80%;
+}
 
 span.lineno, code.lineno {
   color: gray;

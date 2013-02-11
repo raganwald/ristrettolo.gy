@@ -66,7 +66,7 @@ This site uses the [Solarized][solarized] color scheme, is set in Nimbus Sans, a
 
 ---
 
-# End Notes
+## End Notes
 
 [solarized]: http://ethanschoonover.com/solarized
 [tj]: http://www.crystae.net/
