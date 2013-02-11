@@ -3,6 +3,8 @@ layout: default
 title: ristrettolo.gy, CoffeeScript Ristretto Online
 ---
 
+{% include manuscript/Book.md %}
+
 ---
 
 This site uses the [Solarized][solarized] color scheme, is set
