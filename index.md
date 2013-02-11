@@ -13,9 +13,9 @@ Unfortunately, you can only go so far with proxy objects, and eventually you fin
 
 ![The choice](assets/images/pills.jpg)
 
-> This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes.
-
 <iframe style="float:right;margin-left:20px;margin-bottom:20px;" width="160" height="400" src="https://leanpub.com/b/coffee-kestrels-code/embed" frameborder="0" allowtransparency="true"></iframe>
+
+> This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes.
 
 I took the red pill, and wound up writing [rewrite_rails][rr]. The trouble was, Ruby was well-regarded, and the problems that I solved didn't really bother most people. For example, rewrite_rails provides extension methods so you can extend a class without monkey-patching it in the global namespace. Everyone agrees that monkey-patching is a "Bad Idea" in theory, but in practice it seems to suit Ruby programmers just fine. If Rails can do it, how bad can it be?
 
