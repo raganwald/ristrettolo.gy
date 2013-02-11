@@ -67,15 +67,9 @@ blockquote {
   margin-left: 2em;
   margin-right: 2em;
   font-size: 80%;
-/*  background-position: middle center;*/
-}
-
-blockquote p {
   background: url(http://ristrettolo.gy/assets/images/Quote_background_transparent.png);
-}
-
-blockquote p :first {
-  font-zize: 2em;
+  background-repeat: no-repeat;
+/*  background-position: middle center;*/
 }
 
 span.lineno, code.lineno {
