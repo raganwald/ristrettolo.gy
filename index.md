@@ -13,7 +13,7 @@ Some time ago, Benjamin Stein and I rediscovered Haskell's Maybe Monad. Or as we
 
 Unfortunately, you can only go so far with meta-programming, and eventually you find yourself confronted with a choice: Take the blue pill, forget about fixing the language, and live a happy life until old age or a passing asteroid claims you. Or take the red pill, and venture into hacking the syntax with parsers, grammars, ASTs, and whatever else you need to make things like `[1..100].map { its.first_name }` work.
 
-> This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes.
+> &ldquo;This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit-hole goes.&rdquo;—*Morpheus*
 
 I took the red pill, and wound up writing [rewrite_rails][rr]. The trouble was, Ruby was well-regarded, and the problems that I solved didn't really bother most people. For example, rewrite_rails provides extension methods so you can extend a class without monkey-patching it in the global namespace. Everyone agrees that monkey-patching is a "Bad Idea" in theory, but in practice it seems to suit Ruby programmers just fine. If Rails can do it, how bad can it be?
 
@@ -25,8 +25,7 @@ Sorry, I was getting carried away. The point is, JavaScript is a good language h
 
 Yada, yada, and now CoffeeScript could be the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing *libraries*, because lots of pure JavaScript users need to read the code, but when I'm writing code for a team, it's CoffeeScript, CoffeeScript, CoffeeScript.
 
-> "I was also seriously caught up by [the] digression into espresso, ristretto, etc.
-Worth the purchase just for the intro."—*Chris Smith*
+> "I was also seriously caught up by [the] digression into espresso, ristretto, etc. Worth the purchase just for the intro."—*Chris Smith*
 
 ## CoffeeScript Ristretto
 
@@ -52,7 +51,7 @@ If you bought a car that could go 240mph and he dealership advertised a long-wee
 
 The entire text is online, free, although I certainly encourage you to check out the [ebook][cr]. In addition to better formatting and portability to offline formats, you'll also receive free updates and fixes indefinitely, while this web site may not receive updates as often, or at all.
 
-(*And yes, the formatting is terrible on the web at the moment, although it's great in the [ebook][cr]. This isn't a conspiracy, it's just that I'm working on the styling as I go. And if you want to help... Fork it and send me a pull request!*)
+(*And yes, the web formatting is mediocre at the moment, although it's great in the [ebook][cr]. This isn't a conspiracy, it's just that I'm working on the styling as I go. Check out the [sample PDF][sample] for an idea of what the ebook is like. And if you want to help... Fork it and send me a pull request!*)
 
 ---
 <br/>
@@ -74,3 +73,4 @@ This site uses the [Solarized][solarized] color scheme, is set in Nimbus Sans, a
 [rr]: https://github.com/raganwald-deprecated/rewrite_rails
 [CoffeeScript]: http://coffeescript.org
 [cr]: https://leanpub.com/coffeescript-ristretto
+[sample]: http://samples.leanpub.com/coffeescript-ristretto-sample.pdf "Free Sample PDF"
