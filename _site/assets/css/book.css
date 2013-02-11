@@ -69,8 +69,8 @@ blockquote {
   font-size: 80%;
 }
 
-blockquote:after {
-  content('&ldquo;');
+blockquote p:after {
+  content: '&ldquo;';
   font-size: 12em;
   font-weight: bold;
 }
