@@ -51,10 +51,13 @@ If you bought a car that could go 240mph and he dealership advertised a long-wee
 
 The entire text is online, free, although I certainly encourage you to check out the [ebook][cr]. In addition to better formatting and portability to offline formats, you'll also receive free updates and fixes indefinitely, while this web site may not receive updates as often, or at all.
 
-(*And yes, the web formatting is mediocre at the moment, although it's great in the [ebook][cr]. This isn't a conspiracy, it's just that I'm working on the styling as I go. Check out the [sample PDF][sample] for an idea of what the ebook is like. And if you want to help... Fork it and send me a pull request!*)
+(*And yes, the web formatting is mediocre at the moment, although it's great in the [ebook][cr]. This isn't a conspiracy, it's just that I'm working on the styling as I go. Check out the [sample PDF][sample] for an idea of what the ebook is like. And if you want to help... Fork it and send me a pull request!*)  
+                    
+<a name="start"></a>
+                                                                                                                                                                                                                                                                                                                       
+## CoffeeScript Ristretto
 
 ---
-<a name="start"><br/></a>
 
 {% include manuscript/Book.md %}
 
