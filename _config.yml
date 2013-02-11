@@ -1,5 +1,5 @@
 pygments: true
 lsi: false
 safe: true
-
+markdown: kramdown
 exclude: Gemfile, Gemfile.lock, config.rb, Rakefile, CNAME

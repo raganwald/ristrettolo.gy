@@ -1,4 +1,5 @@
-# Stir the Espresso: Objects, Mutation, and State {#mutable}
+
+#Stir the Espresso: Objects, Mutation, and State {#mutable}
 
 ![Life measured out by coffee spoons](images/coffee-spoons.jpg)
 

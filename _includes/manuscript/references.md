@@ -1,4 +1,5 @@
-# References, Identity, Arrays, and Objects {#poco}
+
+#References, Identity, Arrays, and Objects {#poco}
 
 ### a simple question
 
