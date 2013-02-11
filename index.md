@@ -57,14 +57,15 @@ The entire text is online, free, although I certainly encourage you to check out
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.
 
+This site uses the [Solarized][solarized] color scheme, is set
+in Nimbus Sans, and is snarfed wholesale from [Tom Jakubowski][tj].
+
+<hr/>
+<hr/>
+
 {% include manuscript/Book.md %}
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.
-
----
-
-This site uses the [Solarized][solarized] color scheme, is set
-in Nimbus Sans, and is snarfed wholesale from [Tom Jakubowski][tj].
 
 [solarized]: http://ethanschoonover.com/solarized
 [tj]: http://www.crystae.net/
