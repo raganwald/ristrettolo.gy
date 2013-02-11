@@ -71,7 +71,7 @@ blockquote {
 }
 
 blockquote p {
-  background: url(assets/images/Quote_background_transparent.png);
+  background: url(http:./assets/images/Quote_background_transparent.png);
 }
 
 blockquote p :first {
