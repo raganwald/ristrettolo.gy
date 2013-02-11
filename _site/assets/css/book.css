@@ -67,7 +67,7 @@ blockquote {
   margin-left: 2em;
   margin-right: 2em;
   font-size: 80%;
-  background-image: 'images/Quote_background_transparent.png';
+  background-image: url(images/Quote_background_transparent.png);
 }
 span.lineno, code.lineno {
   color: gray;
