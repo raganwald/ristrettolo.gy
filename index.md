@@ -45,11 +45,21 @@ If you bought a car that could go 240mph and he dealership advertised a long-wee
 
 [CoffeeScript Ristretto][cr] is for people who appreciate that they're using a high-performance language, one that can be very powerful when necessary. And they who want to know what it's capable of in their hands. If that's you, read on!
 
-The entire text is online, free, although I certainly encourage you to buy the ebook. In addition to better formatting and portability to offline formats, you'll also receive free updates and fixes indefinitely, while this web site may not receive updates as often, or at all.
+The entire text is online, free, although I certainly encourage you to check out the [ebook][cr]. In addition to better formatting and portability to offline formats, you'll also receive free updates and fixes indefinitely, while this web site may not receive updates as often, or at all.
+
+(*And yes, the formatting is terrible on the web at the moment, although it's great in the [ebook][cr]. This isn't a conspiracy, it's just that I'm working on the styling as I go. And if you want to help... Fork it and send me a pull request!*)
 
 ---
 
+# CoffeeScript Ristretto
+
+(c) 2012-2013 Reginald Braithwaite
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.
+
 {% include manuscript/Book.md %}
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.
 
 ---
 
