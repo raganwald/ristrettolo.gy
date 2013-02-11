@@ -62,14 +62,19 @@ p {
 }
 
 blockquote {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: 2em;
-  margin-right: 2em;
   background: url(http://ristrettolo.gy/assets/images/Quote_background_transparent.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
+}
+
+blockquote p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+  font-size: 80%;
+  font-weight: bold;
 }
 
 span.lineno, code.lineno {
