@@ -3,13 +3,6 @@ layout: default
 title: ristrettolo.gy, CoffeeScript Ristretto Online
 ---
 
-<a id="leanpub" href="https://leanpub.com/coffeescript-ristretto">
-  <span>Get the eBook!</span>
-  <span>CoffeeScript Ristretto</span>
-</a>
-
-Yes, it's true: *The entire text of [CoffeeScript Ristretto][cr] is online for you to read, free*. The book starts [here](#start), but by all means read the introduction first.
-
 ## Introduction to the Online Edition
 
 Some time ago, Benjamin Stein and I rediscovered Haskell's Maybe Monad. Or as we prefer to think of it, we wrote a little Ruby helper called #andand. It was a hack, but it worked and inspired me to want to fix a lot of other "problems" I encountered with Ruby's syntax.
