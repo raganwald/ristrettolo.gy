@@ -2034,191 +2034,7 @@ T&gt; * The fat arrow (<code>=&gt;</code>) is syntactic sugar for binding <code>
 
 <p>One of them is <em>inheritance</em>. In CoffeeScript, inheritance provides a cleaner, simpler mechanism for extending data structures, domain models, and anything else you represent as a bundle of state and operations.</p>
 
-<h2 id="prototypes-are-simple-its-the-explanations-that-are-hard-to-understand">Prototypes are Simple, it’s the Explanations that are Hard To Understand</h2>
-
-<p>As you recall from our code for making objects <a href="#extensible">extensible</a>, we wrote a function that returned a Plain Old CoffeeScript Object. The colloquial term for this kind of function is a “Factory Function.”</p>
-
-<p>Let’s strip a function down to the very bare essentials:</p>
-
-<pre><code>Ur = -&gt;
-</code></pre>
-
-<p>This doesn’t look like a factory function: It doesn’t have an expression that yields a Plain Old CoffeeScript Object when the function is applied. Yet, there is a way to make an object out of it. Behold the power of the <code>new</code> keyword:</p>
-
-<pre><code>new Ur()
-  #=&gt; {}
-</code></pre>
-
-<p>We got an object back! What can we find out about this object?</p>
-
-<pre><code>new Ur() is new Ur()
-  #=&gt; false
-</code></pre>
-
-<p>Every time we call <code>new</code> with a function and get an object back, we get a unique object. We could call these “Objects created with the <code>new</code> keyword,” but this would be cumbersome. So we’re going to call them <em>instances</em>. Instances of what? Instances of the function that creates them. So given <code>i = new Ur()</code>, we say that <code>i</code> is an instance of <code>Ur</code>.</p>
-
-<p>For reasons that will be explained after we’ve discussed prototypes, we also say that <code>Ur</code> is the <em>constructor</em> of <code>i</code>, and that <code>Ur</code> is a <em>constructor function</em>. Therefore, an instance is an object created by using the <code>new</code> keyword on a constructor function, and that function is the instance’s constructor.</p>
-
-<p>A&gt; We are going to look at CoffeeScript’s <code>class</code> keyword later, but it’s worth noting that what CoffeeScript calls a constructor function does almost everything that people think of when they use the word “class.” It constructs instances, it defines their common behaviour, and it can be tested.</p>
-
-<h3 id="prototypes">prototypes</h3>
-
-<p>There’s more. Here’s something you may not know about functions:</p>
-
-<pre><code>Ur.prototype
-  #=&gt; {}
-</code></pre>
-
-<p>What’s this prototype? Let’s run our standard test:</p>
-
-<pre><code>(-&gt;).prototype is (-&gt;).prototype
-  #=&gt; false
-</code></pre>
-
-<p>Every function is initialized with its own unique <code>prototype</code>. What does it do? Let’s try something:</p>
-
-<pre><code>Ur.prototype.language = 'CoffeeScript'
-
-continent = new Ur()
-  #=&gt; {}
-continent.language
-  #=&gt; 'CoffeeScript'
-</code></pre>
-
-<p>That’s very interesting! Instances seem to behave as if they had the same elements as their constructor’s prototype. Let’s try a few things:</p>
-
-<pre><code>continent.language = 'JavaScript'
-continent
-  #=&gt; {language: 'JavaScript'}
-continent.language
-  #=&gt; 'JavaScript'
-Ur.prototype.language
-  'CoffeeScript'
-</code></pre>
-
-<p>You can set elements of an instance, and they “override” the constructor’s prototype, but they don’t actually change the constructor’s prototype. Let’s make another instance and try something else.</p>
-
-<pre><code>another = new Ur()
-  #=&gt; {}
-another.language
-  #=&gt; 'CoffeeScript'
-</code></pre>
-
-<p>New instances don’t acquire any changes made to other instances. Makes sense. And:</p>
-
-<pre><code>Ur.prototype.language = 'Sumerian'
-another.language
-  #=&gt; 'Sumerian'
-</code></pre>
-
-<p>Even more interesting: Changing the constructor’s prototype changes the behaviour of all of its instances. This strongly implies that there is a dynamic relationship between instances and their constructors, rather than some kind of mechanism that makes objects by copying.<sup id="fnref:dynamic"><a href="#fn:dynamic" rel="footnote">24</a></sup></p>
-
-<p>Speaking of prototypes, here’s something else that’s very interesting:</p>
-
-<pre><code>continent.constructor
-  #=&gt; [Function]
-  
-continent.constructor is Ur
-  #=&gt; true
-</code></pre>
-
-<p>Every instance acquires a <code>constructor</code> element that is initialized to their constructor. This is true even for objects we don’t create with <code>new</code> in our own code:</p>
-
-<pre><code>{}.constructor
-  #=&gt; [Function: Object]
-</code></pre>
-
-<p>If that’s true, what about prototypes? Do they have constructors?</p>
-
-<pre><code>Ur.prototype.constructor
-  #=&gt; [Function]
-Ur.prototype.constructor is Ur
-  #=&gt; true
-</code></pre>
-
-<p>Very interesting! We will take another look at the <code>constructor</code> element when we discuss <a href="#classextension">class extension</a>.</p>
-
-<h3 id="revisiting-this-idea-of-queues">revisiting <code>this</code> idea of queues</h3>
-
-<p>Let’s rewrite our Queue to use <code>new</code> and <code>.prototype</code>, using <code>this</code> and <code>=&gt;</code>:</p>
-
-<pre><code>extend = (object, extensions) -&gt;
-  object[key] = value for key, value of extensions
-  object
-
-Queue = -&gt;
-  extend(this, {
-    array: []
-    head: 0
-    tail: -1
-  })
-  
-extend(Queue.prototype,
-  pushTail: (value) -&gt;
-    this.array[this.tail += 1] = value
-  pullHead: -&gt;
-    unless this.isEmpty()
-      do (value = this.array[this.head]) =&gt;
-        this.array[this.head] = undefined
-        this.head += 1
-        value
-  isEmpty: -&gt;
-    this.tail &lt; this.head
-)
-</code></pre>
-
-<p>You recall that when we first looked at <code>this</code>, we only covered the case where a function that belongs to an object is invoked. Now we see another case: When a function is invoked by the <code>new</code> operator, <code>this</code> is set to the new object being created. Thus, our code for <code>Queue</code> initializes the queue.</p>
-
-<p>You can see why <code>this</code> is so handy in CoffeeScript: We wouldn’t be able to define functions in the prototype that worked on the instance if CoffeeScript didn’t give us an easy way to refer to the instance itself.</p>
-
-<h3 id="objects-everywhere">objects everywhere?</h3>
-
-<p>Now that you know about prototypes, it’s time to acknowledge something that even small children know: Everything in CoffeeScript behaves like an object, everything in CoffeeScript behaves like an instance of a function, and therefore everything in CoffeeScript behaves as if it inherits some methods from its constructor’s prototype and/or has some elements of its own.</p>
-
-<p>For example:</p>
-
-<pre><code>3.14159265.toPrecision(5)
-  #=&gt; '3.1415'
-  
-'FORTRAN, SNOBOL, LISP, BASIC'.split(', ')
-  #=&gt; [ 'FORTRAN',
-  #     'SNOBOL',
-  #     'LISP',
-  #     'BASIC' ]
-  
-[ 'FORTRAN',
-  'SNOBOL',
-  'LISP',
-  'BASIC' ].length
-#=&gt; 5
-</code></pre>
-
-<p>Functions themselves are instances, and they have methods. For example, we know that CoffeeScript treats the fat arrow as if you were using the <code>this</code> and <code>that</code> idiom. But if you didn’t have a fat arrow and you didn’t want to take a chance on getting the idiom wrong, you could take advantage of the fact that every function has a method <code>call</code>.</p>
-
-<p>Call’s first argument is a <em>context</em>: When you invoke <code>.call</code> on a function, it invoked the function, setting <code>this</code> to the context. It passes the remainder of the arguments to the function.</p>
-
-<p>So, if we have:</p>
-
-<pre><code>  pullHead: -&gt;
-    unless this.isEmpty()
-      do (value = this.array[this.head]) =&gt;
-        this.array[this.head] = undefined
-        this.head += 1
-        value
-</code></pre>
-
-<p>We could also write it like this:</p>
-
-<pre><code>  pullHead: -&gt;
-    unless this.isEmpty()
-      ((value) -&gt;
-        this.array[this.head] = undefined
-        this.head += 1
-        value
-      ).call(this, this.array[this.head])
-</code></pre>
-
-<p>It seems like are objects everywhere in CoffeeScript!</p>
+<iframe style="float:right;margin-left:20px;margin-bottom:20px;" width="160" height="400" src="https://leanpub.com/b/think/embed" frameborder="0" allowtransparency="true"></iframe>
 
 <pre><code>  ### impostors
 </code></pre>
@@ -2235,7 +2051,7 @@ extend(Queue.prototype,
 
 <p>Somehow, when we write <code>"Spence Olham".split(' ')</code>, the string <code>"Spence Olham"</code> isn’t an instance, it doesn’t have methods, but it does a damn fine job of impersonating an instance of a <code>String</code> constructor. How does <code>"Spence Olham"</code> impersonate an instance?</p>
 
-<p>CoffeeScript pulls some legerdemain. When you do something that treats a value like an object, CoffeeScript checks to see whether the value actually is an object. If the value is actually a primitive,<sup id="fnref:reminder"><a href="#fn:reminder" rel="footnote">25</a></sup> CoffeeScript temporarily makes an object that is a kinda-sorta copy of the primitive and that kinda-sorta copy has methods and you are temporarily fooled into thinking that <code>"Spence Olham"</code> has a <code>.split</code> method.</p>
+<p>CoffeeScript pulls some legerdemain. When you do something that treats a value like an object, CoffeeScript checks to see whether the value actually is an object. If the value is actually a primitive,<sup id="fnref:reminder"><a href="#fn:reminder" rel="footnote">24</a></sup> CoffeeScript temporarily makes an object that is a kinda-sorta copy of the primitive and that kinda-sorta copy has methods and you are temporarily fooled into thinking that <code>"Spence Olham"</code> has a <code>.split</code> method.</p>
 
 <p>These kinda-sorta copies are called String <em>instances</em> as opposed to String <em>primitives</em>. And the instances have methods, while the primitives do not. How does CoffeeScript make an instance out of a primitive? With <code>new</code>, of course. Let’s try it:</p>
 
@@ -2601,7 +2417,7 @@ T&gt; CoffeeScript’s <code>class</code> statement is a nice syntactic convenie
 
 <p>If there are a tractable number of possible instances of a class (such as cards in a deck), it may be more practical to enumerate them all in advance rather than lazily create them, and/or to use a factory method to retried them rather than changing the behaviour of the constructor.</p>
 
-<p>More serious is that the engine that executes CoffeeScript programs does not support weak references.<sup id="fnref:wr"><a href="#fn:wr" rel="footnote">26</a></sup> As a result, if you wish to perform cache eviction for memory management purposes, you will have to implement your own reference management scheme. This may be non-trivial.</p>
+<p>More serious is that the engine that executes CoffeeScript programs does not support weak references.<sup id="fnref:wr"><a href="#fn:wr" rel="footnote">25</a></sup> As a result, if you wish to perform cache eviction for memory management purposes, you will have to implement your own reference management scheme. This may be non-trivial.</p>
 
 <p>If you have many, many possible instances, your cache can end up holding onto what some programmers call <em>zombie objects</em>: Objects that are not in use anywhere in your program except the cache. If they are never accessed again, the memory they take up will never be released for reuse. An early version of the HashLife implementation did not clear objects from the cache. Some computations would consume as much as 700MB of data for the cache before the virtual machine was unable to continue. Most of that memory was consumed by zombie objects.</p>
 
@@ -2799,7 +2615,7 @@ xtend(B, A)
 <pre><code>B extends A
 </code></pre>
 
-<p>Most helpful! In fact, CoffeeScript’s keyword is superior to the <code>xtend</code> function: It provides support for extending functions that have other properties, not just the prototype.<sup id="fnref:xt"><a href="#fn:xt" rel="footnote">27</a></sup> </p>
+<p>Most helpful! In fact, CoffeeScript’s keyword is superior to the <code>xtend</code> function: It provides support for extending functions that have other properties, not just the prototype.<sup id="fnref:xt"><a href="#fn:xt" rel="footnote">26</a></sup> </p>
 
 <p>How about the class statement? CoffeeScript does a lot more work for you if you wish. You can write:</p>
 
@@ -2864,11 +2680,11 @@ T&gt; * <code>extends</code> plays well with <code>class</code>.</p>
   <p>“There is no where to hide with a straight unadulterated shot of espresso.  Even more (less?) so with a ristretto shot.  Any weakness in the blend or in the preparation of the coffee will be brought to light here.  Either the heavens open up and the angels sing after that first sip or….something significantly less.  Which is always such a disappointment knowing all the potential distilled into the dribble of coffee liquor that barely coats the bottom of your cup.”</p>
 </blockquote>
 
-<iframe style="float:right;margin-left:20px;margin-bottom:20px;" width="160" height="400" src="https://leanpub.com/combinators/embed" frameborder="0" allowtransparency="true"></iframe>
-
 <h1 id="extra-shot">An Extra Shot of Ideas</h1>
 
 <p><img src="assets/images/intestines.jpg" alt="The Intestines of an Espresso Machine" /></p>
+
+<iframe style="float:right;margin-left:20px;margin-bottom:20px;" width="160" height="400" src="https://leanpub.com/combinators/embed" frameborder="0" allowtransparency="true"></iframe>
 
 <h2 id="combinators">Refactoring to Combinators</h2>
 
@@ -2901,7 +2717,7 @@ new Fibonacci(45).toInt()
 
 <p>Why is it so slow? Well, it has a nasty habit of recalculating the same results over and over and over again. We could rearrange the computation to avoid this, but let’s be lazy and trade space for time. What we want to do is use a lookup table. Whenever we want a result, we look it up. If we don’t have it, we calculate it and write the result in the table to use in the future. If we do have it, we return the result without recalculating it.</p>
 
-<p>We could write something specific for fibonacci and then generalize it, but let’s skip right to a general solution (we’ll discuss extracting a combinator below). First, a new feature. Within any function the name <code>arguments</code> is always bound to an object that behaves like a collection of all the arguments passed to a function. Using <code>arguments</code>, here is a <code>memoize</code> implementation that works for many<sup id="fnref:json"><a href="#fn:json" rel="footnote">28</a></sup> kinds of functions:</p>
+<p>We could write something specific for fibonacci and then generalize it, but let’s skip right to a general solution (we’ll discuss extracting a combinator below). First, a new feature. Within any function the name <code>arguments</code> is always bound to an object that behaves like a collection of all the arguments passed to a function. Using <code>arguments</code>, here is a <code>memoize</code> implementation that works for many<sup id="fnref:json"><a href="#fn:json" rel="footnote">27</a></sup> kinds of functions:</p>
 
 <pre><code>memoized = (fn) -&gt;
   do (lookupTable = {}, key = undefined, value = undefined) -&gt;
@@ -3045,7 +2861,7 @@ ensureItIsInitialized = once(initializeIt)
 
 <p>Now that we’ve seen how function combinators can make our code cleaner and DRYer, it isn’t a great leap to ask if we can use combinators with methods. After all, methods are functions. That’s one of the great strengths of CoffeeScript, since methods are “just” functions, we don’t need to have one kind of tool for functions and another for methods, or a messy way of turning methods into functions and functions into methods.</p>
 
-<p>And the answer is, “Yes we can.” With some caveats. Let’s get our terminology  synchronized. A combinator is a function that modifies another function. A <em>method decorator</em> is a combinator that modifies a method expression used inline. So, all method decorators are combinators, but not all combinators are method decorators.<sup id="fnref:py"><a href="#fn:py" rel="footnote">29</a></sup></p>
+<p>And the answer is, “Yes we can.” With some caveats. Let’s get our terminology  synchronized. A combinator is a function that modifies another function. A <em>method decorator</em> is a combinator that modifies a method expression used inline. So, all method decorators are combinators, but not all combinators are method decorators.<sup id="fnref:py"><a href="#fn:py" rel="footnote">28</a></sup></p>
 
 <h3 id="decorating-object-methods">decorating object methods</h3>
 
@@ -3398,7 +3214,7 @@ sequenceWithCallbacks = -&gt;
 
 <h3 id="promises-3">solving this problem with promises</h3>
 
-<p>Asynchronous control flow can also be expressed using objects and methods. One model is called <a href="http://wiki.commonjs.org/wiki/Promises/A">promises</a>. A <em>promise</em> is an object that acts as a state machine.<sup id="fnref:fsm"><a href="#fn:fsm" rel="footnote">30</a></sup> Its permissible states are:</p>
+<p>Asynchronous control flow can also be expressed using objects and methods. One model is called <a href="http://wiki.commonjs.org/wiki/Promises/A">promises</a>. A <em>promise</em> is an object that acts as a state machine.<sup id="fnref:fsm"><a href="#fn:fsm" rel="footnote">29</a></sup> Its permissible states are:</p>
 
 <ul>
   <li>unfulfilled</li>
@@ -3408,7 +3224,7 @@ sequenceWithCallbacks = -&gt;
 
 <p>The only permissible transitions are from <em>unfulfilled</em> to <em>fulfilled</em> and from <em>unfulfilled</em> to <em>failed</em>. Once in either the fulfilled or failed states, it remains there permanently.</p>
 
-<p>Each promise must at a bare minimum implement a single method, <code>.then(fulfilledCallback, failedCallback)</code>.<sup id="fnref:interactive"><a href="#fn:interactive" rel="footnote">31</a></sup> <code>fulfilledCallback</code> is a function to be invoked by a fulfilled promise, <code>failedCallback</code> by a failed promise. If the promise is already in either state, that function is invoked immediately.</p>
+<p>Each promise must at a bare minimum implement a single method, <code>.then(fulfilledCallback, failedCallback)</code>.<sup id="fnref:interactive"><a href="#fn:interactive" rel="footnote">30</a></sup> <code>fulfilledCallback</code> is a function to be invoked by a fulfilled promise, <code>failedCallback</code> by a failed promise. If the promise is already in either state, that function is invoked immediately.</p>
 
 <p><code>.then</code> returns another promise that is fulfilled when the appropriate callback is fulfilled or fails when the appropriate callback fails. This allows chaining of <code>.then</code> calls.</p>
 
@@ -3449,7 +3265,7 @@ T&gt; * Promises represent control flow with an object API.</p>
 
 <h2 id="online">How to run the examples</h2>
 
-<p>If you follow the instructions at <a href="http://coffeescript.org/#installation" title="Install CoffeeScript">coffeescript.org</a> to install NodeJS and CoffeeScript,<sup id="fnref:whoa"><a href="#fn:whoa" rel="footnote">32</a></sup> you can run an interactive CoffeeScript <a href="https://en.wikipedia.org/wiki/REPL" title="Read–eval–print loop">REPL</a> on your command line simply by typing <code>coffee</code>. This is how the examples in this book were tested, and what many programmers will do. When running CoffeeScript on the command line, ctrl-V switches between single-line and multi-line input mode. If you need to enter more than one line of code, be sure to enter multi-line mode.</p>
+<p>If you follow the instructions at <a href="http://coffeescript.org/#installation" title="Install CoffeeScript">coffeescript.org</a> to install NodeJS and CoffeeScript,<sup id="fnref:whoa"><a href="#fn:whoa" rel="footnote">31</a></sup> you can run an interactive CoffeeScript <a href="https://en.wikipedia.org/wiki/REPL" title="Read–eval–print loop">REPL</a> on your command line simply by typing <code>coffee</code>. This is how the examples in this book were tested, and what many programmers will do. When running CoffeeScript on the command line, ctrl-V switches between single-line and multi-line input mode. If you need to enter more than one line of code, be sure to enter multi-line mode.</p>
 
 <p>Some websites function as online <a href="https://en.wikipedia.org/wiki/REPL" title="Read–eval–print loop">REPLs</a>, allowing you to type CoffeeScript programs right within a web page and see the results (as well as a translation from CoffeeScript to JavaScript). The examples in this book have all been tested on <a href="http://coffeescript.org/#try:">coffeescript.org</a>. You simply type a CoffeeScript expression into the blank window and you will see its JavaScript translation live. Clicking “Run” evaluates the expression in the browser.</p>
 
@@ -3623,9 +3439,6 @@ Email: <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#103;&#064;&#0
     </li>
     <li id="fn:turing">
       <p>Since the CoffeeScript that we have presented so far is <a href="https://en.wikipedia.org/wiki/Turing_completeness" title="Computational Universality and Turing Completeness">computationally universal</a>, it is possible to perform any calculation with its existing feature set, including emulating any other programming language. Therefore, it is not theoretically necessary to have any further language features; If we need macros, continuations, generic functions, static typing, or anything else, we can <a href="https://en.wikipedia.org/wiki/Greenspun%27s_Tenth_Rule">greenspun</a> them ourselves. In practice, however, this is buggy, inefficient, and presents our fellow developers with serious challenges understanding our code.<a href="#fnref:turing" rev="footnote">&#8617;</a></p>
-    </li>
-    <li id="fn:dynamic">
-      <p>For many programmers, the distinction between a dynamic relationship and a copying mechanism too fine to worry about. However, it makes many dynamic program modifications possible.<a href="#fnref:dynamic" rev="footnote">&#8617;</a></p>
     </li>
     <li id="fn:reminder">
       <p>Recall that Strings, Numbers, Booleans and so forth are value types and primitives. We’re calling them primitives here.<a href="#fnref:reminder" rev="footnote">&#8617;</a></p>
