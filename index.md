@@ -3,6 +3,11 @@ layout: default
 title: ristrettolo.gy, CoffeeScript Ristretto Online
 ---
 
+<a id="leanpub" href="https://leanpub.com/coffeescript-ristretto">
+  <span>Get the eBook!</span>
+  <span>CoffeeScript Ristretto</span>
+</a>
+
 Yes, it's true: *The entire text of [CoffeeScript Ristretto][cr] is online for you to read, free*. The book starts [here](#start), but by all means read the introduction first.
 
 ## Introduction to the Online Edition
