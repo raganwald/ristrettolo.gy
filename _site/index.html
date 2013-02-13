@@ -4,9 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta charset="utf-8">
 <title>ristrettolo.gy, CoffeeScript Ristretto Online</title>
-<link rel="stylesheet" href="/assets/css/ristrettology.css">
-<link rel="stylesheet" href="/assets/css/book.css">
-<link rel="stylesheet" href="/assets/css/badge.css">
+<link rel="stylesheet" href="./assets/css/ristrettology.css">
+<link rel="stylesheet" href="./assets/css/book.css">
+<link rel="stylesheet" href="./assets/css/badge.css">
 <script type="text/javascript" src="//use.typekit.net/nqq2dai.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
@@ -73,7 +73,7 @@
   <p>“I can’t read this! The beautiful images distract me. And it’s midnight and I want ristretto.”—<a href="https://twitter.com/_glass">Roman Glass</a></p>
 </blockquote>
 
-<p>(<em>Want to make this even better? <a href="https://github.com/ristrettolo-gy/ristrettolo-gy.github.com/issues">File an issue</a>, or <a href="https://github.com/ristrettolo-gy/ristrettolo-gy.github.com/">fork this repository</a> and send a pull request!</em>)  </p>
+<p>(<em>Want to make this even better? <a href="https://github.com/ristrettolo-gy/ristrettolo-gy.github.com/issues">File an issue</a>, or <a href="https://github.com/ristrettolo-gy/ristrettolo-gy.github.com/">fork this repository</a> and send a pull request!</em>)   </p>
 
 <hr />
 
@@ -3372,97 +3372,97 @@ Email: <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#103;&#064;&#0
 <div class="footnotes">
   <ol>
     <li id="fn:representation">
-      <p>Technically, it’s a <em>representation</em> of a value using Base10 notation, but we needn’t worry about that in this book. You and I both understand that this means “42,” and so does the computer.<a href="#fnref:representation" rev="footnote">&#8617;</a></p>
+      <p>Technically, it’s a <em>representation</em> of a value using Base10 notation, but we needn’t worry about that in this book. You and I both understand that this means “42,” and so does the computer.<a href="#fnref:representation" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:homoiconicity">
-      <p>In some languages, expressions are a kind of value unto themselves and can be manipulated. The grandfather of such languages is Lisp. CoffeeScript is not such a language, expressions in and of themselves are not values.<a href="#fnref:homoiconicity" rev="footnote">&#8617;</a></p>
+      <p>In some languages, expressions are a kind of value unto themselves and can be manipulated. The grandfather of such languages is Lisp. CoffeeScript is not such a language, expressions in and of themselves are not values.<a href="#fnref:homoiconicity" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:also">
-      <p>If you have dabbled in CoffeeScript or look at other people’s CoffeeScript programs, you may discover that it is also legal to write <code>-&gt;</code>. Conceptually, <code>-&gt;</code> is a function with no arguments and no body. <code>-&gt;</code> is a function with an empty list of arguments and no body. Generally, CoffeeScript programmers prefer <code>-&gt;</code>, so let’s do that.<a href="#fnref:also" rev="footnote">&#8617;</a></p>
+      <p>If you have dabbled in CoffeeScript or look at other people’s CoffeeScript programs, you may discover that it is also legal to write <code>-&gt;</code>. Conceptually, <code>-&gt;</code> is a function with no arguments and no body. <code>-&gt;</code> is a function with an empty list of arguments and no body. Generally, CoffeeScript programmers prefer <code>-&gt;</code>, so let’s do that.<a href="#fnref:also" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:circular">
-      <p>The exact same thing will happen to you once you figure out how to make an array that contains itself. You’ll try to print it out and you’ll get <code>[[Circular]]</code> back. Never mind, internally CoffeeScript has constructed a perfectly fine Ouroborian array even if it won’t try to print it out for you.<a href="#fnref:circular" rev="footnote">&#8617;</a></p>
+      <p>The exact same thing will happen to you once you figure out how to make an array that contains itself. You’ll try to print it out and you’ll get <code>[[Circular]]</code> back. Never mind, internally CoffeeScript has constructed a perfectly fine Ouroborian array even if it won’t try to print it out for you.<a href="#fnref:circular" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:ambiguous">
-      <p>If you’re used to other programming languages, you’ve probably internalized the idea that sometimes parentheses are used to group operations in an expression like math, and sometimes to apply a function to arguments. If not… Welcome to the <a href="https://en.wikipedia.org/wiki/ALGOL">ALGOL</a> family of programming languages!<a href="#fnref:ambiguous" rev="footnote">&#8617;</a></p>
+      <p>If you’re used to other programming languages, you’ve probably internalized the idea that sometimes parentheses are used to group operations in an expression like math, and sometimes to apply a function to arguments. If not… Welcome to the <a href="https://en.wikipedia.org/wiki/ALGOL">ALGOL</a> family of programming languages!<a href="#fnref:ambiguous" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:omit">
-      <p>Elsewhere, we’ve pledged to avoid optional bits that don’t add a lot to our understanding. This optional bit gives us an excuse to learn about <code>undefined</code>, so that’s why it’s in. Now that we know this, we see that our expression <code>-&gt;</code> evaluates to a function taking no arguments and having no expression, therefore when you apply it to no arguments with <code>(-&gt;)()</code>, you get <code>undefined</code>.<a href="#fnref:omit" rev="footnote">&#8617;</a></p>
+      <p>Elsewhere, we’ve pledged to avoid optional bits that don’t add a lot to our understanding. This optional bit gives us an excuse to learn about <code>undefined</code>, so that’s why it’s in. Now that we know this, we see that our expression <code>-&gt;</code> evaluates to a function taking no arguments and having no expression, therefore when you apply it to no arguments with <code>(-&gt;)()</code>, you get <code>undefined</code>.<a href="#fnref:omit" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:pedant">
-      <p>It does something else when the first argument is a string, but let’s ignore that bit of pedantry for now.<a href="#fnref:pedant" rev="footnote">&#8617;</a></p>
+      <p>It does something else when the first argument is a string, but let’s ignore that bit of pedantry for now.<a href="#fnref:pedant" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:mp">
-      <p><a href="http://www.mindspring.com/~mfpatton/sketch.htm">The Argument Sketch</a> from “Monty Python’s Previous Record” and “Monty Python’s Instant Record Collection”<a href="#fnref:mp" rev="footnote">&#8617;</a></p>
+      <p><a href="http://www.mindspring.com/~mfpatton/sketch.htm">The Argument Sketch</a> from “Monty Python’s Previous Record” and “Monty Python’s Instant Record Collection”<a href="#fnref:mp" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:f2f">
-      <p>We said that you can’t apply a function to an expression. You <em>can</em> apply a function to one or more functions. Functions are values! This has interesting applications, and they will be explored much more thoroughly in <a href="#consumers">Functions That Are Applied to Functions</a>.<a href="#fnref:f2f" rev="footnote">&#8617;</a></p>
+      <p>We said that you can’t apply a function to an expression. You <em>can</em> apply a function to one or more functions. Functions are values! This has interesting applications, and they will be explored much more thoroughly in <a href="#consumers">Functions That Are Applied to Functions</a>.<a href="#fnref:f2f" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:nonlocal">
-      <p>You may also hear the term “non-local variable.” <a href="https://en.wikipedia.org/wiki/Free_variables_and_bound_variables">Both are correct.</a> <a href="#fnref:nonlocal" rev="footnote">&#8617;</a></p>
+      <p>You may also hear the term “non-local variable.” <a href="https://en.wikipedia.org/wiki/Free_variables_and_bound_variables">Both are correct.</a> <a href="#fnref:nonlocal" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:let">
-      <p><code>let</code> has made its way into other languages like JavaScript.<a href="#fnref:let" rev="footnote">&#8617;</a></p>
+      <p><code>let</code> has made its way into other languages like JavaScript.<a href="#fnref:let" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:letrec">
-      <p><code>let</code> is limited in some ways. For example, you can’t define a recursive function without some fixed point combinator backflips. This will be discussed later when we look at the related pattern <a href="#letrec"><code>letrec</code></a>.<a href="#fnref:letrec" rev="footnote">&#8617;</a></p>
+      <p><code>let</code> is limited in some ways. For example, you can’t define a recursive function without some fixed point combinator backflips. This will be discussed later when we look at the related pattern <a href="#letrec"><code>letrec</code></a>.<a href="#fnref:letrec" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:ssugar">
-      <p>“Syntactic sugar causes cancer of the semicolon”–<a href="http://www.cs.yale.edu/quotes.html" title="Epigrams in Programming">Alan Perlis</a><a href="#fnref:ssugar" rev="footnote">&#8617;</a></p>
+      <p>“Syntactic sugar causes cancer of the semicolon”–<a href="http://www.cs.yale.edu/quotes.html" title="Epigrams in Programming">Alan Perlis</a><a href="#fnref:ssugar" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:hunh">
-      <p>Arrays in all contemporary languages store references and not copies, so we can be forgiven for expecting them to work the same way in CoffeeScript. Nevertheless, it’s a useful exercise to test things for ourself.<a href="#fnref:hunh" rev="footnote">&#8617;</a></p>
+      <p>Arrays in all contemporary languages store references and not copies, so we can be forgiven for expecting them to work the same way in CoffeeScript. Nevertheless, it’s a useful exercise to test things for ourself.<a href="#fnref:hunh" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:poco">
-      <p>Tradition would have us call objects that don’t contain any functions “POCOs,” meaning Plain Old CoffeeScript Objects. Given that <em>poco a poco</em> means “little by little” in musical notation, I’m tempted to go along with that.<a href="#fnref:poco" rev="footnote">&#8617;</a></p>
+      <p>Tradition would have us call objects that don’t contain any functions “POCOs,” meaning Plain Old CoffeeScript Objects. Given that <em>poco a poco</em> means “little by little” in musical notation, I’m tempted to go along with that.<a href="#fnref:poco" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:y">
-      <p>You may also find <a href="https://en.wikipedia.org/wiki/Fixed-point_combinator">fixed point combinators</a> interesting.<a href="#fnref:y" rev="footnote">&#8617;</a></p>
+      <p>You may also find <a href="https://en.wikipedia.org/wiki/Fixed-point_combinator">fixed point combinators</a> interesting.<a href="#fnref:y" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:worse">
-      <p>It could be worse. One very popular language assumes that if you haven’t otherwise declared a variable local to a function, you must want a global variable that may clobber an existing global variable used by any piece of code in any file or module.<a href="#fnref:worse" rev="footnote">&#8617;</a></p>
+      <p>It could be worse. One very popular language assumes that if you haven’t otherwise declared a variable local to a function, you must want a global variable that may clobber an existing global variable used by any piece of code in any file or module.<a href="#fnref:worse" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:encapsulation">
-      <p>“A language construct that facilitates the bundling of data with the methods (or other functions) operating on that data.”–<a href="https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)">Wikipedia</a><a href="#fnref:encapsulation" rev="footnote">&#8617;</a></p>
+      <p>“A language construct that facilitates the bundling of data with the methods (or other functions) operating on that data.”–<a href="https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)">Wikipedia</a><a href="#fnref:encapsulation" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:length">
-      <p>Yes, there’s another way to track the size of the array, but we don’t need it to demonstrate encapsulation and hiding of state.<a href="#fnref:length" rev="footnote">&#8617;</a></p>
+      <p>Yes, there’s another way to track the size of the array, but we don’t need it to demonstrate encapsulation and hiding of state.<a href="#fnref:length" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:refactoring">
-      <p>And when you take an already factored component and rearrange things so that it is factored into a different set of subcomponents without altering its behaviour, you are <em>refactoring</em>.<a href="#fnref:refactoring" rev="footnote">&#8617;</a></p>
+      <p>And when you take an already factored component and rearrange things so that it is factored into a different set of subcomponents without altering its behaviour, you are <em>refactoring</em>.<a href="#fnref:refactoring" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:wasa">
-      <p>Before you start wondering whether a deque is-a queue, we said nothing about types and classes. This relationship is called was-a, or “implemented in terms of a.”<a href="#fnref:wasa" rev="footnote">&#8617;</a></p>
+      <p>Before you start wondering whether a deque is-a queue, we said nothing about types and classes. This relationship is called was-a, or “implemented in terms of a.”<a href="#fnref:wasa" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:this">
-      <p>CoffeeScript also does other things with <code>this</code> as well, but this is all we care about right now.<a href="#fnref:this" rev="footnote">&#8617;</a></p>
+      <p>CoffeeScript also does other things with <code>this</code> as well, but this is all we care about right now.<a href="#fnref:this" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:turing">
-      <p>Since the CoffeeScript that we have presented so far is <a href="https://en.wikipedia.org/wiki/Turing_completeness" title="Computational Universality and Turing Completeness">computationally universal</a>, it is possible to perform any calculation with its existing feature set, including emulating any other programming language. Therefore, it is not theoretically necessary to have any further language features; If we need macros, continuations, generic functions, static typing, or anything else, we can <a href="https://en.wikipedia.org/wiki/Greenspun%27s_Tenth_Rule">greenspun</a> them ourselves. In practice, however, this is buggy, inefficient, and presents our fellow developers with serious challenges understanding our code.<a href="#fnref:turing" rev="footnote">&#8617;</a></p>
+      <p>Since the CoffeeScript that we have presented so far is <a href="https://en.wikipedia.org/wiki/Turing_completeness" title="Computational Universality and Turing Completeness">computationally universal</a>, it is possible to perform any calculation with its existing feature set, including emulating any other programming language. Therefore, it is not theoretically necessary to have any further language features; If we need macros, continuations, generic functions, static typing, or anything else, we can <a href="https://en.wikipedia.org/wiki/Greenspun%27s_Tenth_Rule">greenspun</a> them ourselves. In practice, however, this is buggy, inefficient, and presents our fellow developers with serious challenges understanding our code.<a href="#fnref:turing" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:reminder">
-      <p>Recall that Strings, Numbers, Booleans and so forth are value types and primitives. We’re calling them primitives here.<a href="#fnref:reminder" rev="footnote">&#8617;</a></p>
+      <p>Recall that Strings, Numbers, Booleans and so forth are value types and primitives. We’re calling them primitives here.<a href="#fnref:reminder" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:wr">
-      <p>A <a href="https://en.wikipedia.org/wiki/Weak_reference">weak reference</a> is a reference that does not protect the referenced object from collection by a garbage collector; unlike a strong reference. An object referenced only by weak references is considered unreachable (or weakly reachable) and so may be collected at any time.<a href="#fnref:wr" rev="footnote">&#8617;</a></p>
+      <p>A <a href="https://en.wikipedia.org/wiki/Weak_reference">weak reference</a> is a reference that does not protect the referenced object from collection by a garbage collector; unlike a strong reference. An object referenced only by weak references is considered unreachable (or weakly reachable) and so may be collected at any time.<a href="#fnref:wr" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:xt">
-      <p>You should almost always use <code>extends</code> rather than rolling your own code to chain functions and instances. And even if you let CoffeeScript do the work, you should always <em>understand</em> what CoffeeScript is doing for you.<a href="#fnref:xt" rev="footnote">&#8617;</a></p>
+      <p>You should almost always use <code>extends</code> rather than rolling your own code to chain functions and instances. And even if you let CoffeeScript do the work, you should always <em>understand</em> what CoffeeScript is doing for you.<a href="#fnref:xt" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:json">
-      <p>To be precise, it works for functions that take arguments that can be expressed with JSON. So you can’t memoize a function that is applied to functions, but it’s fine for strings, numbers, arrays of JSON, POCOs of JSON, and so forth.<a href="#fnref:json" rev="footnote">&#8617;</a></p>
+      <p>To be precise, it works for functions that take arguments that can be expressed with JSON. So you can’t memoize a function that is applied to functions, but it’s fine for strings, numbers, arrays of JSON, POCOs of JSON, and so forth.<a href="#fnref:json" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:py">
-      <p>The term “method decorator” is borrowed from the Python programming language<a href="#fnref:py" rev="footnote">&#8617;</a></p>
+      <p>The term “method decorator” is borrowed from the Python programming language<a href="#fnref:py" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:fsm">
-      <p>A <a href="https://en.wikipedia.org/wiki/Finite-state_machine">state machine</a> is a mathematical model of computation used to design both computer programs and sequential logic circuits. It is conceived as an abstract machine that can be in one of a finite number of states. The machine is in only one state at a time; the state it is in at any given time is called the current state. It can change from one state to another when initiated by a triggering event or condition, this is called a transition. A particular FSM is defined by a list of its states, and the triggering condition for each transition.<a href="#fnref:fsm" rev="footnote">&#8617;</a></p>
+      <p>A <a href="https://en.wikipedia.org/wiki/Finite-state_machine">state machine</a> is a mathematical model of computation used to design both computer programs and sequential logic circuits. It is conceived as an abstract machine that can be in one of a finite number of states. The machine is in only one state at a time; the state it is in at any given time is called the current state. It can change from one state to another when initiated by a triggering event or condition, this is called a transition. A particular FSM is defined by a list of its states, and the triggering condition for each transition.<a href="#fnref:fsm" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:interactive">
-      <p>Interactive promises also support <code>.get</code> and <code>.call</code> methods for interacting with a potentially remote object.<a href="#fnref:interactive" rev="footnote">&#8617;</a></p>
+      <p>Interactive promises also support <code>.get</code> and <code>.call</code> methods for interacting with a potentially remote object.<a href="#fnref:interactive" rel="reference">&#8617;</a></p>
     </li>
     <li id="fn:whoa">
-      <p>Instructions for installing NodeJS and modules like CoffeeScript onto a desktop computer is beyond the scope of this book, especially given the speed with which things advance. Fortunately, there are always up-to-date instructions on the web.<a href="#fnref:whoa" rev="footnote">&#8617;</a></p>
+      <p>Instructions for installing NodeJS and modules like CoffeeScript onto a desktop computer is beyond the scope of this book, especially given the speed with which things advance. Fortunately, there are always up-to-date instructions on the web.<a href="#fnref:whoa" rel="reference">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -3482,6 +3482,8 @@ Email: <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#103;&#064;&#0
 
 </script>
 <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script src="./assets/js/underscore-min.js"></script>
+<script src="./assets/js/speed-bump.js"></script>
 
     </body>
 </html>

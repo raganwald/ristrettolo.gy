@@ -49,7 +49,7 @@ The entire text is online, free, although I certainly encourage you to check out
 
 >  "I can't read this! The beautiful images distract me. And it's midnight and I want ristretto."—[Roman Glass](https://twitter.com/_glass)
 
-(*Want to make this even better? [File an issue][issue], or [fork this repository][repo] and send a pull request!*)  
+(*Want to make this even better? [File an issue][issue], or [fork this repository][repo] and send a pull request!*)   
 
 ---
 
