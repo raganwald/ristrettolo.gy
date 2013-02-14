@@ -189,7 +189,7 @@ this.d.container.hide().remove();this.d.overlay.hide();this.d.iframe&&this.d.ifr
     $('.buy-now').click(function() {
       return $('iframe#coffeescript-ristretto form').submit();
     });
-    return typeof console !== "undefined" && console !== null ? console.log('done!') : void 0;
+    return typeof console !== "undefined" && console !== null ? console.log('done! done!') : void 0;
   });
 
 }).call(this);

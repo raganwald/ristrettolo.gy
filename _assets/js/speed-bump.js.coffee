@@ -76,4 +76,4 @@ $ ->
     $('iframe#coffeescript-ristretto form').submit()
     
   # debug
-  console?.log 'done!'
+  console?.log 'done! done!'
