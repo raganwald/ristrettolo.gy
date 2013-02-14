@@ -25,7 +25,7 @@ Underneath that syntax, JavaScript is extremely cool. Almost lisp-y: It has exce
 
 Yada, yada, and now CoffeeScript could be the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing *libraries*, because lots of pure JavaScript users need to read the code, but when I'm writing code for a team, it's CoffeeScript, CoffeeScript, CoffeeScript.
 
-## WHy I Wrote CoffeeScript Ristretto
+## Why I Wrote CoffeeScript Ristretto
 
 > "The best explanation of closures I've seen yet."—*Jerry Anning*
 
