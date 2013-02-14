@@ -81,6 +81,6 @@ This site uses the [Solarized][solarized] color scheme, is set in Nimbus Sans, a
 [CoffeeScript]: http://coffeescript.org
 [cr]: https://leanpub.com/coffeescript-ristretto
 [sample]: http://samples.leanpub.com/coffeescript-ristretto-sample.pdf "Free Sample PDF"
-[issue]: https://github.com/ristrettolo-gy/ristrettolo-gy.github.com/issues
-[repo]: https://github.com/ristrettolo-gy/ristrettolo-gy.github.com/
+[issue]: https://github.com/raganwald/ristrettolo.gy/issues
+[repo]: https://github.com/raganwald/ristrettolo.gy/
 [Jeremy Ashkenas]: https://github.com/jashkenas
