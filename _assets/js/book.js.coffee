@@ -1,12 +1,11 @@
----
----
-LEVELS = ['book', 'chapter', 'section', 'sub-section', 'sub-sub-section']
 
-DIV = (level) ->
-  return $('<div></div>')
-    .data
-      level: level
-    .addClass LEVELS[level]
+
+DIV = do (LEVELS = ['book', 'chapter', 'section', 'sub-section', 'sub-sub-section']) ->
+  (level) ->
+    return $('<div></div>')
+      .data
+        level: level
+      .addClass LEVELS[level]
     
 $ ->
   # the container div that holds everything

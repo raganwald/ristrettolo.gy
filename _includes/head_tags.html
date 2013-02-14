@@ -1,10 +1,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta charset="utf-8">
 <title>{{ page.title }}</title>
-<link rel="stylesheet" href="./assets/css/osx.css">
-<link rel="stylesheet" href="./assets/css/ristrettology.css">
-<link rel="stylesheet" href="./assets/css/book.css">
-<link rel="stylesheet" href="./assets/css/badge.css">
-<!-- <script type="text/javascript" src="http://use.typekit.net/nqq2dai.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+
+{% css_asset_tag global %}
+- /_assets/css/osx.css
+- /_assets/css/ristrettology.css
+- /_assets/css/book.css
+- /_assets/css/badge.css
+{% endcss_asset_tag %}
+
+<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+
+{% javascript_asset_tag global %}
+- /_assets/js/underscore-min.js
+- /_assets/js/jquery.combinators.min.js
+- /_assets/js/jquery.predicates.js
+- /_assets/js/jquery.simplemodal.1.4.4.min.js
+- /_assets/js/book.js.coffee
+- /_assets/js/speed-bump.js.coffee
+{% endjavascript_asset_tag %}
 

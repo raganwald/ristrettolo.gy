@@ -26,6 +26,9 @@ GEM
       kramdown (>= 0.13.2)
       liquid (>= 1.9.0)
       maruku (>= 0.5.9)
+    jekyll-asset-pipeline (0.1.2)
+      jekyll (>= 0.10.0)
+      liquid (>= 1.9.0)
     kramdown (0.13.7)
     liquid (2.3.0)
     maruku (0.6.0)
@@ -45,4 +48,5 @@ DEPENDENCIES
   coffee-script
   compass
   jekyll (= 0.11.0)
+  jekyll-asset-pipeline
   susy (~> 1.0.rc.3)

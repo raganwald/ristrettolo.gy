@@ -1,3 +1,33 @@
+/*
+ * SimpleModal OSX Style Modal Dialog
+ * http://simplemodal.com
+ *
+ * Copyright (c) 2013 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+
+#osx-modal-content, #osx-modal-data {display:none;}
+
+/* Overlay */
+#osx-overlay {background-color:#000;}
+
+/* Container */
+#osx-container {text-align: left; background-color:#eee; color:#000; font: 16px/24px "Lucida Grande",Arial,sans-serif; padding-bottom:4px; width:600px; -moz-border-radius-bottomleft:6px; -webkit-border-bottom-left-radius:6px; -moz-border-radius-bottomright:6px; -webkit-border-bottom-right-radius:6px; border-radius:0 0 6px 6px; -moz-box-shadow:0 0 64px #000; -webkit-box-shadow:0 0 64px #000; box-shadow:0 0 64px #000;}
+
+#osx-container #osx-modal-title {color:#000; background-color:#ddd; border-bottom:1px solid #ccc; font-weight:bold; padding:6px 8px; text-shadow:0 1px 0 #f4f4f4;}
+#osx-container .close {display:none; position:absolute; right:0; top:0;}
+#osx-container .close a {display:block; color:#777; font-weight:bold; padding:6px 12px 0; text-decoration:none; text-shadow:0 1px 0 #f4f4f4;}
+#osx-container .close a:hover {color:#000;}
+#osx-container #osx-modal-data {font-size:12px; padding:6px 12px;}
+#osx-container h2 {margin:10px 0 6px;}
+#osx-container p {margin-bottom:10px;}
+#osx-container p.why, p.more {display:none;}
+#osx-container span {color:#777;}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}html *{color-profile:sRGB;rendering-intent:auto}* html{font-size:112.5%}html{font-size:18px;line-height:1.33333em}body{background-color:#fdf6e3;color:#657b83;margin-top:1.33333em;font-family:"nimbus-sans", sans-serif;font-weight:300}body h1,body h2,body h3,body h4,body h5,body h6{color:#586e75;border-color:#657b83}body a,body a:active,body a:visited{color:#586e75}body a,body a:active,body a:visited,body code.url{color:#268bd2}body h1,body h2,body h3,body h4,body h5,body h6{color:#268bd2}body.dark{background-color:#002b36;color:#839496}body.dark h1,body.dark h2,body.dark h3,body.dark h4,body.dark h5,body.dark h6{color:#93a1a1;border-color:#839496}body.dark a,body.dark a:active,body.dark a:visited{color:#93a1a1}body.dark a,body.dark a:active,body.dark a:visited,body.dark code.url{color:#268bd2}body.dark h1,body.dark h2,body.dark h3,body.dark h4,body.dark h5,body.dark h6{color:#268bd2}header h1{font-size:1.66667em;line-height:1.6em;font-weight:bold}.container{*zoom:1;max-width:59em;_width:59em;margin-left:auto;margin-right:auto;padding-left:1em;padding-right:1em}.container:after{content:"";display:table;clear:both}.container>header a,.container>header a:active,.container>header a:visited,.container>header code.url{color:#cb4b16}.container>header h1,.container>header h2,.container>header h3,.container>header h4,.container>header h5,.container>header h6{color:#cb4b16}p{margin-top:1.33333em}
+
 body {
   text-align: center;
 }
@@ -228,3 +258,66 @@ img.block-equation {
 .vg { color: #19177C } /* Name.Variable.Global */
 .vi { color: #19177C } /* Name.Variable.Instance */
 .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+#banner{
+  height: 149px;
+  width: 149px;
+  overflow:hidden;
+  padding: 0;
+  margin: 0;
+}
+
+#banner a{
+
+  display: block;
+  width: 190px;
+  font-size: 14px;
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT",
+    "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma,
+    Geneva, "Helvetica Neue", Helvetica, Arial, sans serif;
+  background-color: #333;
+  color: #FFF;
+  word-spacing: 2px;
+  text-decoration: none;
+  padding: 5px 15px 5px 25px;
+
+  position:relative;
+  left: 20px;
+  top: -37px;
+  text-align: center;
+
+  -moz-transform-origin: 0 0 ;
+  -moz-transform:rotate(45deg);
+  -moz-box-shadow:    1px 1px 5px 1px #666;
+
+  -webkit-transform-origin: 0 0 ;
+  -webkit-transform:rotate(45deg);
+  -webkit-box-shadow: 1px 1px 5px 1px #666;
+
+  -ms-transform-origin: 0 0 ;
+  -ms-transform:rotate(45deg);
+  -ms-box-shadow: 1px 1px 5px 1px #666;
+
+  transform-origin: 0 0 ;
+  transform:rotate(45deg);
+  box-shadow: 1px 1px 5px 1px #666;
+
+  background-image: linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+  background-image: -o-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+  background-image: -moz-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+  background-image: -webkit-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+  background-image: -ms-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.03, #000000),
+    color-stop(0.05, #666666),
+    color-stop(0.07, #000000),
+    color-stop(0.93, #000000),
+    color-stop(0.95, #666666),
+    color-stop(0.97, #000000)
+  );
+
+}

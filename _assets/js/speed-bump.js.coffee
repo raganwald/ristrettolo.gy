@@ -1,5 +1,3 @@
----
----
 $ ->
   # pick out the second half of the book and obscure it
   book = $('.book')
