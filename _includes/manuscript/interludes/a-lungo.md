@@ -1,3 +1,0 @@
-### the last word...
-
-![Espresso a lungo, or the long pull, is thinner in texture, more acidic, and contains more caffeine than a ristretto pull](assets/images/brown-cups-1900.jpg)
