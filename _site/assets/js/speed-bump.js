@@ -1,48 +1,85 @@
-$(function () {
-  var nodeList = $('.container').children(),
-	    initialNode = $('<div class="book"></div>').data({level: 0}),
-	    finalStack = _.reduce(nodeList, function (acc, node) {
-				var nodeName = node.nodeName,
-				    top = acc[acc.length-1],
-				    topLevel = top.data('level'),
-				    matchData = nodeName.match(/H(\d)/),
-				    level = (matchData ? matchData[1] : void 0),
-				    newContainer,
-				    oldTop;
-		
-				node = $(node);
-		
-				if (level === void 0) {
-					top.append(node)
-				}
-				else {
-					newContainer = $('<div></div>')
-					               .attr({ id: node.attr('id') })
-					               .data({ level: level })
-					               .append(node);
-					node.attr({ id: null });
-			
-					while (level <= topLevel) {
-						oldTop = acc.pop();
-				    top = acc[acc.length-1].append(oldTop);
-				    topLevel = top.data('level');
-					}
-					acc.push(newContainer);
-				}
-				return acc;
-			}, [initialNode]),
-			topLevel = finalStack[finalStack.length-1].data('level'),
-			oldTop,
-			top;
-	
-	while (topLevel > 0) {
-		oldTop = finalStack.pop();
-    top = finalStack[finalStack.length-1].append(oldTop);
-    topLevel = top.data('level');
-	}
+(function() {
 
-	$('.container')
-	.empty()
-	.append(finalStack[0]);
-  
-});
+  $(function() {
+    var OSX, book, isObscuredInViewport, scrollHandler, secondHalf;
+    book = $('.book');
+    (secondHalf = book.children().slice(book.children().size() / -2)).addClass('obscured-by-clouds');
+    isObscuredInViewport = (function() {
+      var buckWindow, first;
+      first = secondHalf.first();
+      buckWindow = $(window);
+      return function() {
+        var docViewBottom, elemTop;
+        docViewBottom = buckWindow.scrollTop() + buckWindow.height();
+        elemTop = $(first).offset().top;
+        return elemTop < docViewBottom;
+      };
+    })();
+    scrollHandler = (function() {
+      var shown;
+      shown = false;
+      return function() {
+        if (!shown) {
+          if (isObscuredInViewport()) {
+            shown = true;
+            return OSX.display();
+          }
+        }
+      };
+    })();
+    $(this).scroll(_.throttle(scrollHandler, 100));
+    OSX = {
+      container: null,
+      display: function() {
+        return $("#osx-modal-content").modal({
+          overlayId: "osx-overlay",
+          containerId: "osx-container",
+          closeHTML: null,
+          minHeight: 80,
+          opacity: 65,
+          position: ["0"],
+          overlayClose: true,
+          onOpen: OSX.open,
+          onClose: OSX.close
+        });
+      },
+      open: function(d) {
+        var self;
+        self = this;
+        self.container = d.container[0];
+        return d.overlay.fadeIn("slow", function() {
+          var title;
+          $("#osx-modal-content", self.container).show();
+          title = $("#osx-modal-title", self.container);
+          title.show();
+          return d.container.slideDown("slow", function() {
+            return setTimeout((function() {
+              var h;
+              h = $("#osx-modal-data", self.container).height() + title.height() + 20;
+              return d.container.animate({
+                height: h
+              }, 200, function() {
+                $("div.close", self.container).show();
+                return $("#osx-modal-data", self.container).show();
+              });
+            }), 300);
+          });
+        });
+      },
+      close: function(d) {
+        var self;
+        self = this;
+        d.container.animate({
+          top: "-" + (d.container.height() + 20)
+        }, 500, function() {
+          return self.close();
+        });
+        return $('.obscured-by-clouds').removeClass('obscured-by-clouds');
+      }
+    };
+    return $('.buy-now').click(function() {
+      return $('iframe#coffeescript-ristretto form').submit();
+    });
+  });
+
+}).call(this);

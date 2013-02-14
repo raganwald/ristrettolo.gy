@@ -1,6 +1,11 @@
 body {
-  width: 700px;
-  float: center;
+  text-align: center;
+}
+
+.container {
+  text-align: left;
+  width: 750px;
+  margin: 0 auto;
 }
 
 /* headings */
@@ -53,6 +58,19 @@ h5 { margin-top: 1em;
 h6 {
    margin: 0;
  }
+
+/* obscured-by-clouds */
+
+div.obscured-by-clouds {
+  filter: alpha(opacity:0.15);
+  KHTMLOpacity: 0.15;
+  MozOpacity: 0.15;
+  -khtml-opacity:.15;
+  -ms-filter:”alpha(opacity=15)”;
+  -moz-opacity:.15;
+  filter:alpha(opacity=15);
+  opacity:.15;
+}
 
 /* general text */
 

@@ -5,7 +5,9 @@ title: ristrettolo.gy, CoffeeScript Ristretto Online
 
 ## Introduction to the Online Edition
 
-Some time ago, Benjamin Stein and I rediscovered Haskell's Maybe Monad. Or as we prefer to think of it, we wrote a little Ruby helper called #andand. It was a hack, but it worked and inspired me to want to fix a lot of other "problems" I encountered with Ruby's syntax.
+*by Reginald Braithwaite*:
+
+Some time ago, Benjamin Stein and I rediscovered Haskell's Maybe Monad. Or as we prefer to think of it, we wrote a little Ruby helper called [#andand](https://github.com/raganwald/andand). It worked, and it inspired me to want to fix a lot of other "problems" I encountered with Ruby's syntax.
 
 Unfortunately, you can only go so far with meta-programming, and eventually you find yourself confronted with a choice: Take the blue pill, forget about fixing the language, and live a happy life until old age or a passing asteroid claims you. Or take the red pill, and venture into hacking the syntax with parsers, grammars, ASTs, and whatever else you need to make things like `[1..100].map { its.first_name }` work.
 
@@ -23,7 +25,7 @@ Underneath that syntax, JavaScript is extremely cool. Almost lisp-y: It has exce
 
 Yada, yada, and now CoffeeScript could be the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing *libraries*, because lots of pure JavaScript users need to read the code, but when I'm writing code for a team, it's CoffeeScript, CoffeeScript, CoffeeScript.
 
-## CoffeeScript Ristretto
+## WHy I Wrote CoffeeScript Ristretto
 
 > "The best explanation of closures I've seen yet."—*Jerry Anning*
 
