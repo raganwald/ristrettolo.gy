@@ -76,3 +76,6 @@ $ ->
   # wire up buy now links
   $('.buy-now').click ->
     $('iframe#coffeescript-ristretto form').submit()
+    
+  # debug
+  console?.log 'done!'

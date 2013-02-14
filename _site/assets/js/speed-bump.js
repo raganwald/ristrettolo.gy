@@ -77,9 +77,10 @@
         return $('.obscured-by-clouds').removeClass('obscured-by-clouds');
       }
     };
-    return $('.buy-now').click(function() {
+    $('.buy-now').click(function() {
       return $('iframe#coffeescript-ristretto form').submit();
     });
+    return typeof console !== "undefined" && console !== null ? console.log('done!') : void 0;
   });
 
 }).call(this);
