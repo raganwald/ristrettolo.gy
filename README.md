@@ -1,7 +1,7 @@
 ristrettolo.gy
 ==============
 
-This is the source code for the site [ristrettolo.gy]. It's a static site hosted on [Github Pages] that is built with [Jekyll]. Because it uses a custom plugin--the Jekyll Asset Pipeline--to transpile CoffeeScript into JavaScript, building the site is a little more involved than a typical Jekyll-on-Github-Pages site.
+This is one of the two repositories responsible for the site [ristrettolo.gy]. It's a static site hosted on [Github Pages] that is built with [Jekyll]. Because it uses a custom plugin--the Jekyll Asset Pipeline--to transpile CoffeeScript into JavaScript, building the site is a little more involved than a typical Jekyll-on-Github-Pages site.
 
 [ristrettolo.gy]: http://ristrettolo.gy
 [Jekyll]: https://github.com/mojombo/jekyll
@@ -32,18 +32,20 @@ Meaning, it will not convert CoffeeScript using the asset pipeline plugin or the
 setup
 -----
 
-Clone this repo to your local system. You will also need Ruby, and [Bundler] and you're going to run `bundle install`. Or, you're going to use `gem install` for each of the gems in the Gemfile.
+First, clone the source repository, [raganwald/ristrolo.gy][rr] to your local system (cloning [ristrettolo-gy/ristrettolo-gy.github.com][rrgc] is not helpful). You will also need Ruby, and [Bundler] and you're going to run `bundle install`. Or, you're going to use `gem install` for each of the gems in the Gemfile.
 
 [Bundler]: http://gembundler.com
+[rr]: https://github.com/raganwald/ristrolo.gy
+[rrgc]: https://github.com/ristrettolo-gy/ristrettolo-gy.github.com
 
 If you wish to make changes and/or send me a pull request, you can stop right here. Run `jekyll` to process the site locally. Run `jekyll --auto` to automagically process the site when you edit things locally. Run `jekyll --server 3210` to run a local server on your favourite port, like `3210`.
 
 pushing to github pages
 -----------------------
 
-Now if you're using this for yourself, you need to have a *separate* repository set up for Github Pages. You can't use this one! In my case, it's https://ristrettolo-gy/ristrettolo-gy.github.com. We'll call the original repository the `source` repo and we'll call the new one the `published` repo.
+Now if you're using this for yourself, you need to have a *separate* repository set up for Github Pages. You can't use [ristrettolo-gy/ristrettolo-gy.github.com][rrgc]. We'll call your copy of [raganwald/ristrolo.gy][rr] the `source` repo and we'll call the new one the `published` repo.
 
-When you're happy with the `source` repo, you'll need to copy all of the files (recursively!) from `source/_site` into `published/`. `assets`, `index.html`, `CNAME`, the whole shebang. Then you'll need to commit and push. It's now a static site with no plugins, and Github Pages will publish it nicely for you.
+When you're happy with the `source` repo, you'll need to copy all of the files (recursively!) from `source/_site` into `published/`: `assets`, `index.html`, `CNAME`, the whole shebang. Then you'll need to commit and push. It's now a static site with no plugins, and Github Pages will publish it nicely for you.
 
 You're a programmer, so you're probably already googling for a bash script to do it for you (why create when you can sit back and consume copypasta?) Here's my exact `~/.bash_profile` entries, snarfed as-is from [Jekyll + Plugins + Github + You](http://charliepark.org/jekyll-with-plugins/):
 
