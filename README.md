@@ -1,11 +1,12 @@
 ristrettolo.gy
 ==============
 
-This is one of the two repositories responsible for the site [ristrettolo.gy]. It's a static site hosted on [Github Pages] that is built with [Jekyll]. Because it uses a custom plugin--the Jekyll Asset Pipeline--to transpile CoffeeScript into JavaScript, building the site is a little more involved than a typical Jekyll-on-Github-Pages site.
+This is one of the two repositories responsible for the site [ristrettolo.gy]. It's a static site hosted on [Github Pages] that is built with [Jekyll]. Because it uses the [Jekyll Asset Pipeline][jap] to transpile CoffeeScript into JavaScript, building the site is a little more involved than a typical Jekyll-on-Github-Pages site.
 
 [ristrettolo.gy]: http://ristrettolo.gy
 [Jekyll]: https://github.com/mojombo/jekyll
 [Github Pages]: http://pages.github.com
+[jap]: https://github.com/matthodan/jekyll-asset-pipeline
 
 I'm assuming that you want to try it for either of two reasons:
 
@@ -19,6 +20,7 @@ background reading
 
 * [Github Pages Help](https://help.github.com/categories/20/articles)
 * [Using Jekyll with Github Pages](https://help.github.com/articles/using-jekyll-with-pages)
+* [The Jekyll Asset Pipeline][jap]
 * [Jekyll + Plugins + Github + You](http://charliepark.org/jekyll-with-plugins/)
 
 In a nutshell, Github Pages publishes your static site by running it through Jekyll. Since every html page is a valid Jekyll page, Github Pages looks just like a static web server. But if you set up your repo to take advantage of Jekyll's features like [Liquid Templates], Github Pages will do the processing on the server side when you push to the server.
