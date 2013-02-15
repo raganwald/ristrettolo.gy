@@ -1,95 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta charset="utf-8">
-<title>ristrettolo.gy, CoffeeScript Ristretto Online</title>
-
-<link href='/assets/global-a8ca37cf4a59d6aec6b9e38164d40187.css' rel='stylesheet' type='text/css' />
-
-
-<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
-
-<script src='/assets/global-17a7473045cc897f8e2130cb73f82bc7.js' type='text/javascript'></script>
-
-
-
-    </head>
-    <body>
-        <div class="container">
-            <header>
-    <h1><tt>ristrettolo.gy</tt>, CoffeeScript Ristretto Online</h1>
-</header>
-            <h2 id="introduction-to-the-online-edition">Introduction to the Online Edition</h2>
-
-<p><em>by Reginald Braithwaite</em>:</p>
-
-<p>Some time ago, Benjamin Stein and I rediscovered Haskell’s Maybe Monad. Or as we prefer to think of it, we wrote a little Ruby helper called <a href="https://github.com/raganwald/andand">#andand</a>. It worked, and it inspired me to want to fix a lot of other “problems” I encountered with Ruby’s syntax.</p>
-
-<p>Unfortunately, you can only go so far with meta-programming, and eventually you find yourself confronted with a choice: Take the blue pill, forget about fixing the language, and live a happy life until old age or a passing asteroid claims you. Or take the red pill, and venture into hacking the syntax with parsers, grammars, ASTs, and whatever else you need to make things like <code>[1..100].map { its.first_name }</code> work.</p>
-
-<blockquote>
-  <p>“This is your last chance. After this, there is no turning back. You take the blue pill—the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill—you stay in Wonderland and I show you how deep the rabbit-hole goes.”—<em>Morpheus</em></p>
-</blockquote>
-
-<p>I took the red pill, and wound up writing [rewrite_rails][rr]. The trouble was, Ruby was well-regarded, and the problems that I solved didn’t really bother most people. For example, rewrite_rails provides extension methods so you can extend a class without monkey-patching it in the global namespace. Everyone agrees that monkey-patching is a “Bad Idea” in theory, but in practice it seems to suit Ruby programmers just fine.</p>
-
-<h2 id="meanwhile-in-new-york">Meanwhile, in New York…</h2>
-
-<blockquote>
-  <p>“I particularly enjoyed this small book because I’ve reached for it a hundred times before and come up empty-handed. Large and heavy manuals on object-oriented programming and JavaScript are all around us, but to find a book that tackles the fundamental features of functions and objects in a brief, strong gulp, is rare indeed.”—<em>Jeremy Ashkenas, creator of the CoffeeScript Language</em></p>
-</blockquote>
-
-<p>Meanwhile, in New York, [Jeremy Ashkenas] also took the red pill. But instead of smoothing over some obscure warts in a language that was otherwise liked and well-regarded, Jeremy took on some annoyances and headaches in a language that was generally reviled as having awkward and error-prone syntax: JavaScript. </p>
-
-<p>Underneath that syntax, JavaScript is extremely cool. Almost lisp-y: It has excellent support for first-class functions, even better than Ruby. JavaScript is a good language hampered by a syntax that was very, very necessary to capture mindshare in 199x, but is holding it back in 201x. And Jeremy did something about it, he wrote [CoffeeScript].</p>
-
-<p>Yada, yada, and now CoffeeScript could be the best way to write application code targeting JavaScript runtimes. I use pure JavaScript most of the time when writing <em>libraries</em>, because lots of pure JavaScript users need to read the code, but when I’m writing code for a team, it’s CoffeeScript, CoffeeScript, CoffeeScript.</p>
-
-<h2 id="why-i-wrote-coffeescript-ristretto">Why I Wrote CoffeeScript Ristretto</h2>
-
-<blockquote>
-  <p>“The best explanation of closures I’ve seen yet.”—<em>Jerry Anning</em></p>
-</blockquote>
-
-<p>I like almost all of the books I’ve read that introduce the CoffeeScript language. They do a great job of teaching you how the syntax works. Some walk you through building something big enough to touch on many features but small enough to fit in a week or two of reading.</p>
-
-<p>But what I hadn’t seen was a book that addressed the underlying semantics, the functions, functions, functions orientation of the JavaScript runtime. So I set out to write such a book. Not a book about “functional programming,” the world needs another discussion of folds, unfolds, lazy lists, and purely functional data structures like it needs another Haskell or Clojure blog post explaining that “Schrödinger’s Cat is a Monad”.</p>
-
-<p>But a book about programming with functions as first-class values, a book that embraces the fact that CoffeeScript methods, like JavaScript methods, are functions. A book that dares to start the story at the very beginning but not falter and work from there up to very advanced topics like refactoring to method combinators and decorators. A book that complements what you read elsewhere and already know, a book that acts like a multiplier of your skills.</p>
-
-<p>That was a book I thought was worth writing, and more than three hundred people think it’s worth paying for and reading! </p>
-
-<h2 id="is-this-book-for-you">Is this book for you?</h2>
-
-<blockquote>
-  <p>“I was also seriously caught up by the digression into espresso, ristretto, etc. Worth the purchase just for the intro.”—<em>Chris Smith</em></p>
-</blockquote>
-
-<p>Quite frankly, the audience for a book about “function decorators and method combinators” is tiny. But that isn’t really what [CoffeeScript Ristretto][cr] is about, and that isn’t who it’s for. <strong>This is a book about understanding what CoffeeScript is really capable of and how far you can take it.</strong> Function decorators and method combinators and everything else are just how we get there together.</p>
-
-<p>If you bought a car that could go 240mph and he dealership advertised a long-weekend driving course at a local racetrack, obviously it isn’t really for people who want to go street racing. It’s for people who want to know how to drive their car safely on the autobahn and for people who want the knowledge and reflexes to know what to do if they find the car drifting in a turn on a slippery road.</p>
-
-<p>[CoffeeScript Ristretto][cr] is for people who appreciate that they’re using a high-performance language, one that can be very powerful when necessary. And they who want to know what it’s capable of in their hands. If that’s you, read on!</p>
-
-<p>The entire text is online, free, although I certainly encourage you to check out the [ebook][cr]. In addition to better formatting and portability to offline formats, you’ll also receive free updates and fixes indefinitely, while this web site may not receive updates as often, or at all.</p>
-
-<blockquote>
-  <p>“I can’t read this! The beautiful images distract me. And it’s midnight and I want ristretto.”—<a href="https://twitter.com/_glass">Roman Glass</a></p>
-</blockquote>
-
-<p>(<em>Want to make this even better? [File an issue][issue], or [fork this repository][repo] and send a pull request!</em>)   </p>
-
-<hr />
-
-<p><img src="http://i.minus.com/iL337yTdgFj7.png" alt="" /><a href="http://leanpub.com/javascript-allonge" title="JavaScript Allongé"><img src="http://i.minus.com/iW2E1A8M5UWe6.jpeg" alt="JavaScript Allongé" /></a><img src="http://i.minus.com/iL337yTdgFj7.png" alt="" /><a href="http://leanpub.com/coffeescript-ristretto" title="CoffeeScript Ristretto"><img src="http://i.minus.com/iMmGxzIZkHSLD.jpeg" alt="CoffeeScript Ristretto" /></a><img src="http://i.minus.com/iL337yTdgFj7.png" alt="" /><a href="http://leanpub.com/combinators" title="Kestrels, Quirky Birds, and Hopeless Egocentricity"><img src="http://i.minus.com/ibw1f1ARQ4bhi1.jpeg" alt="Kestrels, Quirky Birds, and Hopeless Egocentricity" /></a></p>
-
-<hr />
-
-<p><a name="start"></a></p>
-
-<h2 id="coffeescript-ristretto">CoffeeScript Ristretto</h2>
-
 <div id="leanpub-main">
 
 <!-- begin frontmatter -->
@@ -98,13 +6,13 @@
 <div class="image-with-caption">
   <p><img src="images/caffemolinari.jpg" alt="Caffe Molinari" />
   <p>Caffe Molinari</p>
-
+</div>
 
 <blockquote>
   <p>&ldquo;We always pour our coffee in the ristretto, or restricted, tradition. The coffee is restricted to the most flavourful part of the shot.  This tradition offers the heaviest shot, thickest texture and finest flavour that the coffee has to offer.&rdquo;&ndash;<a href="http://www.espressovivace.com/archives/9507scr.html">David Schomer</a></p>
 </blockquote>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="about-this-book">About This Book</h3>
 
 <blockquote>
@@ -121,7 +29,7 @@
 
 <p>As a result, <em>CoffeeScript Ristretto</em> is a rich, dense read, much like the Espresso Ristretto beloved by coffee enthusiasts everywhere.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="foreword-by-jeremy-ashkenas">Foreword by Jeremy Ashkenas</h3>
 
 <blockquote>
@@ -136,7 +44,7 @@
   <p>&ldquo;This book is dense, but hopefully you&rsquo;ve chosen it because you like your ristretto bold and strong. If Reg had pulled it any thicker you&rsquo;d have to chew it.&rdquo;—Jeremy Ashkenas, CoffeeScript&rsquo;s creator</p>
 </blockquote>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="legend">Legend</h3>
 
 <p>Some text in monospaced type like <code>this</code> in the text represents some code being discussed. Some monospaced code in its own lines also represents code being discussed:</p>
@@ -181,7 +89,7 @@
   <hr />
 </div>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h2 id="prelude-values-and-expressions">Prelude: Values and Expressions</h2>
 
 <p><em>The following material is extremely basic, however like most stories, the best way to begin is to start at the very beginning.</em></p>
@@ -301,7 +209,7 @@
 <div class="image-with-caption">
   <p><img src="images/macchiato_1200.jpg" alt="Cafe Macchiato is also a fine drink, especially when following up on the fortunes of the Azzuri or the standings in the Giro D'Italia" />
   <p>Cafe Macchiato is also a fine drink, especially when following up on the fortunes of the Azzuri or the standings in the Giro D'Italia</p>
-
+</div>
 
 <h4 id="reference-types">reference types</h4>
 
@@ -352,13 +260,13 @@
 
 <p>They look the same, but if you examine them with <code>is</code>, you see that they are different. Every time you evaluate an expression (including typing something in) to create an array, you&rsquo;re creating a new, distinct value even if it <em>appears</em> to be the same as some other array value. As we&rsquo;ll see, this is true of many other kinds of values, including <em>functions</em>, the main subject of this book.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h4 id="interlude">interlude&hellip;</h4>
 
 <div class="image-with-caption">
   <p><img src="images/espresso.jpg" alt="A short, intense shot of espresso" />
   <p>A short, intense shot of espresso</p>
-
+</div>
 
 <p><a href="https://en.wikipedia.org/wiki/Ristretto">Wikipedia</a> on Ristretto:</p>
 
@@ -366,23 +274,23 @@
   <p>&rdquo;<strong>Ristretto</strong> is a very &lsquo;short&rsquo; shot of espresso coffee. Originally this meant pulling a hand press faster than usual using the same amount of water as a regular shot of espresso. Since the water came in contact with the grinds for a much shorter time the caffeine is extracted in reduced ratio to the flavorful coffee oils. The resultant shot could be described as bolder, fuller, with more body and less bitterness.&rdquo;</p>
 </blockquote>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <!-- begin mainmatter -->
 <h2 id="coffeescript-ristretto">CoffeeScript Ristretto</h2>
 
 <div class="image-with-caption">
   <p><img src="images/leaf-roaster.jpg" alt="The perfect Espresso Ristretto begins with the right beans, properly roasted. CoffeeScript Ristretto begins with functions, properly dissected." />
   <p>The perfect Espresso Ristretto begins with the right beans, properly roasted. CoffeeScript Ristretto begins with functions, properly dissected.</p>
-
+</div>
 
 <h2 id="functions">The first sip: Functions</h2>
 
 <div class="image-with-caption">
   <p><img src="images/half-drunk.jpg" alt="While Terroir tends toward pretty low body (particularly at its age when we pulled it), the crema's so thin on this shot due to it having been sipped from already!" />
   <p>While Terroir tends toward pretty low body (particularly at its age when we pulled it), the crema's so thin on this shot due to it having been sipped from already!</p>
+</div>
 
-
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="as-little-as-possible-about-functions-but-no-less">As Little As Possible About Functions, But No Less</h3>
 
 <p>In CoffeeScript, functions are values, but they are also much more than simple numbers, strings, or even complex data structures like trees or maps. Functions represent computations to be performed. Like numbers, strings, and arrays, they have a representation in CoffeeScript. Let&rsquo;s start with the very simplest possible function. In CoffeeScript, it looks like this:<sup id="fnref-also"><a href="#fn-also" rel="footnote">3</a></sup></p>
@@ -404,7 +312,7 @@
 
 <p>What!? Why didn&rsquo;t it type back <code>-&gt;</code> for us? This <em>seems</em> to break our rule that if an expression is also a value, CoffeeScript will give the same value back to us. What&rsquo;s going on? The simplest and easiest answer is that although the CoffeeScript interpreter does indeed return that value, displaying it on the screen is a slightly different matter. <code>[Function]</code> is a choice made by the people who wrote Node.js, the JavaScript environment that hosts the CoffeeScript REPL. If you try the same thing in a browser (using &ldquo;Try CoffeeScript&rdquo; at <a href="http://coffeescript.org">coffeescript.org</a> for example), you&rsquo;ll get something else entirely that isn&rsquo;t CoffeeScript at all, it&rsquo;s JavaScript.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <div class="aside sidebarish">
   <hr />
   <p>I&rsquo;d prefer something else, but I console myself with the thought that what gets typed back to us on the screen is arbitrary, and all that really counts is that it is somewhat useful for a human to read. But we must understand that whether we see <code>[Function]</code> or <code>function () {}</code> or&ndash;in some future version of CoffeeScript&ndash;<code>-&gt;</code>, internally CoffeeScript has a full and proper function.<sup id="fnref-circular"><a href="#fn-circular" rel="footnote">4</a></sup></p>
@@ -621,7 +529,7 @@
 
 <p>And with that&rsquo;s let&rsquo;s move on!</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="fargs">Ah. I&rsquo;d Like to Have an Argument, Please.<sup id="fnref-mp"><a href="#fn-mp" rel="footnote">8</a></sup></h3>
 
 <p>Up to now, we&rsquo;ve looked at functions without arguments. We haven&rsquo;t even said what an argument <em>is</em>, only that our functions don&rsquo;t have any.</p>
@@ -786,7 +694,7 @@
 
 </div>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="closures">Closures and Scope</h3>
 
 <p>Before we explain <code>(x) -&gt; (y) -&gt; x</code>, we&rsquo;re going to toss in something that doesn&rsquo;t directly affect our explanation, but makes things easier to see <em>visually</em>. Up to now, every function has looked like this: <code>(</code><em>arguments</em><code>) -&gt; </code><em>body</em>. There&rsquo;s another way to write functions. For example here&rsquo;s the other way to write <code>(x) -&gt; x</code>:</p>
@@ -959,7 +867,7 @@
 
 <p>Only you call it with <code>(1)(2)(3)</code> instead of <code>(1, 2, 3)</code>. The other big difference is that you can call it with <code>(1)</code> and get a function back that you can later call with <code>(2)(3)</code>.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <div class="aside sidebarish">
   <hr />
   <p>The first function is the result of <a href="https://en.wikipedia.org/wiki/Currying">currying</a> the second function. Calling a curried function with only some of its arguments is sometimes called <a href="https://en.wikipedia.org/wiki/Partial_application">partial application</a>. Some programming languages automatically curry and partially evaluate functions without the need to manually nest them.</p>
@@ -1013,7 +921,7 @@
 
 <p>The effect of this is to insert a new, empty environment in between the global environment and your own functions: <code>{x: 1, '..': {'..': </code><em>global environment</em><code>}}</code>. As we&rsquo;ll see when we discuss mutable state, this helps to prevent programmers from accidentally changing the global state that is shared by code in every file.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="summary">Summary</h3>
 
 <div class="tip sidebarish">
@@ -1039,9 +947,9 @@
 <div class="image-with-caption">
   <p><img src="images/diplomatico.jpg" alt="Cafe Diplomatico in Toronto's Little Italy" />
   <p>Cafe Diplomatico in Toronto's Little Italy</p>
+</div>
 
-
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="let-me-show-you-what-to-do">Let Me Show You What To Do</h3>
 
 <h4 id="let">let</h4>
@@ -1112,7 +1020,7 @@
 <div class="image-with-caption">
   <p><img src="images/sugarservice.jpg" alt="Italians seem to prefer espresso with plenty of sugar, while North Americans often drink it without" />
   <p>Italians seem to prefer espresso with plenty of sugar, while North Americans often drink it without</p>
-
+</div>
 
 <p>This is what our example looks like using <code>do</code>:</p>
 
@@ -1159,7 +1067,7 @@
   <hr />
 </div>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="a-simple-question">A Simple Question</h3>
 
 <p>Both of the following produce the exact same result:</p>
@@ -1296,7 +1204,7 @@
 
 <p>What happens? There&rsquo;s one outer <code>do (circumference = (...) -&gt;</code>, same as before. And then every time we invoke <code>circumference</code>, we also invoke <code>do (Pi = 3.14159265) -&gt;</code>, so we have a total of twenty-one function invocations. This is nearly twice as expensive.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="making-things-easy">Making Things Easy</h3>
 
 <p>In <em>CoffeeScript Ristretto</em>, we are focusing on CoffeeScript&rsquo;s <em>semantics</em>, the meaning of CoffeeScript programs. As we go along, we&rsquo;re learning just enough CoffeeScript to understand the next concept simply and directly.</p>
@@ -1372,8 +1280,8 @@
 
 </div>
 
-<div class="page-break"></div>
-<div class="page-break"></div>
+<div class="page-break" />
+<div class="page-break" />
 <h3 id="summary-1">Summary</h3>
 
 <div class="tip sidebarish">
@@ -1390,13 +1298,13 @@
   <hr />
 </div>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h4 id="interlude-1">interlude&hellip;</h4>
 
 <div class="image-with-caption">
   <p><img src="images/mirage.jpg" alt="A beautiful espresso machine" />
   <p>A beautiful espresso machine</p>
-
+</div>
 
 <p><a href="http://www.ineedcoffee.com/07/ristretto-rant/">Michael Allen Smith</a> on Ristretto:</p>
 
@@ -1404,7 +1312,7 @@
   <p>&ldquo;It must have been 1996. I was living in South Tampa at the time and the area finally got a great coffee house. The place was Jet City Espresso. Don&rsquo;t go looking for it. It is no longer there. As the name implies, the owner Jessica was from Seattle and shared her coffee knowledge with her customers. After ordering numerous americanos and espressos, Jessica thought it was time I tried a ristretto. I expected the short pull of the espresso shot would result in a more bitter flavor. To my delight the shot was actually a sweeter and more intense version of her espresso blend.&rdquo;</p>
 </blockquote>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h2 id="poco">References, Identity, Arrays, and Objects</h2>
 
 <h4 id="a-simple-question-1">a simple question</h4>
@@ -1454,7 +1362,7 @@
 
 <p><code>x</code> and <code>y</code> both end up bound to the exact same array, not two different arrays that look the same to our eyes.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="arguments-and-arrays">arguments and arrays</h3>
 
 <p>CoffeeScript provides two different kinds of containers for values. We&rsquo;ve met one already, the array. Let&rsquo;s see how it treats values and identities. For starters, we&rsquo;ll learn how to extract a value from an array. We&rsquo;ll start with a function that makes a new value with a unique identity every time we call it. We already know that every function we create is unique, so that&rsquo;s what we&rsquo;ll use:</p>
@@ -1528,7 +1436,7 @@
 
 </div>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="references-and-objects">references and objects</h3>
 
 <p>CoffeeScript also provides objects. The word &ldquo;object&rdquo; is loaded in programming circles, due to the widespread use of the term &ldquo;object-oriented programming&rdquo; that was coined by Alan Kay but has since come to mean many, many things to many different people.</p>
@@ -1614,13 +1522,13 @@
 <div class="image-with-caption">
   <p><img src="images/coffee-spoons.jpg" alt="Life measured out by coffee spoons" />
   <p>Life measured out by coffee spoons</p>
-
+</div>
 
 <p>So far, we have discussed what many call &ldquo;pure functional&rdquo; programming, where every expression is necessarily <a href="https://en.wikipedia.org/wiki/Idempotence">idempotent</a>, because we have no way of changing state within a program using the tools we have examined.</p>
 
 <p>It&rsquo;s time to change <em>everything</em>.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="reassignment-and-mutation">Reassignment and Mutation</h3>
 
 <p>Like most imperative programming languages, CoffeeScript allows you to re-assign the value of variables. The syntax is familiar to users of most popular languages:</p>
@@ -1904,7 +1812,7 @@
   <hr />
 </div>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="normal-variables">Normal Variables</h3>
 
 <p>Now that we&rsquo;ve discussed reassignment, it&rsquo;s time to discuss <em>assignment</em>.</p>
@@ -1979,13 +1887,13 @@
 
 <p><code>do</code> is a good pattern to know and deeply understand, but it is generally sufficient to write with normal variables. If you see a lot of <code>do</code> in this book, that is because we are writing to be excruciatingly clear, not to construct software that is easy to read and maintain in a team setting.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="comprehensions">Comprehensions</h3>
 
 <div class="image-with-caption">
   <p><img src="images/cupping.jpg" alt="Cupping Grinds" />
   <p>Cupping Grinds</p>
-
+</div>
 
 <p>If you&rsquo;re the type of person who can &ldquo;Write Lisp in any language,&rdquo; you could set about writing entire CoffeeScript programs using <code>let</code> and <code>letrec</code> patterns such that you don&rsquo;t have <em>any</em> normal variables. But being a CoffeeScript programmer, you will no doubt embrace normal variables. As you dive into CoffeeScript, you&rsquo;ll discover many helpful features that aren&rsquo;t &ldquo;Lisp-y.&rdquo; Eschewing them is to cut against CoffeeScript&rsquo;s grain. One of those features is the <a href="http://coffeescript.org/#loops">comprehension</a>, a mechanism for working with collections that was popularized by Python.</p>
 
@@ -2111,7 +2019,7 @@
   <hr />
 </div>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="encapsulation">Encapsulating State with Closures</h3>
 
 <blockquote>
@@ -2237,7 +2145,7 @@
 <div class="image-with-caption">
   <p><img src="images/coffee-trees-1200.jpg" alt="Coffee DOES grow on trees" />
   <p>Coffee DOES grow on trees</p>
-
+</div>
 
 <p>We don&rsquo;t want to repeat this code every time we want a stack, so let&rsquo;s make ourselves a &ldquo;stack maker:&rdquo;</p>
 
@@ -2272,7 +2180,7 @@
   <hr />
 </div>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="composition">Composition and Extension</h3>
 
 <h4 id="composition">composition</h4>
@@ -2418,7 +2326,7 @@
   <hr />
 </div>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="this">This and That</h3>
 
 <p>Let&rsquo;s take another look at <a href="#extensible">extensible objects</a>. Here&rsquo;s a Queue:</p>
@@ -2661,7 +2569,7 @@
 
 <p>The fat arrow says, &ldquo;Treat this function as if we did the <code>this</code> and <code>that</code> idiom, so that whenever I refer to <code>this</code>, I get the outer one.&rdquo; Which is exactly what we want if we don&rsquo;t care to rearrange our code.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="summary-2">Summary</h3>
 
 <div class="tip sidebarish">
@@ -2690,13 +2598,13 @@
 <div class="image-with-caption">
   <p><img src="images/beans1.jpg" alt="Other languages call their objects &quot;beans,&quot; but serve extra-weak coffee in an attempt to be all things to all people" />
   <p>Other languages call their objects "beans," but serve extra-weak coffee in an attempt to be all things to all people</p>
-
+</div>
 
 <p>As discussed in <a href="#poco">References, Identity, Arrays, and Objects</a> and again in <a href="#encapsulation">Encapsulating State</a>, CoffeeScript objects are very simple, yet the combination of objects, functions, and closures can create powerful data structures. That being said, there are language features that cannot be implemented with Plain Old CoffeeScript Objects, functions, and closures<sup id="fnref-turing"><a href="#fn-turing" rel="footnote">23</a></sup>.</p>
 
 <p>One of them is <em>inheritance</em>. In CoffeeScript, inheritance provides a cleaner, simpler mechanism for extending data structures, domain models, and anything else you represent as a bundle of state and operations.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="prototypes-are-simple-its-the-explanations-that-are-hard-to-understand">Prototypes are Simple, it&rsquo;s the Explanations that are Hard To Understand</h3>
 
 <p>As you recall from our code for making objects <a href="#extensible">extensible</a>, we wrote a function that returned a Plain Old CoffeeScript Object. The colloquial term for this kind of function is a &ldquo;Factory Function.&rdquo;</p>
@@ -2936,7 +2844,7 @@
 
 <p>It seems like are objects everywhere in CoffeeScript!</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h4 id="impostors">impostors</h4>
 
 <p>You may have noticed that we use &ldquo;weasel words&rdquo; to describe how everything in CoffeeScript <em>behaves like</em> an instance. Everything <em>behaves as if</em> it was created by a function with a prototype.</p>
@@ -3043,7 +2951,7 @@
 
 <p>Of course, <code>original</code> will not work for your own creations unless you take great care to emulate the same behaviour. But it does work for strings, numbers, and booleans.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="a-touch-of-class">A Touch of Class</h3>
 
 <p>CoffeeScript has &ldquo;classes,&rdquo; for some definition of &ldquo;class.&rdquo; You&rsquo;ve met them already, they&rsquo;re constructors that are designed to work with the <code>new</code> keyword and have behaviour in their <code>.prototype</code> element. You can create one any time you like by:</p>
@@ -3228,7 +3136,7 @@
 <div class="image-with-caption">
   <p><img src="images/types.jpg" alt="It seems there is Strong Typing in Coffeeland" />
   <p>It seems there is Strong Typing in Coffeeland</p>
-
+</div>
 
 <div class="tip sidebarish">
   <hr />
@@ -3239,7 +3147,7 @@
   <hr />
 </div>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="object-methods">Object Methods</h3>
 
 <p>An <em>instance method</em> is a function defined in the constructor&rsquo;s prototype. Every instance acquires this behaviour unless otherwise &ldquo;overridden.&rdquo; Instance methods usually have some interaction with the instance, such as references to <code>this</code> or to other methods that interact with the instance. A <em>constructor method</em> is a function belonging to the constructor itself.</p>
@@ -3311,7 +3219,7 @@
 
 <p><code>set</code>, <code>get</code>, and <code>has</code> are instance methods, but <code>id</code> is an object method: Each object has its own <code>id</code> closure, where <code>id</code> is bound to the id of the widget by the argument <code>id</code> in the constructor. The advantage of this approach is that instances can have different object methods, or object methods with their own closures as in this case. The disadvantage is that every object has its own methods, which uses up much more memory than instance methods, which are shared amongst all instances.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="canonicalization">Canonicalization</h3>
 
 <p>Early in this book, we discussed how objects, arrays, and functions are <em>reference types</em>. When we create a new object, even if it has the same contents as some other object, it is a different value, as we can tell when we test its identity with <code>is</code>:</p>
@@ -3414,7 +3322,7 @@
 
 <p>All that being said, canonicalization is sometimes the appropriate path forward, and even if it isn&rsquo;t, it serves to illustrate the possibilities latent in writing constructors that return objects explicitly.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="this-section-needs-no-title">This Section Needs No Title</h3>
 
 <p>CoffeeScript is fundamentally an object-oriented language in the sense that Alan Kay first described object orientation. His vision was of software constructed from entities that communicate with message passing, with the system being extremely dynamic (what he described as &ldquo;extreme late-binding&rdquo;). However, words and phrases are only useful when both writer and reader share a common understanding, and for many people the words &ldquo;object-oriented&rdquo; carry with them a great deal of baggage related to constructing ontologies of domain entities.</p>
@@ -3425,7 +3333,7 @@
 
 <p>We&rsquo;ll finish by looking at the excellent support CoffeeScript provides so that you can accomplish all of this with a single keyword.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="classextension">Extending Classes</h3>
 
 <p>You recall from <a href="#extensible">Composition and Extension</a> that we extended a Plain Old CoffeeScript Queue to create a Plain Old CoffeeScript Deque. But what if we have decided to use CoffeeScript&rsquo;s prototypes and class statements instead of Plain Old CoffeeScript Objects? How do we extend a queue into a deque?</p>
@@ -3679,7 +3587,7 @@
   <li>CoffeeScript&rsquo;s <code>class</code> and <code>extends</code> keywords handle a lot of the boilerplate and play nicely together. Use them unless you have specific needs they don&rsquo;t cover.</li>
 </ol>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="summary-3">Summary</h3>
 
 <div class="tip sidebarish">
@@ -3707,13 +3615,13 @@
   <hr />
 </div>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h4 id="interlude-2">interlude&hellip;</h4>
 
 <div class="image-with-caption">
   <p><img src="images/doppio.jpg" alt="Drawing a Doppio" />
   <p>Drawing a Doppio</p>
-
+</div>
 
 <p><a href="http://www.coffeegeek.com/opinions/aarondelazzer/02-24-2002" title="Coffeegeek Etiquette &amp; The Ristretto Shot">Aaron De Lazzer</a> on Ristretto:</p>
 
@@ -3738,9 +3646,9 @@
 <div class="image-with-caption">
   <p><img src="images/intestines.jpg" alt="The Intestines of an Espresso Machine" />
   <p>The Intestines of an Espresso Machine</p>
+</div>
 
-
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="combinators">Refactoring to Combinators</h3>
 
 <p>The word &ldquo;combinator&rdquo; has a precise technical meaning in mathematics:</p>
@@ -3969,7 +3877,7 @@
 
 <p>All of this is made possible by the simple property of <em>composability</em>, the property of combinators taking a function as an argument and returning a function that operates on the same arguments and returns something meaningful to code expecting to call the original function.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="method-decorators">Method Decorators</h3>
 
 <p>Now that we&rsquo;ve seen how function combinators can make our code cleaner and DRYer, it isn&rsquo;t a great leap to ask if we can use combinators with methods. After all, methods are functions. That&rsquo;s one of the great strengths of CoffeeScript, since methods are &ldquo;just&rdquo; functions, we don&rsquo;t need to have one kind of tool for functions and another for methods, or a messy way of turning methods into functions and functions into methods.</p>
@@ -4200,7 +4108,7 @@
 
 <p>All four of these, and many more can be found in the <a href="https://github.com/raganwald/method-combinators">method combinators</a> module. They can be used with all CoffeeScript and JavaScript projects.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="callbacks-and-promises">Callbacks and Promises</h3>
 
 <p>Like nearly all languages in widespread use, CoffeeScript expresses programs as expressions that are composed together with a combination of operators, function application, and control flow constructs such as sequences of statements.</p>
@@ -4438,7 +4346,7 @@
 
 <p>Crisp and clean, no caffeine. The promises model provides linear code &ldquo;out of the box,&rdquo; and it &ldquo;scales up&rdquo; to serve as a complete platform for managing asynchronous code and remote invocation. Be sure to look at libraries supporting promises like <a href="https://github.com/kriskowal/q">q</a>, and <a href="https://github.com/cujojs/when">when</a>.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="summary-4">Summary</h3>
 
 <div class="tip sidebarish">
@@ -4465,7 +4373,7 @@
 <div class="image-with-caption">
   <p><img src="images/brown-cups-1900.jpg" alt="Espresso a lungo, or the long pull, is thinner in texture, more acidic, and contains more caffeine than a ristretto pull" />
   <p>Espresso a lungo, or the long pull, is thinner in texture, more acidic, and contains more caffeine than a ristretto pull</p>
-
+</div>
 
 <!-- begin backmatter -->
 <h2 id="a-golden-crema">A Golden Crema</h2>
@@ -4473,9 +4381,9 @@
 <div class="image-with-caption">
   <p><img src="images/la_marzocco.jpg" alt="You've earned a break!" />
   <p>You've earned a break!</p>
+</div>
 
-
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="online">How to run the examples</h3>
 
 <p>If you follow the instructions at <a href="http://coffeescript.org/#installation" title="Install CoffeeScript">coffeescript.org</a> to install NodeJS and CoffeeScript,<sup id="fnref-whoa"><a href="#fn-whoa" rel="footnote">32</a></sup> you can run an interactive CoffeeScript <a href="https://en.wikipedia.org/wiki/REPL" title="Read–eval–print loop">REPL</a> on your command line simply by typing <code>coffee</code>. This is how the examples in this book were tested, and what many programmers will do. When running CoffeeScript on the command line, ctrl-V switches between single-line and multi-line input mode. If you need to enter more than one line of code, be sure to enter multi-line mode.</p>
@@ -4484,7 +4392,7 @@
 
 <p>To actually see the result of your expressions, you&rsquo;ll need to either include a call to <code>console.log</code> (and be using a browser that supports console logging) or you could go old-school and use <code>alert</code>, e.g. <code>alert 2+2</code> will cause the alert box to be displayed with the message <code>4</code>.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="thanks">Thanks!</h3>
 
 <h4 id="daniel-friedman-and-matthias-felleisen">Daniel Friedman and Matthias Felleisen</h4>
@@ -4492,42 +4400,42 @@
 <div class="image-with-caption">
   <p><img src="images/little-schemer.jpg" alt="The Little Schemer" />
   <p>The Little Schemer</p>
-
+</div>
 
 <p><em>CoffeeScript Ristretto</em> was inspired by <a href="http://www.amzn.com/0262560992?tag=raganwald001-20">The Little Schemer</a> by Daniel Friedman and Matthias Felleisen. But where <em>The Little Schemer&rsquo;s</em> primary focus is recursion, <em>CoffeeScript Ristretto&rsquo;s</em> primary focus is <strong>functions as first-class values</strong>.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h4 id="richard-feynman">Richard Feynman</h4>
 
 <div class="image-with-caption">
   <p><img src="images/qed.jpg" alt="QED: The Strange Theory of Light and Matter" />
   <p>QED: The Strange Theory of Light and Matter</p>
-
+</div>
 
 <p>Richard Feynman&rsquo;s <a href="http://www.amzn.com/0691125759?tag=raganwald001-20">QED</a> was another inspiration: A book that explains Quantum Electrodynamics and the &ldquo;Sum of the Histories&rdquo; methodology using the simple expedient of explaining how light reflects off a mirror, and showing how most of the things we think are happening&ndash;such as light travelling on a straight line,  the angle of reflection equalling the angle of refraction, or that a beam of light only interacts with a small portion of the mirror, or that it reflects off a plane&ndash;are all wrong. And everything is explained in simple, concise terms that build upon each other logically.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h4 id="trevor-burnham">Trevor Burnham</h4>
 
 <div class="image-with-caption">
   <p><img src="images/tbcoffee.jpg" alt="CoffeeScript: Accelerated JavaScript Development" />
   <p>CoffeeScript: Accelerated JavaScript Development</p>
-
+</div>
 
 <p>Trevor Burnham provided invaluable assistance with this book. Trevor is the author of <a href="http://pragprog.com/book/tbcoffee/coffeescript">CoffeeScript: Accelerated JavaScript Development</a>, an excellent resource for CoffeeScript programmers.</p>
 
-<div class="page-break"></div>
-<div class="page-break"></div>
+<div class="page-break" />
+<div class="page-break" />
 <h3 id="javascript-allong">JavaScript Allongé</h3>
 
 <div class="image-with-caption">
   <p><img src="images/javascript_allonge_medium.jpg" alt="a long and strong programming book" />
   <p>a long and strong programming book</p>
-
+</div>
 
 <p><a href="http://leanpub.com/javascript-allonge">JavaScript Allongé</a> is the companion book to <em>CoffeeScript Ristretto</em>.</p>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="copyright-notice">Copyright Notice</h3>
 
 <p>The original words in this sample preview of <a href="https://leanpub.com/coffeescript-ristretto">CoffeeScript Ristretto</a> are (c) 2012, Reginald Braithwaite. This sample preview work is licensed under an <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Attribution-NonCommercial-NoDerivs 3.0 Unported</a> license.</p>
@@ -4535,7 +4443,7 @@
 <div class="image-with-caption">
   <p><img src="images/cc.png" alt="Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License" />
   <p>Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</p>
-
+</div>
 
 <h4 id="images">images</h4>
 
@@ -4574,7 +4482,7 @@
   <li><a href="http://www.flickr.com/photos/joncrel/237026246/">Coffee Van with Bullet Holes</a> (c) 2006 Jon Crel. <a href="http://creativecommons.org/licenses/by-nd/2.0/deed.en">Some rights reserved</a>.</li>
 </ul>
 
-<div class="page-break"></div>
+<div class="page-break" />
 <h3 id="about-the-author">About The Author</h3>
 
 <p>When he&rsquo;s not shipping CoffeeScript, Ruby, JavaScript and Java applications scaling out to millions of users, Reg &ldquo;Raganwald&rdquo; Braithwaite has authored <a href="http://github.com/raganwald">libraries</a> for CoffeeScript, JavaScript and Ruby programming such as Method Combinators, Katy, JQuery Combinators, YouAreDaChef, andand, and others.</p>
@@ -4589,7 +4497,7 @@ Email: <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#103;&#064;&#0
 <div class="image-with-caption">
   <p><img src="images/reg2.jpg" alt="Reg &quot;Raganwald&quot; Braithwaite " />
   <p>Reg "Raganwald" Braithwaite </p>
-
+</div>
 
 <div class="footnotes">
   <ol>
@@ -4628,7 +4536,7 @@ Email: <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#103;&#064;&#0
   </ol>
 </div>
 
-
+</div>
 <div id="leanpub-toc">
 <h2>Table of Contents</h2>
 <ol class="toc">
@@ -4684,60 +4592,3 @@ Email: <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#103;&#064;&#0
 <li class="section"><a href="#about-the-author">About The Author</a></li>
 </ol>
 </div>
- 
-
----
-
-This site uses the [Solarized][solarized] color scheme, is set in Nimbus Sans, and is snarfed wholesale from [Tom Jakubowski][tj] All words are (c) 2012-2013 Reginald Braithwaite.
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.
-
----
-
-## End Notes
-
-[solarized]: http://ethanschoonover.com/solarized
-[tj]: http://www.crystae.net/
-[rr]: https://github.com/raganwald-deprecated/rewrite_rails
-[CoffeeScript]: http://coffeescript.org
-[cr]: https://leanpub.com/coffeescript-ristretto
-[sample]: http://samples.leanpub.com/coffeescript-ristretto-sample.pdf "Free Sample PDF"
-[issue]: https://github.com/raganwald/ristrettolo.gy/issues
-[repo]: https://github.com/raganwald/ristrettolo.gy/
-[Jeremy Ashkenas]: https://github.com/jashkenas
-</p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></p></div></div>
-
-        </div>
-        <!-- modal content -->
-    		<div id="osx-modal-content">
-    			<div id="osx-modal-title">CoffeeScript Ristretto</div>
-    			<div class="close"><a href="#" class="simplemodal-close">x</a></div>
-    			<div id="osx-modal-data">
-    				<h2>A Word From Reginald Braithwaite</h2>
-    				<a href="https://leanpub.com/coffeescript-ristretto"><img style="float:right;margin-left:10px;margin-right:10px;margin-bottom:10px;" src="http://i.minus.com/iMmGxzIZkHSLD.jpeg"/></a>
-    				<p class="short">Hello and thank you very much for your interest in <em>CoffeeScript Ristretto</em>.</p>
-    				<p class="short">Having read this far, I'm sure you love the book and its unique insights into taking advantage of CoffeeScript's power. I'd like to ask you to please <a href="https://leanpub.com/coffeescript-ristretto">click this link</a>, and get your very own copy.</p>
-    				<p class="short">Or I can tell you <a href="https://leanpub.com/coffeescript-ristretto">more about it</a>!</p>
-    				<p class="more">In addition to getting DRM-free copies in PDF, .epub, and .mobi formats (for just about every reading platform available), you'll receive free updates forever.</p>
-    				<p class="more">Best of all, you can <span style="text-decoration: bold;">set your very own price</span>, with a minimum of just $15.99! If your appetite for learning is large, please spread your purchase around a few of <a href="https://leanpub.com/u/raganwald">my books</a> and really get full value for your investment. If you like CoffeeScript Ristretto, you'll love <a href="https://leanpub.com/javascript-allonge">JavaScript Allongé</a>, my book about JavaScript programming. <a href="http://combinators.info">Kestrels, Quirky Birds and Hopeless Egocentricity</a> is the world's finest book on that combines advanced Ruby meta-programming with Combinatory Logic. And you can get all three books for a very special low price in the <a href="https://leanpub.com/b/coffee-kestrels-code">Coffee, Kestrels, and Code</a> bundle.</p>
-    				<p class="more">Thanks very much for your support. It really helps me keep writing!</p>
-    				<p>Sincerely, <a href="https://leanpub.com/u/raganwald">Reg "raganwald" Braithwaite</a></p>
-    				<p><button class="simplemodal-close">Close</button> <span>(or click the overlay)</span></p>
-    			</div>
-    		</div>
-    	</div>
-        <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-38371925-3']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-    </body>
-</html>
