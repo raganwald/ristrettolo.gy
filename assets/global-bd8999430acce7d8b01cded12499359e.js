@@ -74,11 +74,10 @@ this.d.container.hide().remove();this.d.overlay.hide();this.d.iframe&&this.d.ifr
     };
   })(['book', 'chapter', 'section', 'sub-section', 'sub-sub-section']);
 
-  $(function() {
-    var book, container, firstChild, _results;
-    container = $('.container');
+  window.bindBook = function(source) {
+    var book, firstChild, _results;
     book = DIV(0);
-    _.each(container.children(), function(node) {
+    _.each(source.children(), function(node) {
       var lastChild, level, matchData, nodeName, receiver;
       nodeName = node.nodeName;
       if (_.isNull(matchData = nodeName.match(/H(\d)/))) {
@@ -97,30 +96,35 @@ this.d.container.hide().remove();this.d.overlay.hide();this.d.iframe&&this.d.ifr
       }
       return receiver.append(node);
     });
-    container.append(book);
+    source.append(book);
     _results = [];
     while ((firstChild = $(book.children(':first')[0])).attr('id') !== 'coffeescript-ristretto') {
       _results.push(book.before(firstChild));
     }
     return _results;
-  });
+  };
 
 }).call(this);
 
 (function() {
 
-  $(function() {
-    var OSX, book, isObscuredInViewport, scrollHandler, secondHalf;
-    book = $('.book');
-    (secondHalf = book.children().slice(book.children().size() / -2)).addClass('obscured-by-clouds');
+  window.obscure = function(source, obscureAll) {
+    var OSX, firstInSecondHalf, isObscuredInViewport, scrollHandler, secondHalf;
+    if (obscureAll == null) {
+      obscureAll = true;
+    }
+    secondHalf = source.children().slice(source.children().size() / -2);
+    if (obscureAll) {
+      secondHalf.addClass('obscured-by-clouds');
+    }
+    firstInSecondHalf = secondHalf.first();
     isObscuredInViewport = (function() {
-      var buckWindow, first;
-      first = secondHalf.first();
+      var buckWindow;
       buckWindow = $(window);
       return function() {
         var docViewBottom, elemTop;
         docViewBottom = buckWindow.scrollTop() + buckWindow.height();
-        elemTop = $(first).offset().top;
+        elemTop = $(firstInSecondHalf).offset().top;
         return elemTop < docViewBottom;
       };
     })();
@@ -186,10 +190,18 @@ this.d.container.hide().remove();this.d.overlay.hide();this.d.iframe&&this.d.ifr
         return $('.obscured-by-clouds').removeClass('obscured-by-clouds');
       }
     };
-    $('.buy-now').click(function() {
+    return $('.buy-now').click(function() {
       return $('iframe#coffeescript-ristretto form').submit();
     });
-    return typeof console !== "undefined" && console !== null ? console.log('done! done!') : void 0;
+  };
+
+}).call(this);
+
+(function() {
+
+  $(function() {
+    bindBook($('.countainer'));
+    return obscure($('.book'));
   });
 
 }).call(this);
