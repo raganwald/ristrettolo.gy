@@ -1,0 +1,323 @@
+/*
+ * SimpleModal OSX Style Modal Dialog
+ * http://simplemodal.com
+ *
+ * Copyright (c) 2013 Eric Martin - http://ericmmartin.com
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+
+#osx-modal-content, #osx-modal-data {display:none;}
+
+/* Overlay */
+#osx-overlay {background-color:#000;}
+
+/* Container */
+#osx-container {text-align: left; background-color:#eee; color:#000; font: 16px/24px "Lucida Grande",Arial,sans-serif; padding-bottom:4px; width:600px; -moz-border-radius-bottomleft:6px; -webkit-border-bottom-left-radius:6px; -moz-border-radius-bottomright:6px; -webkit-border-bottom-right-radius:6px; border-radius:0 0 6px 6px; -moz-box-shadow:0 0 64px #000; -webkit-box-shadow:0 0 64px #000; box-shadow:0 0 64px #000;}
+
+#osx-container #osx-modal-title {color:#000; background-color:#ddd; border-bottom:1px solid #ccc; font-weight:bold; padding:6px 8px; text-shadow:0 1px 0 #f4f4f4;}
+#osx-container .close {display:none; position:absolute; right:0; top:0;}
+#osx-container .close a {display:block; color:#777; font-weight:bold; padding:6px 12px 0; text-decoration:none; text-shadow:0 1px 0 #f4f4f4;}
+#osx-container .close a:hover {color:#000;}
+#osx-container #osx-modal-data {font-size:12px; padding:6px 12px;}
+#osx-container h2 {margin:10px 0 6px;}
+#osx-container p {margin-bottom:10px;}
+#osx-container p.why, p.more {display:none;}
+#osx-container span {color:#777;}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}html *{color-profile:sRGB;rendering-intent:auto}* html{font-size:112.5%}html{font-size:18px;line-height:1.33333em}body{background-color:#fdf6e3;color:#657b83;margin-top:1.33333em;font-family:"nimbus-sans", sans-serif;font-weight:300}body h1,body h2,body h3,body h4,body h5,body h6{color:#586e75;border-color:#657b83}body a,body a:active,body a:visited{color:#586e75}body a,body a:active,body a:visited,body code.url{color:#268bd2}body h1,body h2,body h3,body h4,body h5,body h6{color:#268bd2}body.dark{background-color:#002b36;color:#839496}body.dark h1,body.dark h2,body.dark h3,body.dark h4,body.dark h5,body.dark h6{color:#93a1a1;border-color:#839496}body.dark a,body.dark a:active,body.dark a:visited{color:#93a1a1}body.dark a,body.dark a:active,body.dark a:visited,body.dark code.url{color:#268bd2}body.dark h1,body.dark h2,body.dark h3,body.dark h4,body.dark h5,body.dark h6{color:#268bd2}header h1{font-size:1.66667em;line-height:1.6em;font-weight:bold}.container{*zoom:1;max-width:59em;_width:59em;margin-left:auto;margin-right:auto;padding-left:1em;padding-right:1em}.container:after{content:"";display:table;clear:both}.container>header a,.container>header a:active,.container>header a:visited,.container>header code.url{color:#cb4b16}.container>header h1,.container>header h2,.container>header h3,.container>header h4,.container>header h5,.container>header h6{color:#cb4b16}p{margin-top:1.33333em}
+
+body {
+  text-align: center;
+}
+
+.container {
+  text-align: left;
+  width: 750px;
+  margin: 0 auto;
+}
+
+/* headings */
+
+
+/*h1, h2, h3, h4, h5, h6, h7 {
+   font-family: sans-serif;
+}*/
+
+img {
+  max-width: 100%;
+}
+
+/* Parts */
+/*h1 {
+   font-size: 1.5em;
+   line-height: .8em;
+   font-variant: small-caps;
+   margin-top: 20%;
+   text-align: center;
+   padding: 0;
+   font-weight: normal;
+}
+*/
+/* Chapters */
+h2 {
+   margin-top: 1em;
+   margin-bottom: 0.5em;
+   font-weight: bold;
+}
+
+h2:before {
+  content('<hr/>');
+}
+
+/* Sections */
+h3 {
+   margin-top: 1em;
+   margin-bottom: 0.25em;
+}
+
+h4 { margin-top: 1em;
+   margin-bottom: 0.25em;
+}
+
+h5 { margin-top: 1em;
+   margin-bottom: 0.25em;
+ }
+
+h6 {
+   margin: 0;
+ }
+
+/* obscured-by-clouds */
+
+.obscured-by-clouds {
+  filter: alpha(opacity:0.20);
+  KHTMLOpacity: 0.20;
+  MozOpacity: 0.20;
+  -khtml-opacity:.20;
+  -ms-filter:”alpha(opacity=15)”;
+  -moz-opacity:.20;
+  filter:alpha(opacity=15);
+  opacity:.20;
+}
+
+/* general text */
+
+p {
+  text-indent: 0em;
+  margin-top: 0.5em;
+}
+
+blockquote {
+  background: url(http://ristrettolo.gy/assets/images/Quote_background_transparent.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+blockquote p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 2em;
+  margin-right: 2em;
+  font-size: 80%;
+  font-weight: bold;
+}
+
+span.lineno, code.lineno {
+  color: gray;
+  font-size: 80%;
+}
+
+.centered p {
+  text-align: center;
+}
+
+/* asides, warnings, etc */
+
+div.sidebarish h1, div.sidebarish h2, div.sidebarish h3, div.sidebarish h4 {
+  margin-bottom: 0.5em;
+  vertical-align: center;
+}
+
+div.sidebarish   {
+  margin: 50px 0px 50px 10px;
+  padding-left: 60px;
+}
+
+div.sidebarish img.sidebar-image {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: center;
+}
+
+div.page-break {
+  page-break-after: always;
+}
+
+/* force some space before and after code blocks */
+pre {
+   margin-top: 0.5em;
+   margin-bottom: 0.5em;
+   font-family: Courier, monospace;
+}
+
+code {
+  font-family: Courier, monospace;
+}
+
+body {
+  direction: ltr;
+}
+
+/* image equations */
+
+img.inline-equation {
+   vertical-align: -30%;
+}
+
+img.block-equation {
+  margin-top: 0.5em;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  text-align: center;
+}
+
+
+/* NOTE: I replaced this line:
+ * .err { border: 1px solid #FF0000 } /* Error */
+ * with this:
+ * .err { color: #FF0000 } /* Error */
+ * to get rid of the ugly red boxes
+ */
+
+/* ============================================================================== */
+/* everything below this line is generated by rake book_generator:pygments_styles */
+.hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { color: #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #808080 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0040D0 } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+
+#banner{
+  height: 149px;
+  width: 149px;
+  overflow:hidden;
+  padding: 0;
+  margin: 0;
+}
+
+#banner a{
+
+  display: block;
+  width: 190px;
+  font-size: 14px;
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT",
+    "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma,
+    Geneva, "Helvetica Neue", Helvetica, Arial, sans serif;
+  background-color: #333;
+  color: #FFF;
+  word-spacing: 2px;
+  text-decoration: none;
+  padding: 5px 15px 5px 25px;
+
+  position:relative;
+  left: 20px;
+  top: -37px;
+  text-align: center;
+
+  -moz-transform-origin: 0 0 ;
+  -moz-transform:rotate(45deg);
+  -moz-box-shadow:    1px 1px 5px 1px #666;
+
+  -webkit-transform-origin: 0 0 ;
+  -webkit-transform:rotate(45deg);
+  -webkit-box-shadow: 1px 1px 5px 1px #666;
+
+  -ms-transform-origin: 0 0 ;
+  -ms-transform:rotate(45deg);
+  -ms-box-shadow: 1px 1px 5px 1px #666;
+
+  transform-origin: 0 0 ;
+  transform:rotate(45deg);
+  box-shadow: 1px 1px 5px 1px #666;
+
+  background-image: linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+  background-image: -o-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+  background-image: -moz-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+  background-image: -webkit-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+  background-image: -ms-linear-gradient(bottom, #000000 3%, #666666 5%, #000000 7%, #000000 93%, #666666 95%, #000000 97%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.03, #000000),
+    color-stop(0.05, #666666),
+    color-stop(0.07, #000000),
+    color-stop(0.93, #000000),
+    color-stop(0.95, #666666),
+    color-stop(0.97, #000000)
+  );
+
+}
