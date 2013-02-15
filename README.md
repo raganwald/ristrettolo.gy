@@ -54,7 +54,7 @@ pushing to github pages
 
 Now if you're using this for yourself, you need to have a *separate* repository set up for Github Pages. You can't use [ristrettolo-gy/ristrettolo-gy.github.com][rrgc]. We'll call your copy of [raganwald/ristrolo.gy][rr] the `source` repo and we'll call the new one the `published` repo.
 
-You can build your own book from scratch. If you're using Leanpub, export your book as a single .html page and put it in `_includes`. I renamed it `coffeescript-ristretto.html`, but you don't have to rename it. Just eb sure to adjust the include markup accordingly. You may also want to fiddle extensively with the styles.
+You can build your own book from scratch. If you're using Leanpub, export your book as a single .html page and put it in `_includes`. I renamed it `coffeescript-ristretto.html`, but you don't have to rename it. Just be sure to adjust the include markup accordingly. You may also want to fiddle extensively with the styles.
 
 When you're happy with the `source` repo, you'll need to copy all of the files (recursively!) from `source/_site` into `published/`: `assets`, `index.html`, `CNAME`, the whole shebang. Then you'll need to commit and push. It's now a static site with no plugins, and Github Pages will publish it nicely for you.
 
@@ -70,7 +70,7 @@ That's it!
 credit
 ------
 
-[risterttolo.gy] was inspired by Manuel Kiessling's [The Node Beginner Book](http://www.nodebeginner.org).
+[ristrettolo.gy] was inspired by Manuel Kiessling's [The Node Beginner Book](http://www.nodebeginner.org).
 
 license
 -------
