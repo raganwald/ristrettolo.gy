@@ -49,12 +49,17 @@ First, clone the source repository, [raganwald/ristrolo.gy][rr] to your local sy
 
 If you wish to make changes and/or send me a pull request, you can stop right here. Run `jekyll` to process the site locally. Run `jekyll --auto` to automagically process the site when you edit things locally. Run `jekyll --server 3210` to run a local server on your favourite port, like `3210`.
 
+hosting your own site
+---------------------
+
+You can use this to host your own site on a server. Clone this repo, then modify `index.md` to suit your needs. If you're using Leanpub, export your book as a single .html page and put it in `_includes`. I renamed it `coffeescript-ristretto.html`, but you don't have to rename it. Just be sure to adjust the include markup accordingly. You may also want to fiddle extensively with the styles. Finally, modify `speed-bump.html` to taste.
+
+When you're happy with the contents of `_site`, push them to your server using your favourite method of transferring the files, such as `sftp`.
+
 pushing to github pages
 -----------------------
 
-Now if you're using this for yourself, you need to have a *separate* repository set up for Github Pages. You can't use [ristrettolo-gy/ristrettolo-gy.github.com][rrgc]. We'll call your copy of [raganwald/ristrolo.gy][rr] the `source` repo and we'll call the new one the `published` repo.
-
-You can build your own book from scratch. If you're using Leanpub, export your book as a single .html page and put it in `_includes`. I renamed it `coffeescript-ristretto.html`, but you don't have to rename it. Just be sure to adjust the include markup accordingly. You may also want to fiddle extensively with the styles.
+If you want to host your own site on Github Pages, you need to have a *separate* repository set up (You can't use [ristrettolo-gy/ristrettolo-gy.github.com][rrgc], that's my site!). We'll call your copy of [raganwald/ristrolo.gy][rr] the `source` repo and we'll call the new one the `published` repo.
 
 When you're happy with the `source` repo, you'll need to copy all of the files (recursively!) from `source/_site` into `published/`: `assets`, `index.html`, `CNAME`, the whole shebang. Then you'll need to commit and push. It's now a static site with no plugins, and Github Pages will publish it nicely for you.
 
@@ -66,6 +71,8 @@ alias bb="build_blog"
 ```
 
 That's it!
+
+p.s. If your publishing gets really complex, you could use Capistrano to deploy. But a one-line bash script is all I need, so that's what I use.
 
 credit
 ------

@@ -8,24 +8,7 @@
             {% include header.html %}
             {{ content }}
         </div>
-        <!-- modal content -->
-    		<div id="osx-modal-content">
-    			<div id="osx-modal-title">CoffeeScript Ristretto</div>
-    			<div class="close"><a href="#" class="simplemodal-close">x</a></div>
-    			<div id="osx-modal-data">
-    				<h2>A Word From Reginald Braithwaite</h2>
-    				<a href="https://leanpub.com/coffeescript-ristretto"><img style="float:right;margin-left:10px;margin-right:10px;margin-bottom:10px;" src="http://i.minus.com/iMmGxzIZkHSLD.jpeg"/></a>
-    				<p class="short">Hello and thank you very much for your interest in <em>CoffeeScript Ristretto</em>.</p>
-    				<p class="short">Having read this far, I'm sure you love the book and its unique insights into taking advantage of CoffeeScript's power. I'd like to ask you to please <a href="https://leanpub.com/coffeescript-ristretto">click this link</a>, and get your very own copy.</p>
-    				<p class="short">Or I can tell you <a href="https://leanpub.com/coffeescript-ristretto">more about it</a>!</p>
-    				<p class="more">In addition to getting DRM-free copies in PDF, .epub, and .mobi formats (for just about every reading platform available), you'll receive free updates forever.</p>
-    				<p class="more">Best of all, you can <span style="text-decoration: bold;">set your very own price</span>, with a minimum of just $15.99! If your appetite for learning is large, please spread your purchase around a few of <a href="https://leanpub.com/u/raganwald">my books</a> and really get full value for your investment. If you like CoffeeScript Ristretto, you'll love <a href="https://leanpub.com/javascript-allonge">JavaScript Allongé</a>, my book about JavaScript programming. <a href="http://combinators.info">Kestrels, Quirky Birds and Hopeless Egocentricity</a> is the world's finest book on that combines advanced Ruby meta-programming with Combinatory Logic. And you can get all three books for a very special low price in the <a href="https://leanpub.com/b/coffee-kestrels-code">Coffee, Kestrels, and Code</a> bundle.</p>
-    				<p class="more">Thanks very much for your support. It really helps me keep writing!</p>
-    				<p>Sincerely, <a href="https://leanpub.com/u/raganwald">Reg "raganwald" Braithwaite</a></p>
-    				<p><button class="simplemodal-close">No Thanks!</button> <span>(or click the overlay)</span></p>
-    			</div>
-    		</div>
-    	</div>
+        {% include speed-bump.html %}
         {% include foot_tags.html %}
     </body>
 </html>
