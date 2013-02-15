@@ -3,7 +3,7 @@ ristrettolo.gy
 
 This is one of the two repositories responsible for the site [ristrettolo.gy]. It's a static site hosted on [Github Pages] that is built with [Jekyll], it contains the text of my book [CoffeeScript Ristretto](https://leanpub.com/coffeescript-ristretto).
 
-Leanpub books are written as collections of markdown files and images, with a manifest to organize everything. These are used to generate the ebooks, and there is also a feature to export a .html file. I exported the file, choosing not to wrap it in html and body tags, and also choosing to have the entire book in one file rather than one file per chapter. That file is dropped into `_includes`, and the exported images are dropped into the root. 
+[Leanpub] books are written as collections of markdown files and images, with a manifest to organize everything. These are used to generate the ebooks, and there is also a feature to export a .html file. I exported the file, choosing not to wrap it in html and body tags, and also choosing to have the entire book in one file rather than one file per chapter. That file is dropped into `_includes`, and the exported images are dropped into the root. 
 
 The rest of this repository is set up to create a web site that includes a "speed bump" feature: When a user scrolls approximately half-way through the book, a modal dialog appears politely suggesting that the user buy the ebook. The dialog can be dismissed to continue reading.
 
@@ -13,6 +13,7 @@ The "speed bump" is coded in CoffeeScript and makes use of Underscore, jQuery, a
 [Jekyll]: https://github.com/mojombo/jekyll
 [Github Pages]: http://pages.github.com
 [jap]: https://github.com/matthodan/jekyll-asset-pipeline
+[Leanpub]: https://leanpub.com
 
 I'm assuming that you want to try it for either of two reasons:
 
@@ -65,6 +66,11 @@ alias bb="build_blog"
 ```
 
 That's it!
+
+credit
+------
+
+[risterttolo.gy] was inspired by Manuel Kiessling's [The Node Beginner Book](http://www.nodebeginner.org).
 
 license
 -------
