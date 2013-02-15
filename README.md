@@ -70,6 +70,11 @@ alias build_blog="cd ~/Dropbox/sites/ristrettolo.gy.raw; jekyll;cp -r ~/Dropbox/
 alias bb="build_blog"
 ```
 
+the speed bump
+--------------
+
+You might not like the speed bump, or want to experiment with other ways of displaying it. The code currently supports the option of not showing the speed bump, and also the option of not "obfuscating" the second half of the book until you dismiss the speed bump.
+
 That's it!
 
 p.s. If your publishing gets really complex, you could use Capistrano to deploy. But a one-line bash script is all I need, so that's what I use.
