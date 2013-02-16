@@ -41,10 +41,10 @@ Meaning, it will not convert CoffeeScript using the asset pipeline plugin or the
 setup
 -----
 
-First, clone the source repository, [raganwald/ristrolo.gy][rr] to your local system (cloning [ristrettolo-gy/ristrettolo-gy.github.com][rrgc] is not helpful). You will also need Ruby, and [Bundler] and you're going to run `bundle install`. Or, you're going to use `gem install` for each of the gems in the Gemfile.
+First, clone the source repository, [raganwald/ristrettolo.gy][rr] to your local system (cloning [ristrettolo-gy/ristrettolo-gy.github.com][rrgc] is not helpful). You will also need Ruby, and [Bundler] and you're going to run `bundle install`. Or, you're going to use `gem install` for each of the gems in the Gemfile.
 
 [Bundler]: http://gembundler.com
-[rr]: https://github.com/raganwald/ristrolo.gy
+[rr]: https://github.com/raganwald/ristrettolo.gy
 [rrgc]: https://github.com/ristrettolo-gy/ristrettolo-gy.github.com
 
 If you wish to make changes and/or send me a pull request, you can stop right here. Run `jekyll` to process the site locally. Run `jekyll --auto` to automagically process the site when you edit things locally. Run `jekyll --server 3210` to run a local server on your favourite port, like `3210`.
@@ -59,7 +59,7 @@ When you're happy with the contents of `_site`, push them to your server using y
 pushing to github pages
 -----------------------
 
-If you want to host your own site on Github Pages, you need to have a *separate* repository set up (You can't use [ristrettolo-gy/ristrettolo-gy.github.com][rrgc], that's my site!). We'll call your copy of [raganwald/ristrolo.gy][rr] the `source` repo and we'll call the new one the `published` repo.
+If you want to host your own site on Github Pages, you need to have a *separate* repository set up (You can't use [ristrettolo-gy/ristrettolo-gy.github.com][rrgc], that's my site!). We'll call your copy of [raganwald/ristrettolo.gy][rr] the `source` repo and we'll call the new one the `published` repo.
 
 When you're happy with the `source` repo, you'll need to copy all of the files (recursively!) from `source/_site` into `published/`: `assets`, `index.html`, `CNAME`, the whole shebang. Then you'll need to commit and push. It's now a static site with no plugins, and Github Pages will publish it nicely for you.
 
