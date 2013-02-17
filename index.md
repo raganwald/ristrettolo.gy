@@ -58,6 +58,16 @@ The entire text is online, free, although I certainly encourage you to check out
 ![](http://i.minus.com/iL337yTdgFj7.png)[![JavaScript Allongé](http://i.minus.com/iW2E1A8M5UWe6.jpeg)](http://leanpub.com/javascript-allonge "JavaScript Allongé")![](http://i.minus.com/iL337yTdgFj7.png)[![CoffeeScript Ristretto](http://i.minus.com/iMmGxzIZkHSLD.jpeg)](http://leanpub.com/coffeescript-ristretto "CoffeeScript Ristretto")![](http://i.minus.com/iL337yTdgFj7.png)[![Kestrels, Quirky Birds, and Hopeless Egocentricity](http://i.minus.com/ibw1f1ARQ4bhi1.jpeg)](http://leanpub.com/combinators "Kestrels, Quirky Birds, and Hopeless Egocentricity")
 
 ---
+
+[solarized]: http://ethanschoonover.com/solarized
+[tj]: http://www.crystae.net/
+[rr]: https://github.com/raganwald-deprecated/rewrite_rails
+[CoffeeScript]: http://coffeescript.org
+[cr]: https://leanpub.com/coffeescript-ristretto
+[sample]: http://samples.leanpub.com/coffeescript-ristretto-sample.pdf "Free Sample PDF"
+[issue]: https://github.com/raganwald/ristrettolo.gy/issues
+[repo]: https://github.com/raganwald/ristrettolo.gy/
+[Jeremy Ashkenas]: https://github.com/jashkenas
                     
 <a name="start"></a>
                                                                                                                                                                                                                                                                                                                        
@@ -74,13 +84,3 @@ This site uses the [Solarized][solarized] color scheme, is set in Nimbus Sans, a
 ---
 
 ## End Notes
-
-[solarized]: http://ethanschoonover.com/solarized
-[tj]: http://www.crystae.net/
-[rr]: https://github.com/raganwald-deprecated/rewrite_rails
-[CoffeeScript]: http://coffeescript.org
-[cr]: https://leanpub.com/coffeescript-ristretto
-[sample]: http://samples.leanpub.com/coffeescript-ristretto-sample.pdf "Free Sample PDF"
-[issue]: https://github.com/raganwald/ristrettolo.gy/issues
-[repo]: https://github.com/raganwald/ristrettolo.gy/
-[Jeremy Ashkenas]: https://github.com/jashkenas
