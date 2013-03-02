@@ -3920,7 +3920,7 @@
 <div class="code-block">
 <div class="highlight"><pre><code class="n">requiresValues</code> <code class="p">=</code> <code class="p">(</code><code class="n">fn</code><code class="p">)</code> <code class="o">-&gt;</code>
   <code class="o">-&gt;</code>
-    <code class="n">throw</code> &quot;<code class="n">Value</code> <code class="n">Required</code>&quot; <code class="n">unless</code> <code class="n">arg</code>? <code class="k">for</code> <code class="n">arg</code> <code class="n">in</code> <code class="n">arguments</code>
+    <code class="p">(</code><code class="n">throw</code> &quot;<code class="n">Value</code> <code class="n">Required</code>&quot; <code class="n">unless</code> <code class="n">arg</code>?<code class="p">)</code> <code class="k">for</code> <code class="n">arg</code> <code class="n">in</code> <code class="n">arguments</code>
     <code class="n">fn</code><code class="p">.</code><code class="n">apply</code><code class="p">(</code><code class="n">this</code><code class="p">,</code> <code class="n">arguments</code><code class="p">)</code>
 </pre></div>
 
