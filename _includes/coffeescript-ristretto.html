@@ -21,7 +21,7 @@
 
 <p>Programming languages are characterized by their syntax and their semantics. The syntax of a language defines its user interface; If you understand a language&rsquo;s syntax, you understand what it makes easy. The semantics of a language defines its capabilities; If you understand a language&rsquo;s semantics, you understand what it does well.</p>
 
-<p><em>CoffeeScript Ristretto</em> is first and foremost about a book about programming with functions, because its flexible and powerful functions are what make the <a href="http://coffeescript.org">CoffeeScript</a> programming language so capable, and what CoffeeScript does well.</p>
+<p><em>CoffeeScript Ristretto</em> is first and foremost a book about programming with functions, because its flexible and powerful functions are what make the <a href="http://coffeescript.org">CoffeeScript</a> programming language so capable, and what CoffeeScript does well.</p>
 
 <h4 id="how-this-book-is-organized">how this book is organized</h4>
 
@@ -94,7 +94,7 @@
 
 <p><em>The following material is extremely basic, however like most stories, the best way to begin is to start at the very beginning.</em></p>
 
-<p>Imagine we are visiting our favourite coffee shop. They will make for you just about any drink you desire, from a sort, intense espresso ristretto through a dry cappuccino, up to those coffee-flavoured desert concoctions featuring various concentrated syrups and milks. (You tolerate the existence of sugary drinks because they provide a sufficient profit margin to the establishment to finance your hanging out there all day using their WiFi and ordering a $3 drink every few hours.)</p>
+<p>Imagine we are visiting our favourite coffee shop. They will make for you just about any drink you desire, from a short, intense espresso ristretto through a dry cappuccino, up to those coffee-flavoured dessert concoctions featuring various concentrated syrups and milks. (You tolerate the existence of sugary drinks because they provide a sufficient profit margin to the establishment to finance your hanging out there all day using their WiFi and ordering a $3 drink every few hours.)</p>
 
 <p>You express your order at one end of their counter, the folks behind the counter perform their magic, and deliver the coffee you value at the other end. This is exactly how the CoffeeScript environment works for the purpose of this book. We are going to dispense with web servers, browsers and other complexities and deal with this simple model: You give the computer an <a href="https://en.wikipedia.org/wiki/Expression_" title="computer_science">expression</a>, and it returns a <a href="https://en.wikipedia.org/wiki/Value_" title="computer_science">value</a>, just as you express your wishes to a barista and receive a coffee in return.</p>
 
@@ -565,7 +565,7 @@
 
 </div>
 
-<p>It&rsquo;s a function for calculating the circumference of a circle given the radius. I read that aloud as &ldquo;When applied to a value representing the diameter, this function <em>gives</em> (that&rsquo;s my word for the arrow) the diameter times 3.14159265.&rdquo;</p>
+<p>It&rsquo;s a function for calculating the circumference of a circle given the diameter. I read that aloud as &ldquo;When applied to a value representing the diameter, this function <em>gives</em> (that&rsquo;s my word for the arrow) the diameter times 3.14159265.&rdquo;</p>
 
 <p>Remember that to apply a function with no arguments, we wrote <code>(-&gt;)()</code>. To apply a function with an argument (or arguments), we put the argument (or arguments) within the parentheses, like this:</p>
 
@@ -669,7 +669,7 @@
   <li>And that&rsquo;s our result.</li>
 </ol>
 
-<p>When we talk about environments, we&rsquo;ll use an <a href="http://json.org/">unsurprising syntax</a> for showing their bindings: <code>{x: 2, ...}</code>. meaning, that the environment is a dictionary, and that the value <code>2</code> is bound to the name <code>x</code>, and that there might be other stuff in that dictionary we aren&rsquo;t discussing right now.</p>
+<p>When we talk about environments, we&rsquo;ll use an <a href="http://json.org/">unsurprising syntax</a> for showing their bindings: <code>{x: 2, ...}</code>. Meaning, that the environment is a dictionary, and that the value <code>2</code> is bound to the name <code>x</code>, and that there might be other stuff in that dictionary we aren&rsquo;t discussing right now.</p>
 
 <h4 id="call-by-sharing">call by sharing</h4>
 
@@ -828,7 +828,7 @@
   <hr />
 </div>
 
-<p>Pure functions always mean the same thing because all of their &ldquo;inputs&rdquo; are fully defined by their arguments. Not so with a closure. If I present to you this free function <code>(x, y) -&gt; x + y</code>, we know exactly what it does with <code>(2, 2)</code>. But what about this closure: <code>(y) -&gt; x + y</code>? We can&rsquo;t say what it will do with argument <code>(2)</code> without understanding the magic for evaluating the free variable <code>x</code>.</p>
+<p>Pure functions always mean the same thing because all of their &ldquo;inputs&rdquo; are fully defined by their arguments. Not so with a closure. If I present to you this pure function <code>(x, y) -&gt; x + y</code>, we know exactly what it does with <code>(2, 2)</code>. But what about this closure: <code>(y) -&gt; x + y</code>? We can&rsquo;t say what it will do with argument <code>(2)</code> without understanding the magic for evaluating the free variable <code>x</code>.</p>
 
 <h4 id="its-always-the-environment">it&rsquo;s always the environment</h4>
 
@@ -934,7 +934,7 @@
     <li>Functions are applied to arguments.</li>
     <li>The arguments are passed by sharing, which is also called &ldquo;pass by value.&rdquo;</li>
     <li>Function bodies have zero or more expressions.</li>
-    <li>Function application evaluates to the value of the last expression evaluated or <code>undedfined</code>.</li>
+    <li>Function application evaluates to the value of the last expression evaluated or <code>undefined</code>.</li>
     <li>Function application creates a scope. Scopes are nested and free variable references closed over.</li>
     <li>Variables can shadow variables in an enclosing scope.</li>
   </ul>
@@ -1292,7 +1292,7 @@
     <li><code>let</code> is an idiom where we create a function and call it immediately in order to bind values to names.</li>
     <li>CoffeeScript uses <code>do</code> as syntactic sugar for <code>let</code>.</li>
     <li>CoffeeScript&rsquo;s comments are signalled with <code>#</code>.</li>
-    <li>CoffeeScript has <code>if</code>, <code>then</code>, <code>'else</code> and boolean logic.</li>
+    <li>CoffeeScript has <code>if</code>, <code>then</code>, <code>else</code> and boolean logic.</li>
   </ul>
 
   <hr />
@@ -2093,9 +2093,9 @@
 
 <h4 id="method-ology">method-ology</h4>
 
-<p>In this text, we lurch from talking about functions belong to an object to methods. Other languages may separate methods from functions very strictly, but in CoffeeScript every method is a function but not all functions are methods.</p>
+<p>In this text, we lurch from talking about functions belonging to an object to methods. Other languages may separate methods from functions very strictly, but in CoffeeScript every method is a function but not all functions are methods.</p>
 
-<p>The view taken in this book is that a function is a method of an object if it belongs to that object and interacts with that object in some way. So the functions implementing the operations on the queue are all absolutely methods of the queue.</p>
+<p>The view taken in this book is that a function is a method of an object if it belongs to that object and interacts with that object in some way. So the functions implementing the operations on the stack are all absolutely methods of the stack.</p>
 
 <p>But these wouldn&rsquo;t be methods. Although they belong to an object, they don&rsquo;t interact with it:</p>
 
@@ -2794,7 +2794,7 @@
 
 <div class="code-block">
 <div class="highlight"><pre>3<code class="p">.</code>14159265<code class="p">.</code><code class="n">toPrecision</code><code class="p">(</code>5<code class="p">)</code>
-  #<code class="p">=</code><code class="o">&gt;</code> <code class="s">&#39;3.1415&#39;</code>
+  #<code class="p">=</code><code class="o">&gt;</code> <code class="s">&#39;3.1416&#39;</code>
   
 <code class="s">&#39;FORTRAN, SNOBOL, LISP, BASIC&#39;</code><code class="p">.</code><code class="n">split</code><code class="p">(</code><code class="s">&#39;, &#39;</code><code class="p">)</code>
   #<code class="p">=</code><code class="o">&gt;</code> <code class="p">[</code> <code class="s">&#39;FORTRAN&#39;</code><code class="p">,</code>
@@ -2806,7 +2806,7 @@
   <code class="s">&#39;SNOBOL&#39;</code><code class="p">,</code>
   <code class="s">&#39;LISP&#39;</code><code class="p">,</code>
   <code class="s">&#39;BASIC&#39;</code> <code class="p">].</code><code class="nb">length</code>
-#<code class="p">=</code><code class="o">&gt;</code> 5
+#<code class="p">=</code><code class="o">&gt;</code> 4
 </pre></div>
 
 </div>
@@ -2943,7 +2943,7 @@
     
 <code class="n">original</code><code class="p">(</code><code class="n">true</code><code class="p">)</code> <code class="n">is</code> <code class="n">true</code>
   #<code class="p">=</code><code class="o">&gt;</code> <code class="n">true</code>
-<code class="n">original</code><code class="p">(</code><code class="n">new</code> <code class="n">Boolean</code><code class="p">(</code><code class="n">true</code><code class="p">)</code> <code class="n">is</code> <code class="n">true</code>
+<code class="n">original</code><code class="p">(</code><code class="n">new</code> <code class="n">Boolean</code><code class="p">(</code><code class="n">true</code><code class="p">)</code><code class="p">)</code> <code class="n">is</code> <code class="n">true</code>
   #<code class="p">=</code><code class="o">&gt;</code> <code class="n">true</code>
 </pre></div>
 
@@ -3472,7 +3472,7 @@
 
 </div>
 
-<p>Oops! Messing around with Dequeue&rsquo;s prototype broke this important equivalence. Luckily for us, the <code>constructor</code> property is mutable for objects we create. So, let&rsquo;s make a small change to <code>QueueProxy</code>:</p>
+<p>Oops! Messing around with Deque&rsquo;s prototype broke this important equivalence. Luckily for us, the <code>constructor</code> property is mutable for objects we create. So, let&rsquo;s make a small change to <code>QueueProxy</code>:</p>
 
 <div class="code-block">
 <div class="highlight"><pre><code class="n">class</code> <code class="n">Deque</code>
@@ -4216,7 +4216,7 @@
 
 <div class="code-block">
 <div class="highlight"><pre><code class="n">defer</code> <code class="p">(</code><code class="n">fn</code><code class="p">,</code> <code class="n">callback</code><code class="p">)</code> <code class="o">-&gt;</code>
-  <code class="n">window</code><code class="p">.</code><code class="n">setTimeout</code> <code class="p">(</code><code class="o">-&gt;</code> <code class="n">callback</code> <code class="n">fn</code><code class="p">),</code> 0
+  <code class="n">window</code><code class="p">.</code><code class="n">setTimeout</code> <code class="p">(</code><code class="o">-&gt;</code> <code class="n">callback</code> <code class="n">fn</code><code class="p">(</code><code class="p">)</code><code class="p">),</code> 0
 </pre></div>
 
 </div>
@@ -4266,7 +4266,7 @@
 <div class="highlight"><pre><code class="n">tag</code> <code class="p">=</code> <code class="s">&#39;ristretto&#39;</code>
 
 <code class="n">fotositeGetPhotosByTag</code> <code class="n">tag</code><code class="p">,</code> <code class="p">(</code><code class="n">photoList</code><code class="p">)</code> <code class="o">-&gt;</code>
-  <code class="n">fotositeGetOneFromList</code> <code class="n">photos</code><code class="p">,</code> <code class="p">(</code><code class="n">photoId</code><code class="p">)</code> <code class="o">-&gt;</code>
+  <code class="n">fotositeGetOneFromList</code> <code class="n">photoList</code><code class="p">,</code> <code class="p">(</code><code class="n">photoId</code><code class="p">)</code> <code class="o">-&gt;</code>
     <code class="n">fotositeGetPhoto</code> <code class="n">photoId</code><code class="p">,</code> <code class="n">displayPhoto</code>
 </pre></div>
 
@@ -4277,7 +4277,7 @@
 <div class="code-block">
 <div class="highlight"><pre><code class="n">displayPhotoForTag</code> <code class="p">=</code> <code class="p">(</code><code class="n">tag</code><code class="p">,</code> <code class="n">callback</code><code class="p">)</code> <code class="o">-&gt;</code>
   <code class="n">fotositeGetPhotosByTag</code> <code class="n">tag</code><code class="p">,</code> <code class="p">(</code><code class="n">photoList</code><code class="p">)</code> <code class="o">-&gt;</code>
-    <code class="n">fotositeGetOneFromList</code> <code class="n">photos</code><code class="p">,</code> <code class="p">(</code><code class="n">photoId</code><code class="p">)</code> <code class="o">-&gt;</code>
+    <code class="n">fotositeGetOneFromList</code> <code class="n">photoList</code><code class="p">,</code> <code class="p">(</code><code class="n">photoId</code><code class="p">)</code> <code class="o">-&gt;</code>
       <code class="n">fotositeGetPhoto</code> <code class="n">photoId</code><code class="p">,</code> <code class="n">displayPhoto</code>
 </pre></div>
 
@@ -4337,9 +4337,9 @@
 
 <div class="code-block">
 <div class="highlight"><pre><code class="n">fotositeGetPhotosByTag</code><code class="p">(</code><code class="n">tag</code><code class="p">)</code>
-  <code class="p">.</code><code class="n">then</code> <code class="n">fotositeGetOneFromList</code>
-  <code class="p">.</code><code class="n">then</code> <code class="n">fotositeGetPhoto</code>
-  <code class="p">.</code><code class="n">then</code> <code class="n">displayPhoto</code>
+  <code class="p">.</code><code class="n">then</code><code class="p">(</code><code class="n">fotositeGetOneFromList</code><code class="p">)</code>
+  <code class="p">.</code><code class="n">then</code><code class="p">(</code><code class="n">fotositeGetPhoto</code><code class="p">)</code>
+  <code class="p">.</code><code class="n">then</code><code class="p">(</code><code class="n">displayPhoto</code><code class="p">)</code>
 </pre></div>
 
 </div>
@@ -4524,7 +4524,7 @@ Email: <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#114;&#101;&#103;&#064;&#0
     <li id="fn-wasa">Before you start wondering whether a deque is-a queue, we said nothing about types and classes. This relationship is called was-a, or &ldquo;implemented in terms of a.&rdquo;<a href="#fnref-wasa" rev="footnote">&#8617;</a></li>
     <li id="fn-this">CoffeeScript also does other things with <code>this</code> as well, but this is all we care about right now.<a href="#fnref-this" rev="footnote">&#8617;</a></li>
     <li id="fn-turing">Since the CoffeeScript that we have presented so far is <a href="https://en.wikipedia.org/wiki/Turing_completeness" title="Computational Universality and Turing Completeness">computationally universal</a>, it is possible to perform any calculation with its existing feature set, including emulating any other programming language. Therefore, it is not theoretically necessary to have any further language features; If we need macros, continuations, generic functions, static typing, or anything else, we can <a href="https://en.wikipedia.org/wiki/Greenspun%27s_Tenth_Rule">greenspun</a> them ourselves. In practice, however, this is buggy, inefficient, and presents our fellow developers with serious challenges understanding our code.<a href="#fnref-turing" rev="footnote">&#8617;</a></li>
-    <li id="fn-dynamic">For many programmers, the distinction between a dynamic relationship and a copying mechanism too fine to worry about. However, it makes many dynamic program modifications possible.<a href="#fnref-dynamic" rev="footnote">&#8617;</a></li>
+    <li id="fn-dynamic">For many programmers, the distinction between a dynamic relationship and a copying mechanism is too fine to worry about. However, it makes many dynamic program modifications possible.<a href="#fnref-dynamic" rev="footnote">&#8617;</a></li>
     <li id="fn-reminder">Recall that Strings, Numbers, Booleans and so forth are value types and primitives. We&rsquo;re calling them primitives here.<a href="#fnref-reminder" rev="footnote">&#8617;</a></li>
     <li id="fn-wr">A <a href="https://en.wikipedia.org/wiki/Weak_reference">weak reference</a> is a reference that does not protect the referenced object from collection by a garbage collector; unlike a strong reference. An object referenced only by weak references is considered unreachable (or weakly reachable) and so may be collected at any time.<a href="#fnref-wr" rev="footnote">&#8617;</a></li>
     <li id="fn-xt">You should almost always use <code>extends</code> rather than rolling your own code to chain functions and instances. And even if you let CoffeeScript do the work, you should always <em>understand</em> what CoffeeScript is doing for you.<a href="#fnref-xt" rev="footnote">&#8617;</a></li>
